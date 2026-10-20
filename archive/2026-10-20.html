@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Tuesday, 20 October 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">Elektrobit and Microchip ship pre-integrated Classic AUTOSAR and push &ldquo;integration-as-code&rdquo; toward AI-assisted ECU configuration.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>Anthropic ships Claude Haiku 5.5</h2>
+      <p>Anthropic released Claude Haiku 5.5 on 7 October, a small, fast model aimed at high-volume work such as summarisation, sub-agents and browser use &mdash; the cheap tier for pipelines that call a model many times.</p>
+      <p class="src"><a href="https://www.anthropic.com/news">anthropic.com/news</a></p>
+    </article>
+    <article>
+      <h2>Anthropic to put a slice of its own equity into a Public Benefit Fund</h2>
+      <p>In an 18 October post, Anthropic said it will commit a portion of its shares to a new Public Benefit Fund whose stake grows as the company does &mdash; an unusual structural tie between the firm&rsquo;s valuation and a public-good vehicle.</p>
+      <p class="src"><a href="https://www.anthropic.com/news">anthropic.com/news</a></p>
+    </article>
+    <article>
+      <h2>Anthropic launches a long-term &ldquo;Cyber Mission&rdquo;</h2>
+      <p>On 8 October Anthropic announced the Anthropic Cyber Mission to secure widely-relied-on systems, alongside an expanded Cyber Verification Program (6 Oct) that loosens blocking classifiers for vetted security professionals. It also reports cutting model-distillation attack rates by over 90%.</p>
+      <p class="src"><a href="https://www.anthropic.com/news">anthropic.com/news</a></p>
+    </article>
+    <article>
+      <h2>Frontier model churn: GPT-6 Pro and Gemini 4 reportedly out <span class="tag">(tracker-sourced, not officially verified)</span></h2>
+      <p>Model-release trackers list OpenAI&rsquo;s GPT-6 Pro with a &ldquo;parallel agents&rdquo; feature (16 Oct) and Google&rsquo;s Gemini 4 Argon reaching general availability (13 Oct). Treat the dates and feature claims as provisional &mdash; they come from aggregators, not the labs&rsquo; own posts.</p>
+      <p class="src"><a href="https://llmgateway.io/timeline">llmgateway.io/timeline</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <h2>Elektrobit + Microchip: pre-integrated Classic AUTOSAR, groundwork for AI config</h2>
+      <p>Announced 15 October: Elektrobit&rsquo;s MCAL and base software (EB tresos, AutoCore OS) come pre-integrated on Microchip&rsquo;s SAMA5 MCUs to cut integration risk. Elektrobit is applying &ldquo;integration-as-code&rdquo; to repeatable Classic AUTOSAR setup &mdash; what they frame as the base for AI-assisted configuration. Directly relevant to AUTOSAR Classic + AI-in-MBD work.</p>
+      <p class="src"><a href="https://www.microchip.com/en-us/about/news-releases/products/elektrobit-and-microchip-collaborate-on-pre-integrated-autosar-solutions">microchip.com news release</a></p>
+    </article>
+    <article>
+      <h2>Nissan picks Valeo as system Tier-1 for next-gen ProPILOT, Wayve as the AI layer</h2>
+      <p>Nissan selected Valeo to supply the next-generation ProPILOT, with Wayve&rsquo;s AI Driver as the decision-making software inside Valeo&rsquo;s hardware. First model is planned for Japan in FY2027; automation level and specific models are not yet named.</p>
+      <p class="src"><a href="https://www.automotiveworld.com/news/valeo-to-integrate-wayve-ai-driver-into-nissan-propilot/">automotiveworld.com</a></p>
+    </article>
+    <article>
+      <h2>Stellantis + Wayve: integration to road test in under four weeks</h2>
+      <p>Stellantis showed development Fiat 500e and Maserati Grecale running an L2++ system that pairs Wayve&rsquo;s AI Driver with its STLA AutoDrive platform, going from integration to on-road testing in under four weeks. Series production targeted for North America in 2028.</p>
+      <p class="src"><a href="https://moparinsiders.com/stellantis-and-wayve-expand-hands-free-driving-technology/">moparinsiders.com</a></p>
+    </article>
+    <article>
+      <h2>Volvo deepens Nvidia tie-up; US regulators eye Tesla robotaxi</h2>
+      <p>Volvo Cars is widening its Nvidia partnership toward eyes-off and later mind-off driving. Separately, US regulators are reported to be weighing a formal defect investigation into Tesla robotaxis over school-zone speeding (reported 19 Oct; a probe is being considered, not yet opened).</p>
+      <p class="src"><a href="https://www.automotiveworld.com/newsletters/autonomous-mobility-newsletter-october-19-2026/">automotiveworld.com</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>Hero Xtreme 160R 4V launched at ~&#8377;1.27 lakh</h2>
+      <p>Launched 16 October (per Bikewale): revised styling, updated engine output and features including cruise control and a TFT display on a 160cc commuter-sport bike.</p>
+      <p class="src"><a href="https://www.bikewale.com/new-bike-launches/">bikewale.com</a></p>
+    </article>
+    <article>
+      <h2>Royal Enfield Classic 650 125th Anniversary Edition</h2>
+      <p>Royal Enfield launched a 125th-anniversary Classic 650 at about &#8377;4.26 lakh, with a colour-shifting finish and anniversary badging on the 648cc parallel-twin platform.</p>
+      <p class="src"><a href="https://www.zigwheels.com/news">zigwheels.com</a></p>
+    </article>
+    <article>
+      <h2>Hero Karizma 400 expected late October <span class="tag">(tentative &mdash; date not confirmed)</span></h2>
+      <p>Aggregators peg a Karizma 400 launch around 30 October at an estimated &#8377;2&ndash;2.1 lakh ex-showroom, with a 400cc engine. Launch confidence is listed as low; price and date are pre-launch estimates, not official.</p>
+      <p class="src"><a href="https://www.carbike360.com/bikes/hero/karizma-400">carbike360.com</a></p>
+    </article>
+    <article>
+      <h2>Tata EV pipeline: Safari EV expected around Diwali <span class="tag">(expected, not launched)</span></h2>
+      <p>With the Sierra EV already on sale, the seven-seat Safari EV is flagged by trackers as Tata&rsquo;s next electric SUV, expected around Diwali 2026. No official launch date confirmed yet.</p>
+      <p class="src"><a href="https://www.carlelo.com/news/3-game-changing-electric-suvs-launching-before-diwali-2026">carlelo.com</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>
