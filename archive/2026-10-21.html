@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Wednesday, 21 October 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">Subaru commits to software-defined vehicles built on its own integrated ECU and a custom AMD chip &mdash; AI-enabled EyeSight, ~40% faster development &mdash; as Toyota and Mercedes push the same shift.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>Meta ships frontier-class Muse Wonder, plus an open-weight Muse Spark</h2>
+      <p>On 12 October Meta launched Muse Wonder and Muse Wonder Full &mdash; closed frontier models it claims lead on agentic, memory and coding tasks, pitched squarely against OpenAI and Anthropic. An open-weight Muse Spark followed on 15 October, keeping the top models closed.</p>
+      <p class="src"><a href="https://www.axios.com/2026/10/12/meta-new-ai-models-anthropic-openai">axios.com</a></p>
+    </article>
+    <article>
+      <h2>Anthropic opens its models to independent evaluators</h2>
+      <p>In a 15 October post, Anthropic said it is giving the nonprofit evaluator METR employee-like access to its frontier models, and is in early talks with others including Hugging Face &mdash; a step toward more external scrutiny of model capabilities and safety.</p>
+      <p class="src"><a href="https://www.anthropic.com/news/an-update-on-independent-evaluators">anthropic.com/news</a></p>
+    </article>
+    <article>
+      <h2>Anthropic opens Singapore office, signs government MOU</h2>
+      <p>On 14 October Anthropic opened a Singapore office and signed a memorandum of understanding with the Singapore government to advance safe, responsible AI adoption &mdash; continuing its Asia-Pacific build-out.</p>
+      <p class="src"><a href="https://www.anthropic.com/news/singapore-office-opening">anthropic.com/news</a></p>
+    </article>
+    <article>
+      <h2>Anthropic details election safeguards ahead of 2026 US midterms</h2>
+      <p>A 14 October post lays out how Anthropic has tightened safeguards around election-related use of Claude before the US midterms &mdash; part of the wider governance push as frontier labs face scrutiny over political misuse.</p>
+      <p class="src"><a href="https://www.anthropic.com/news/2026-us-midterms">anthropic.com/news</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <h2>Subaru plans an in-house integrated ECU for software-defined vehicles</h2>
+      <p>On 18 October Subaru detailed a move to software-defined vehicles later this decade, targeting roughly 40% shorter development time. It is building its own integrated ECU &mdash; handling ADAS, chassis, powertrain and infotainment on a custom AMD-co-developed chip &mdash; to enable OTA updates and AI in a future EyeSight generation, with production reported around 2029. Directly relevant to MBD/controls work at an OEM.</p>
+      <p class="src"><a href="https://asia.nikkei.com/business/automobiles/subaru-to-launch-software-defined-vehicles-in-late-2020s">asia.nikkei.com</a></p>
+    </article>
+    <article>
+      <h2>Toyota targets all ~50 models as software-defined by 2030</h2>
+      <p>At an investor briefing, Toyota&rsquo;s CTO said it aims to make its roughly 50 models software-defined by 2030 &mdash; about 10 million vehicles a year running its Arene software platform, with post-sale update revenue. Arene debuted in the 2025 RAV4.</p>
+      <p class="src"><a href="https://www.timeslive.co.za/motoring/2026-10-16-toyota-to-deploy-arene-software-platform-in-10-million-new-vehicles-by-2030/">timeslive.co.za</a></p>
+    </article>
+    <article>
+      <h2>Mercedes-Benz and Nvidia expand their automated-driving partnership</h2>
+      <p>The two expanded their tie-up, pairing Mercedes&rsquo; MB.OS and safety engineering with Nvidia&rsquo;s Hyperion compute, the Alpamayo driving stack and the Halos safety layer &mdash; covering L2++ assistance now (the new CLA in the US) and aiming at future SAE Level 4. No L4 timeline or financial terms were disclosed.</p>
+      <p class="src"><a href="https://group.mercedes-benz.com/company/news/mb-and-nvidia-expand-strategic-partnership.html">group.mercedes-benz.com</a></p>
+    </article>
+    <article>
+      <h2>Waymo drops waitlists in new US cities, heads to Canada</h2>
+      <p>Waymo opened its robotaxi service to all riders (no waitlist) in markets including San Antonio, San Diego and Tampa, and announced its first Canadian deployment in Toronto, per TechCrunch&rsquo;s 16&ndash;18 October coverage; it now operates in roughly 15 markets.</p>
+      <p class="src"><a href="https://techcrunch.com/2026/10/16/waymos-robotaxis-are-headed-to-canada/">techcrunch.com</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>Mahindra XUV 3XO CNG launched from &#8377;9.99 lakh</h2>
+      <p>Mahindra&rsquo;s factory-fitted CNG XUV 3XO opened for bookings and deliveries on 20 October, priced &#8377;9.99&ndash;12.27 lakh (ex-showroom) across four trims. It runs a 1.2L turbo-petrol on CNG with a claimed 24.7 km/kg, taking on the Tata Nexon and Maruti Brezza CNG.</p>
+      <p class="src"><a href="https://www.drivespark.com/four-wheelers/2026/mahindra-xuv-3xo-cng-launched-at-rs-9-99-lakh-24-7-km-kg-mileage-088365.html">drivespark.com</a></p>
+    </article>
+    <article>
+      <h2>Locally built 2026 Audi Q3 launched at &#8377;51.99 lakh</h2>
+      <p>Audi launched the all-new, India-assembled Q3 on 16 October from &#8377;51.99 lakh (ex-showroom) for the Nova trim &mdash; a 2.0 TFSI petrol (204 bhp) with quattro all-wheel drive, built at its Aurangabad plant.</p>
+      <p class="src"><a href="https://www.newsbytesapp.com/news/auto/audi-launches-locally-built-2026-q3-in-india-at-rs5199l/tldr">newsbytesapp.com</a></p>
+    </article>
+    <article>
+      <h2>Toyota Glanza facelift launched from &#8377;6.99 lakh, adds Level-2 ADAS</h2>
+      <p>The 2026 Glanza facelift (the Maruti Baleno&rsquo;s rebadged sibling) launched on 14 October from &#8377;6.99 lakh, now with a new 1.2L three-cylinder petrol, Level-2 ADAS, ventilated front seats and a tyre-pressure monitor.</p>
+      <p class="src"><a href="https://www.timesdrive.in/news/toyota-glanza-facelift-launched-at-rs-6-99-lakh-with-updated-design-powertrain-features-and-adas-article-156337610">timesdrive.in</a></p>
+    </article>
+    <article>
+      <h2>Hero launches updated Xtreme 160R 4V and Xtreme 250R</h2>
+      <p>Hero MotoCorp launched the 2026 Xtreme 160R 4V on 16 October at &#8377;1.27&ndash;1.41 lakh &mdash; adding ride-by-wire with three riding modes, cruise control and a TFT display on the top trim &mdash; alongside the Xtreme 250R at &#8377;1.98 lakh. Bookings are open; deliveries begin 1 November.</p>
+      <p class="src"><a href="https://carhp.in/bike-news/2026-hero-xtreme-160r-4v-xtreme-250r-launched-with-new-features-and-colours">carhp.in</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>
