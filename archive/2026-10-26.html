@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Monday, 26 October 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">Tesla concedes two things at once: unsupervised Full Self-Driving in customer cars slips to Q2 2027 and only inside its small, geofenced Robotaxi zones &mdash; and, after years of dismissing maps, it is now building its own to fix FSD&rsquo;s trouble with speed limits, parking and routing. A pointed reminder that vision-only autonomy still leans on the localisation and redundancy that functional-safety work is built around.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>OpenAI reportedly nears a ~$30bn raise at a ~$1.25 trillion valuation <span class="tag">(reported / in talks)</span></h2>
+      <p>CNBC reported on 24 October that OpenAI is closing in on a funding round of up to $30bn at roughly a $1.25 trillion valuation &mdash; even as an earlier revenue disclosure knocked AI-infrastructure stocks (Nvidia, Oracle, CoreWeave) earlier in the month. Separately, Anthropic, which confidentially filed an IPO prospectus with the SEC in June, is seen as the only major AI firm that might go public before year-end. Treat the OpenAI figure as a report, not a closed deal.</p>
+      <p class="src"><a href="https://www.cnbc.com/2026/10/19/anthropic-ipo-ai-trade.html">cnbc.com</a></p>
+    </article>
+    <article>
+      <h2>Mistral&rsquo;s trillion-parameter &ldquo;Le Chonk&rdquo; open weights land this week</h2>
+      <p>Mistral Large 4 &mdash; a mixture-of-experts model of about 1.05 trillion parameters (~52bn active per token) &mdash; is set to publish its open weights on 27 October, after a roughly three-week guardrail-only test period. API pricing runs about $1.36 per million input tokens and $4.18 output. Mistral calls it the strongest open-weight model built outside China; most benchmark figures so far are Mistral&rsquo;s own. Open weights matter if you want to run or fine-tune a frontier-class model on your own hardware.</p>
+      <p class="src"><a href="https://venturebeat.com/technology/mistral-debuts-large-4-le-chonk-a-1-trillion-parameter-text-output-model-with-high-benchmarks-planned-for-open-weights-release">venturebeat.com</a></p>
+    </article>
+    <article>
+      <h2>Anthropic hands its &ldquo;Agent Skills&rdquo; standard to a neutral foundation</h2>
+      <p>On 22 October Anthropic donated Agent Skills &mdash; its open format for packaging reusable agent knowledge and workflows &mdash; to the Agentic AI Foundation, saying more than 70 agent platforms have already integrated it. A small but telling move to standardise how AI agents are handed domain procedures: the kind of plumbing that matters when you try to wire AI into an engineering toolchain rather than a chat window.</p>
+      <p class="src"><a href="https://www.anthropic.com/news">anthropic.com</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <h2>Tesla reverses on maps and pushes unsupervised FSD to 2027</h2>
+      <p>Tesla now says it is building its own maps to fix FSD&rsquo;s handling of speed limits, parking and route choice &mdash; after years of insisting it needed none. It also moved unsupervised FSD in privately-owned cars to Q2 2027, and only by enrolling those cars into its small, geofenced Robotaxi fleet; California still requires a safety driver. Q3 numbers: FSD subscriptions up 67% year-on-year to 1.74 million.</p>
+      <p class="src"><a href="https://electrek.co/2026/10/22/tesla-building-own-maps-fsd-after-mocking-maps">electrek.co</a></p>
+    </article>
+    <article>
+      <h2>NHTSA proposes marker lights so you can tell a car is driving itself</h2>
+      <p>In its 25 October mobility briefing, TechCrunch reports NHTSA has proposed new lighting requirements for autonomous vehicles &mdash; including an option for cyan (blue-green) lights to signal when a vehicle is operating autonomously with no human monitoring the road. A rare US federal step toward a standard external HMI signal for driverless operation; still only a proposal at this stage.</p>
+      <p class="src"><a href="https://techcrunch.com/2026/10/25/techcrunch-mobility-blue-green-is-the-color-of-autonomy/">techcrunch.com</a></p>
+    </article>
+    <article>
+      <h2>Waymo keeps scaling: 4,000+ driverless cars, airports, Madrid next</h2>
+      <p>Waymo now runs more than 4,000 driverless vehicles in US commercial service, began airport pickups and drop-offs in Las Vegas (dedicated AV zones at Terminals 1 and 3) around 21 October, and says it will open a robotaxi service in Madrid &mdash; its first Spanish city &mdash; to riders in 2027. On the ground, the gap between mapped-and-lidar and vision-only approaches keeps widening.</p>
+      <p class="src"><a href="https://techcrunch.com/2026/10/21/waymo-starts-offering-rides-at-the-las-vegas-airport">techcrunch.com</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>Hyundai Bayon launches in India today</h2>
+      <p>Hyundai launches the Bayon &mdash; a 4.2m crossover slotting between Venue and Creta &mdash; in India today, 26 October. It uses the Creta&rsquo;s 1.5-litre MPi petrol (115 PS / 143.8 Nm) with a 6-speed manual or iVT; no diesel or turbo, and a CNG variant is expected only later. Bookings opened at &#8377;11,000; media estimates put it around &#8377;9.5&ndash;15 lakh ex-showroom, with official prices due today.</p>
+      <p class="src"><a href="https://www.autocarpro.in/news/hyundai-bayon-to-launch-in-india-on-october-26-with-15l-petrol-engine-135414">autocarpro.in</a></p>
+    </article>
+    <article>
+      <h2>Festive-season two-wheelers: Bonneville 400, Pulsar N250, Honda XR300 <span class="tag">(expected / spied &mdash; dates not confirmed)</span></h2>
+      <p>Expected this month per BikeDekho: the Triumph Bonneville 400, a retro roadster sharing the Speed 400&rsquo;s ~398cc single, aimed at the Royal Enfield Classic 350; a revamped Bajaj Pulsar N250 with a new 4-valve engine and a TFT display; and Honda&rsquo;s XR300L and XR300 Rally dual-sports (293cc), reportedly India-built. These are spied or expected models, so exact launch dates and prices may slip.</p>
+      <p class="src"><a href="https://www.bikedekho.com/news/upcoming-two-wheeler-launches-october-2026-20398">bikedekho.com</a></p>
+    </article>
+    <article>
+      <h2>Mahindra XEV 9S three-row electric SUV on the October list</h2>
+      <p>Mahindra&rsquo;s XEV 9S &mdash; a three-row electric SUV on the INGLO platform &mdash; features on Autocar India&rsquo;s October launch list at roughly &#8377;19.95&ndash;29.45 lakh (some listings start lower, around &#8377;16.6 lakh for the base). It extends Mahindra&rsquo;s BE/XEV electric push aimed squarely at family-SUV buyers.</p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/upcoming-car-launches-and-debuts-in-october-2026-440877">autocarindia.com</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>
