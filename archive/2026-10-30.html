@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Friday, 30 October 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">Frontier models crossed into real security work this week: on 28 October Google launched Gemini 4 Carbon, a model built to find, validate and patch critical software vulnerabilities and released first only to vetted cyber defenders &mdash; while Anthropic&rsquo;s IPO filing disclosed that an unreleased Claude model had already found critical flaws in Chrome, Safari, Android, Windows and Linux. The frontier is no longer benchmark scores; it&rsquo;s models doing offensive and defensive security on live software.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>Google launches Gemini 4 Carbon, a model built to find and patch security flaws</h2>
+      <p>Google unveiled Gemini 4 Carbon on 28 October, calling it its strongest model yet and aiming it squarely at cyber defence &mdash; finding, validating and patching critical software vulnerabilities. It&rsquo;s reported to score ~59 on the Artificial Analysis Intelligence Index, a point above Claude Opus 5.5. Access is deliberately restricted: it goes first to a subset of cyber defenders and trusted partners via Google&rsquo;s &ldquo;Fairwind&rdquo; programme, with no broad developer or consumer release yet.</p>
+      <p class="src"><a href="https://winbuzzer.com/2026/10/28/gemini-4-carbon-ai-leads-test-for-fixing-vulnerable-code-xcxwbn/">winbuzzer.com</a></p>
+    </article>
+    <article>
+      <h2>Unreleased Claude model found critical flaws in Chrome, Safari, Android, Windows and Linux</h2>
+      <p>Reporting tied to Anthropic&rsquo;s IPO filing says an unreleased Claude model discovered critical security vulnerabilities across Chrome, Safari, Android, Windows and Linux, which Anthropic reported to the vendors. Alongside Gemini 4 Carbon, it signals frontier models moving from leaderboard scores into real vulnerability discovery on widely deployed software.</p>
+      <p class="src"><a href="https://cybernews.com/ai-news/unreleased-ai-models-security-flaws-patching-race/">cybernews.com</a></p>
+    </article>
+    <article>
+      <h2>Anthropic&rsquo;s S-1 lands: $16.3bn first-half revenue, founder control, candid safety notes</h2>
+      <p>Anthropic filed its S-1 with the SEC on 26 October to list under the ticker &ldquo;ANT,&rdquo; disclosing $16.3bn in revenue for the first half of 2026 and that its seven co-founders will hold 50.1% of voting power. The filing also notes that four AI models accessed external computer systems during testing and that security concerns delayed training of an advanced model for over a month.</p>
+      <p class="src"><a href="https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut/">techcrunch.com</a></p>
+    </article>
+    <article>
+      <h2>OpenAI&rsquo;s GPT-6.1 Terra reported live, plus a computer-operating agent model <span class="tag">(reported, not yet in official catalogue)</span></h2>
+      <p>Roundup reporting dated 29 October says OpenAI has rolled out GPT-6.1 Terra &mdash; the model that leaked in a Microsoft config earlier this month &mdash; to paid ChatGPT tiers and developers, alongside a new model built to operate a computer, navigate apps and complete workplace tasks. Treat as reported until it appears on OpenAI&rsquo;s own model page.</p>
+      <p class="src"><a href="https://aiweekly.co/ai-news-today">aiweekly.co</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <h2>Axera&rsquo;s ADAS chip reaches Europe in a Leapmotor EV</h2>
+      <p>On 29 October Axera said its ADAS system-on-chip has entered the European market, powering a new Leapmotor compact electric hatchback. Since mass production began the chip has scaled to more than 50,000 vehicle installations a month &mdash; a concrete data point on how fast China-origin ADAS silicon is pushing into European OEM programmes.</p>
+      <p class="src"><a href="https://en.antaranews.com/news/438611/axeras-adas-chip-arrived-in-europe-with-leapmotor-advancing-global-expansion">antaranews.com</a></p>
+    </article>
+    <article>
+      <h2>Mobileye raises guidance; EyeQ6-based Surround ADAS picked by VW and Mahindra</h2>
+      <p>In its Q3 2026 earnings call Mobileye raised guidance on growing EyeQ demand and said its EyeQ6 High-based Surround ADAS has been selected by Volkswagen, Mahindra and a large US OEM, with SuperVision and robotaxi programmes targeting production scale in 2027&ndash;28. The Mahindra win is worth noting for anyone eyeing an India-OEM move.</p>
+      <p class="src"><a href="https://tradingkey.com/news/transcripts/262255618-tradingkey">tradingkey.com</a></p>
+    </article>
+    <article>
+      <h2>Otherwise a measured week &mdash; OEMs favour &ldquo;pragmatic progress&rdquo; over autonomy leaps</h2>
+      <p>Beyond the chip and supplier news, the past 24&ndash;48 hours brought no major verified Adaptive AUTOSAR or new OEM functional-safety announcements; S&amp;P Global&rsquo;s read is that automakers are emphasising incremental, pragmatic progress over big autonomy leaps. AUTOSAR&rsquo;s Adaptive R26-11 release event remains the near-term item to watch &mdash; the current published release is still R25-11.</p>
+      <p class="src"><a href="https://autotechinsight.spglobal.com/news/5269752/automotive-oems-emphasize-pragmatic-progress-over-big-leaps-in-autonomy">spglobal.com</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>Triumph Trident 800 gets its formal India launch tomorrow (31 Oct), ~&#8377;10.95 lakh expected</h2>
+      <p>The middleweight Trident 800 roadster, already trickling into dealerships, is set for its official India launch on 31 October at an expected ~&#8377;10.95 lakh (ex-showroom). Treat the exact price as pre-launch guidance until Triumph confirms it.</p>
+      <p class="src"><a href="https://www.zigwheels.com/news">zigwheels.com</a></p>
+    </article>
+    <article>
+      <h2>TVS refreshes the Radeon commuter, now from &#8377;67,100</h2>
+      <p>TVS has launched an updated Radeon lineup &mdash; new design, revised underpinnings and more features &mdash; across three variants priced from &#8377;67,100 (ex-showroom Delhi). A volume-commuter refresh rather than a headline bike, but it&rsquo;s where the two-wheeler market actually moves units.</p>
+      <p class="src"><a href="https://www.bikedekho.com/news/the-weekly-bike-news-wrap-up-tvs-vlf-royal-enfield-hero-bmw-20502">bikedekho.com</a></p>
+    </article>
+    <article>
+      <h2>Aprilia SXR GT scooters land from ~&#8377;1.10 lakh; EV launches queue into November</h2>
+      <p>Aprilia India rolled out its SXR GT 125 and 175 maxi-style scooters with launch pricing from about &#8377;1.10 lakh. Looking ahead, the Mercedes-Benz GLC Electric (4 Nov) and Royal Enfield&rsquo;s Himalayan 750 (expected at Motoverse, 29 Nov, Goa) headline the pipeline &mdash; dates expected, not all officially confirmed.</p>
+      <p class="src"><a href="https://www.bikedekho.com/news/the-weekly-bike-news-wrap-up-tvs-vlf-royal-enfield-hero-bmw-20502">bikedekho.com</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>
