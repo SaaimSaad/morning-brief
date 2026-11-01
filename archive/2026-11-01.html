@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Sunday, 1 November 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">Anthropic has filed its S-1 to go public on Nasdaq under the ticker &ldquo;ANT,&rdquo; disclosing $16.29bn in revenue for the first half of 2026 &mdash; up roughly 1,300% year-on-year &mdash; alongside heavy losses and a still-blank price range. Press reports peg the targeted valuation at $1.5&ndash;2tn, which would rank among the largest tech listings ever. The maker of Claude filed on 26 October; pricing and date are unconfirmed, reportedly aimed at late November.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>Anthropic files for a Nasdaq IPO, revealing $16.3bn first-half revenue</h2>
+      <p>Anthropic&rsquo;s S-1, filed 26 October, discloses revenue of $16.29bn for the six months to 30 June &mdash; up ~1,304% from $1.16bn a year earlier &mdash; and plans to list as &ldquo;ANT.&rdquo; It also booked large net losses (figures vary across reports) and left the IPO price range blank. Press reports put the targeted valuation at roughly $1.5&ndash;2tn, well above the ~$965bn post-money Series H in May; listing timing is reportedly late November but unconfirmed.</p>
+      <p class="src"><a href="https://finance.yahoo.com/technology/live/anthropic-ipo-live-updates-frontier-ai-lab-discloses-revenue-and-risks-in-highly-anticipated-s-1-filing-141702607.html">Yahoo Finance / S-1</a></p>
+    </article>
+    <article>
+      <h2>Google&rsquo;s Gemini 4 Carbon takes #1 on Artificial Analysis&rsquo;s Intelligence Index</h2>
+      <p>Artificial Analysis says Gemini 4 Carbon is the new leader on its Intelligence Index v5 (28 October), overtaking the field. On the separate Coding Agent Index it still trails Claude Opus 5.5 &mdash; 59 (Carbon high, Antigravity CLI) vs 62 (Opus 5.5 max, Claude Code). Carbon was not yet generally available at announcement.</p>
+      <p class="src"><a href="https://artificialanalysis.ai/articles/gemini-4-carbon-new-number-1">artificialanalysis.ai</a></p>
+    </article>
+    <article>
+      <h2>Major AI labs said to back a shared &ldquo;opt-out&rdquo; signal for training data <span class="tag">(reported; not officially confirmed)</span></h2>
+      <p>AI newsletters reported on 30 October that OpenAI, Google, Microsoft and Anthropic will honour a single, standardised robots.txt-style token letting sites opt out of AI training &mdash; Anthropic said to have begun implementing it, OpenAI targeting &ldquo;coming months.&rdquo; I could not confirm this against the companies&rsquo; own pages, so treat it as reported rather than official.</p>
+      <p class="src"><a href="https://aiweekly.co/alerts/openai-google-microsoft-anthropic-back-one-ai-opt-out-token">aiweekly.co</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <h2>Waymo picks Toyota&rsquo;s bZ4X as its next robotaxi, built at Takaoka</h2>
+      <p>On 30 October Waymo and Toyota said Toyota will supply and help integrate a 2027 bZ4X carrying Waymo&rsquo;s self-driving system, assembled at Toyota&rsquo;s Takaoka plant in Japan, with testing in Japan next year and an eye on international markets including the UK. The pair&rsquo;s earlier idea of putting autonomy into personally owned Toyotas remains exploratory, with no concrete plan yet &mdash; a notable OEM&ndash;AV supply tie-up rather than a consumer-car milestone.</p>
+      <p class="src"><a href="https://techcrunch.com/2026/10/30/waymos-next-robotaxi-will-be-a-toyota-bz4x-destined-for-japan-and-the-uk/">TechCrunch</a></p>
+    </article>
+    <article>
+      <h2>Mobileye trims full-year guidance as Q3 lands; shares slip</h2>
+      <p>Mobileye&rsquo;s Q3 2026 results (29 October) prompted a ~4.5% premarket drop even as it adjusted full-year guidance citing SuperVision strength. The EyeQ-based ADAS supplier remains a bellwether for how fast OEMs are committing to higher-level assisted and hands-off driving &mdash; worth watching for anyone tracking the ADAS production ramp.</p>
+      <p class="src"><a href="https://seekingalpha.com/news/4660087-mobileye-slides-even-as-it-tweaks-full-year-guidance-on-supervision-strength">Seeking Alpha</a></p>
+    </article>
+    <article>
+      <h2>STMicroelectronics launches its first automotive safety combo sensors for mass-market use</h2>
+      <p>On 26 October ST introduced combined accelerometer-plus-gyroscope (6-axis) inertial sensors in a single package, aimed at active and passive safety across price segments &mdash; the kind of ASIL-rated inertial sensing that feeds airbag deployment, stability control and ADAS functions in the safety-critical signal chain.</p>
+      <p class="src"><a href="https://globenewswire.com/news-release/2026/10/26/3387826/0/en/stmicroelectronics-introduces-first-automotive-safety-combination-sensors-for-mass-market-applications.html">GlobeNewswire</a></p>
+    </article>
+    <article>
+      <h2>Quiet on new Adaptive AUTOSAR / ISO 26262 announcements this weekend</h2>
+      <p>No major new AUTOSAR platform release or OEM functional-safety milestone surfaced in the past day or two. The most MBD-relevant recent item remains Elektrobit and Microchip&rsquo;s pre-integrated Classic AUTOSAR work (mid-October); the near-term watch items are the next AUTOSAR releases and OEM software reorganisations.</p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>Mercedes-Benz GLC Electric launches in India on 4 November</h2>
+      <p>Bookings are open and a 4 November launch is locked for the locally assembled GLC Electric. India gets the dual-motor 400 4MATIC &mdash; around 360kW (~490hp) and 800Nm &mdash; off the Chakan (Pune) line. Price comes at launch; estimates run ~&#8377;80&ndash;85 lakh (ex-showroom). It squares up against the BMW iX3 LWB due in 2027.</p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/mercedes-glc-ev-bookings-open-in-october-launch-by-end-2026-440709">autocarindia.com</a></p>
+    </article>
+    <article>
+      <h2>India&rsquo;s electric two-wheeler registrations near 2.15 lakh in October</h2>
+      <p>Vahan data shows 2,14,654 e-2W registrations in October, up ~2.9% month-on-month. TVS held the top spot and Hero posted the strongest growth among the leaders, while Ola Electric&rsquo;s share slipped to 5.4% (from 6.4% in September). TVS, Bajaj, Ather and Hero together account for ~76% of the market this year.</p>
+      <p class="src"><a href="https://lapaasvoice.com/indias-electric-two-wheeler-registrations-rise-2-9-to-2-15-lakh-in-october-as-tvs-and-hero-gain-share">lapaasvoice.com</a></p>
+    </article>
+    <article>
+      <h2>Hero rolls out a Destini 110 Classique Edition at &#8377;76,400</h2>
+      <p>Hero MotoCorp launched a Classique Edition of its Destini 110 petrol scooter on 30 October at &#8377;76,400 (ex-showroom, Delhi) &mdash; a trim/cosmetic special rather than a new platform or an EV.</p>
+      <p class="src"><a href="https://thebikejunction.com/news/bi-weekly-two-wheeler-news-upcoming-launches-to-updated-models/amp">thebikejunction.com</a></p>
+    </article>
+    <article>
+      <h2>Tata Safari EV still tipped for the Diwali/November window <span class="tag">(expected; date unconfirmed)</span></h2>
+      <p>Tata&rsquo;s flagship three-row Safari EV is widely expected around the Diwali/November window as India&rsquo;s first mainstream 7-seat electric SUV, but Tata hasn&rsquo;t confirmed a date or price. Treat the timing as an estimate until Tata announces.</p>
+      <p class="src"><a href="https://www.latestly.com/auto/tata-motors-ev-launch-2026-sierra-ev-slated-for-q3-2026-safari-ev-by-diwali-this-year-7460699.html">latestly.com</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>
