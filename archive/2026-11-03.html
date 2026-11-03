@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Tuesday, 3 November 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">Anthropic&rsquo;s text watermarking goes live today: from 3 November, replies from Claude Mythos 5, Opus 4.7, Opus 4.6 and Sonnet 4.6 on the Claude API carry a detectable watermark &mdash; Anthropic&rsquo;s own build of Google DeepMind&rsquo;s SynthID-Text &mdash; with Amazon Bedrock following a few days later. It confirms what this brief flagged as a rumour yesterday. If you build on the API, note the signal marks text as written or processed by Claude, while its absence never proves a human wrote something.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>Claude text watermarking expands to older models, effective today</h2>
+      <p>Anthropic emailed API customers that from 3 November, output from Claude Mythos 5, Opus 4.7, Opus 4.6 and Sonnet 4.6 will carry a detectable watermark, with Amazon Bedrock a few days behind. It is Anthropic&rsquo;s implementation of SynthID-Text, the Google DeepMind technique published in Nature in 2024 &mdash; a statistical signal in token sampling, not an invisible character or metadata tag. A watermark shows text was written or processed by Claude; its absence does not prove a human wrote it.</p>
+      <p class="src"><a href="https://www.pcworld.com/article/3224834/claudes-updated-fable-and-mythos-models-watermark-their-replies.html">PCWorld</a></p>
+    </article>
+    <article>
+      <h2>Anthropic tightens usage policy, adds permanent bans in extreme cases</h2>
+      <p>CNN reports (1 November) that Anthropic added language to its usage policy allowing permanent account bans for the most severe or repeated violations. A spokesperson said enforcement will mostly take the milder form of Claude ending a conversation rather than cutting off accounts.</p>
+      <p class="src"><a href="https://www.cnn.com/2026/11/01/business/anthropic-dont-be-mean-claude-ban">CNN Business</a></p>
+    </article>
+    <article>
+      <h2>Google&rsquo;s Gemini 4 Carbon debuts, but access is locked down</h2>
+      <p>Announced 28 October as Google&rsquo;s strongest model, Carbon is pitched at cybersecurity and long-duration agentic tasks. Rather than a broad launch, Google is releasing it first to a subset of cyber-defenders under its Fairwind program, with no date for wider availability &mdash; a deliberately restricted rollout that contrasts with OpenAI&rsquo;s cheaper, broadly-available GPT-6.1 Terra from 26 October.</p>
+      <p class="src"><a href="https://ai-unpacked.com/stories/frontier-week-terra-carbon">AI Unpacked</a></p>
+    </article>
+    <article>
+      <h2>Anthropic IPO still firming for mid-November <span class="tag">(reported; schedule unconfirmed)</span></h2>
+      <p>Following its 26 October S-1 (ticker &ldquo;ANT&rdquo;), reports continue to point to marketing around the week of 9 November and a debut the week of 16 November, at a valuation discussed near ~$1.5tn. No pricing or date is official.</p>
+      <p class="src"><a href="https://news.bgov.com/banking-law/anthropic-said-to-target-mega-ipo-before-thanksgiving-holiday">Bloomberg Government</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <h2>BMW brings Level 2 driver assist into cities, standard-fit from 2027</h2>
+      <p>BMW said (2 November) it will extend its driver-assistance system to urban driving, with the required sensor/compute hardware becoming standard on key model lines from 2027. Rollout starts in Germany pending final regulatory sign-off expected early 2027, then other markets. BMW is explicit that this remains SAE Level 2 &mdash; hands-on, driver-responsible &mdash; not autonomous driving, positioning it against Tesla&rsquo;s supervised FSD and Mercedes&rsquo; L2++ stack.</p>
+      <p class="src"><a href="https://www.autonews.com/bmw/ane-bmw-urban-self-driving-standard-fit-1102/">Automotive News</a></p>
+    </article>
+    <article>
+      <h2>Tesla adds Fort Worth to its robotaxi network; NHTSA probes school-zone speeding</h2>
+      <p>Tesla launched robotaxi service in Fort Worth on 2 November, extending its Texas footprint alongside Austin, Dallas and Houston. Separately, NHTSA is reviewing a complaint alleging the automated driving system sped in school zones, covering both Model Y and Cybercab robotaxis. Consumer FSD (v14.3.x as of 31 October) remains supervised.</p>
+      <p class="src"><a href="https://autos.yahoo.com/ev-and-future-tech/articles/tesla-adds-fort-worth-growing-211522456.html">Yahoo Autos</a></p>
+    </article>
+    <article>
+      <h2>Safety and cybersecurity now have to be engineered together (MBD angle)</h2>
+      <p>An Electronics Weekly analysis argues ISO 26262 (functional safety) and ISO/SAE 21434 (cybersecurity) can no longer be separate workstreams: AUTOSAR&rsquo;s SecOC adds per-frame authentication and a freshness counter, and the piece quantifies the crypto latency this adds on a safety-critical braking ECU handling an ADAS camera command &mdash; a direct concern for MBD teams budgeting timing on secured signal paths. <span class="tag">(analysis, late October &mdash; not new-this-week)</span></p>
+      <p class="src"><a href="https://www.electronicsweekly.com/news/business/linking-functional-safety-with-cybersecurity-in-the-automotive-industry-2026-10/">Electronics Weekly</a></p>
+    </article>
+    <article>
+      <h2>No new AUTOSAR platform release this cycle</h2>
+      <p>Nothing surfaced in the past day or two on a fresh AUTOSAR (Classic or Adaptive) release or a new OEM functional-safety milestone. Watch items remain the next AUTOSAR drops and how combined safety-plus-security requirements reshape classic ECU toolchains.</p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>October sales: a record festive month across the board</h2>
+      <p>GST 2.0 cuts and Diwali demand drove a strong October. Maruti Suzuki sold 2,12,384 domestic PVs (+20% YoY); Tata Motors held second at 73,894 (+20.9%); Mahindra posted its best-ever month of 73,338 domestic SUVs; and Hyundai did 62,799 (+16.7%). The industry is reading this as the real test after a frothy booking season &mdash; and it delivered.</p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/october-2026-car-sales-tata-retains-second-place-441189">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>Mercedes-Benz GLC Electric launches tomorrow (4 November)</h2>
+      <p>The locally assembled GLC Electric launches 4 November as the entry point to Mercedes-Benz India&rsquo;s electric SUV line-up, built off the Chakan (Pune) line. India gets the dual-motor 400 4MATIC; price is revealed at launch, with estimates around &#8377;80&ndash;85 lakh (ex-showroom).</p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/upcoming-car-launches-in-november-2026-441173">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>A busy November car calendar &mdash; most dates still &ldquo;expected&rdquo; <span class="tag">(dates largely unconfirmed)</span></h2>
+      <p>Trackers pencil in the Denza Z9 GT (13 Nov), Toyota Innova Hycross facelift (~26 Nov), Maruti Fronx facelift (~4 Nov) and MINI Cooper SE (~27 Nov). Treat the specific dates as tentative until the brands confirm.</p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/upcoming-car-launches-in-november-2026-441173">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>Electric two-wheeler launches cluster late in the month <span class="tag">(estimated dates)</span></h2>
+      <p>Listing sites expect the Ultraviolette X44 (~18 Nov) and F99 (~20 Nov), Ampere Xyber (~22 Nov) and Ather Redux (~26 Nov), plus the Oben O00 commuter (~&#8377;80k). All dates are estimates; one tracker could not corroborate a firmly-dated e-2W launch for November, so expect slippage.</p>
+      <p class="src"><a href="https://www.91wheels.com/upcoming-bikes/electric">91wheels.com</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>

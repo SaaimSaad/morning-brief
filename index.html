@@ -78,77 +78,87 @@
     <h1>The Morning Brief</h1>
     <div class="dateline">
       <span>Bengaluru</span>
-      <span id="edition-date">Monday, 2 November 2026</span>
+      <span id="edition-date">Tuesday, 3 November 2026</span>
       <span>For Odin</span>
     </div>
   </header>
 
-  <p class="lead">Anthropic is heading for a record Nasdaq debut within weeks: Bloomberg and the Wall Street Journal report the Claude maker will begin formally marketing its IPO (ticker &ldquo;ANT&rdquo;) around the week of 9 November and could start trading the week of 16 November, ahead of the 26 November Thanksgiving break. Reuters says investors are now circling a valuation near $1.5tn &mdash; trimmed from an earlier ~$2tn on a Q3 growth slowdown &mdash; which would still rank among the largest listings ever.</p>
+  <p class="lead">Anthropic&rsquo;s text watermarking goes live today: from 3 November, replies from Claude Mythos 5, Opus 4.7, Opus 4.6 and Sonnet 4.6 on the Claude API carry a detectable watermark &mdash; Anthropic&rsquo;s own build of Google DeepMind&rsquo;s SynthID-Text &mdash; with Amazon Bedrock following a few days later. It confirms what this brief flagged as a rumour yesterday. If you build on the API, note the signal marks text as written or processed by Claude, while its absence never proves a human wrote something.</p>
 
   <section>
     <div class="section-title">AI &amp; LLMs</div>
     <article>
-      <h2>Anthropic&rsquo;s mega-IPO firms up for mid-November; valuation reportedly cut to ~$1.5tn</h2>
-      <p>Following its 26 October S-1 (listing as &ldquo;ANT&rdquo;), reports now point to Anthropic marketing the offering around the week of 9 November and debuting the week of 16 November. Reuters says attendees at the late-October investor day are discussing a ~$1.5tn valuation, down from roughly $2tn earlier, after Q3 growth cooled. Bloomberg documents peg 2025 sales near $4.6bn, about 12x the prior year. Schedule and price remain unconfirmed.</p>
+      <h2>Claude text watermarking expands to older models, effective today</h2>
+      <p>Anthropic emailed API customers that from 3 November, output from Claude Mythos 5, Opus 4.7, Opus 4.6 and Sonnet 4.6 will carry a detectable watermark, with Amazon Bedrock a few days behind. It is Anthropic&rsquo;s implementation of SynthID-Text, the Google DeepMind technique published in Nature in 2024 &mdash; a statistical signal in token sampling, not an invisible character or metadata tag. A watermark shows text was written or processed by Claude; its absence does not prove a human wrote it.</p>
+      <p class="src"><a href="https://www.pcworld.com/article/3224834/claudes-updated-fable-and-mythos-models-watermark-their-replies.html">PCWorld</a></p>
+    </article>
+    <article>
+      <h2>Anthropic tightens usage policy, adds permanent bans in extreme cases</h2>
+      <p>CNN reports (1 November) that Anthropic added language to its usage policy allowing permanent account bans for the most severe or repeated violations. A spokesperson said enforcement will mostly take the milder form of Claude ending a conversation rather than cutting off accounts.</p>
+      <p class="src"><a href="https://www.cnn.com/2026/11/01/business/anthropic-dont-be-mean-claude-ban">CNN Business</a></p>
+    </article>
+    <article>
+      <h2>Google&rsquo;s Gemini 4 Carbon debuts, but access is locked down</h2>
+      <p>Announced 28 October as Google&rsquo;s strongest model, Carbon is pitched at cybersecurity and long-duration agentic tasks. Rather than a broad launch, Google is releasing it first to a subset of cyber-defenders under its Fairwind program, with no date for wider availability &mdash; a deliberately restricted rollout that contrasts with OpenAI&rsquo;s cheaper, broadly-available GPT-6.1 Terra from 26 October.</p>
+      <p class="src"><a href="https://ai-unpacked.com/stories/frontier-week-terra-carbon">AI Unpacked</a></p>
+    </article>
+    <article>
+      <h2>Anthropic IPO still firming for mid-November <span class="tag">(reported; schedule unconfirmed)</span></h2>
+      <p>Following its 26 October S-1 (ticker &ldquo;ANT&rdquo;), reports continue to point to marketing around the week of 9 November and a debut the week of 16 November, at a valuation discussed near ~$1.5tn. No pricing or date is official.</p>
       <p class="src"><a href="https://news.bgov.com/banking-law/anthropic-said-to-target-mega-ipo-before-thanksgiving-holiday">Bloomberg Government</a></p>
-    </article>
-    <article>
-      <h2>OpenAI ships GPT-6.1 Terra, a cheaper everyday model</h2>
-      <p>OpenAI released GPT-6.1 Terra on 26 October, positioned as a lower-cost default with roughly a 50% price cut versus the prior tier. On independent tracking it lands mid-pack &mdash; Vals AI ranks it #10 of 28 at ~60% on its index &mdash; so it trails frontier models but undercuts them on cost. OpenAI&rsquo;s own figures show a sharp drop in low-effort error rates; third-party replication is still thin.</p>
-      <p class="src"><a href="https://vals.ai/models/openai_gpt-6.1-terra">Vals AI</a></p>
-    </article>
-    <article>
-      <h2>Claude to begin watermarking text from older models on 3 November <span class="tag">(reported; via secondary source)</span></h2>
-      <p>A secondary report says Anthropic has told Claude Platform customers that from 3 November it will add detectable watermarks to text generated by several older Claude models. I could not confirm this on Anthropic&rsquo;s own pages, so treat it as reported rather than official &mdash; worth watching if you build on the API.</p>
-      <p class="src"><a href="https://cellcog.ai/blog/claude-watermark-older-models">cellcog.ai</a></p>
     </article>
   </section>
 
   <section>
     <div class="section-title">Automotive &amp; MBD</div>
     <article>
-      <h2>Tesla pushes FSD harder: v14.2.2.6 ships, US referral program opens, EU approval sought</h2>
-      <p>Tesla&rsquo;s 2026.39.6 update (around 29 October) carries FSD (Supervised) v14.2.2.6, and a US referral program for FSD reportedly went live on 30 October. Separately, Tesla is pressing for EU-wide type approval of its supervised system, with Italy said to be backing the push. Still driver-supervised, not unsupervised autonomy &mdash; but a steady cadence of OTA driving-stack releases worth tracking.</p>
-      <p class="src"><a href="https://www.notateslaapp.com/fsd-beta/">notateslaapp.com</a></p>
+      <h2>BMW brings Level 2 driver assist into cities, standard-fit from 2027</h2>
+      <p>BMW said (2 November) it will extend its driver-assistance system to urban driving, with the required sensor/compute hardware becoming standard on key model lines from 2027. Rollout starts in Germany pending final regulatory sign-off expected early 2027, then other markets. BMW is explicit that this remains SAE Level 2 &mdash; hands-on, driver-responsible &mdash; not autonomous driving, positioning it against Tesla&rsquo;s supervised FSD and Mercedes&rsquo; L2++ stack.</p>
+      <p class="src"><a href="https://www.autonews.com/bmw/ane-bmw-urban-self-driving-standard-fit-1102/">Automotive News</a></p>
     </article>
     <article>
-      <h2>Why ISO 26262 and ISO/SAE 21434 now have to be designed together</h2>
-      <p>An Electronics Weekly piece (October) argues that cybersecurity (ISO/SAE 21434) and functional safety (ISO 26262) can no longer be separate workstreams: mechanisms like AUTOSAR&rsquo;s SecOC add per-frame authentication and a freshness counter, and the article quantifies the real-time latency that crypto adds on a safety-critical braking ECU handling an ADAS camera command. Directly relevant for MBD teams budgeting timing on secured signal paths.</p>
+      <h2>Tesla adds Fort Worth to its robotaxi network; NHTSA probes school-zone speeding</h2>
+      <p>Tesla launched robotaxi service in Fort Worth on 2 November, extending its Texas footprint alongside Austin, Dallas and Houston. Separately, NHTSA is reviewing a complaint alleging the automated driving system sped in school zones, covering both Model Y and Cybercab robotaxis. Consumer FSD (v14.3.x as of 31 October) remains supervised.</p>
+      <p class="src"><a href="https://autos.yahoo.com/ev-and-future-tech/articles/tesla-adds-fort-worth-growing-211522456.html">Yahoo Autos</a></p>
+    </article>
+    <article>
+      <h2>Safety and cybersecurity now have to be engineered together (MBD angle)</h2>
+      <p>An Electronics Weekly analysis argues ISO 26262 (functional safety) and ISO/SAE 21434 (cybersecurity) can no longer be separate workstreams: AUTOSAR&rsquo;s SecOC adds per-frame authentication and a freshness counter, and the piece quantifies the crypto latency this adds on a safety-critical braking ECU handling an ADAS camera command &mdash; a direct concern for MBD teams budgeting timing on secured signal paths. <span class="tag">(analysis, late October &mdash; not new-this-week)</span></p>
       <p class="src"><a href="https://www.electronicsweekly.com/news/business/linking-functional-safety-with-cybersecurity-in-the-automotive-industry-2026-10/">Electronics Weekly</a></p>
     </article>
     <article>
-      <h2>Supplier compute consolidation: Magna widens NVIDIA DRIVE Hyperion work for OEM deployments</h2>
-      <p>Magna is expanding its collaboration with NVIDIA on the DRIVE Hyperion platform &mdash; contributing systems engineering, integration and validation while NVIDIA supplies the AI compute &mdash; to help automakers deploy software-defined driving stacks faster. It fits the broader shift (Mercedes&rsquo; CLA on DRIVE AGX with Level 2++ point-to-point assist) toward a few AI-compute platforms underpinning OEM autonomy roadmaps. <span class="tag">(ongoing collaboration, not a new-this-week announcement)</span></p>
-      <p class="src"><a href="https://evmagazine.com/news/magna-nvidia-helping-oems-create-ai-defined-vehicles">EV Magazine</a></p>
-    </article>
-    <article>
-      <h2>Quiet on new Adaptive AUTOSAR / ISO 26262 releases this weekend</h2>
-      <p>No fresh AUTOSAR platform release or OEM functional-safety milestone surfaced in the past day or two. The near-term watch items remain the next AUTOSAR releases, OEM software-stack reorganisations, and how safety-plus-security requirements reshape classic ECU toolchains.</p>
+      <h2>No new AUTOSAR platform release this cycle</h2>
+      <p>Nothing surfaced in the past day or two on a fresh AUTOSAR (Classic or Adaptive) release or a new OEM functional-safety milestone. Watch items remain the next AUTOSAR drops and how combined safety-plus-security requirements reshape classic ECU toolchains.</p>
     </article>
   </section>
 
   <section>
     <div class="section-title">India &middot; Cars &amp; Bikes</div>
     <article>
-      <h2>Mercedes-Benz GLC Electric launches in India in two days (4 November)</h2>
-      <p>Bookings are open and the launch of the locally assembled GLC Electric is locked for 4 November. India gets the dual-motor 400 4MATIC &mdash; around 360kW (~490hp) and 800Nm &mdash; off the Chakan (Pune) line, with price at launch; estimates run ~&#8377;80&ndash;85 lakh (ex-showroom). It lines up against the BMW iX3 LWB due in 2027.</p>
-      <p class="src"><a href="https://www.autocarindia.com/car-news/mercedes-glc-ev-bookings-open-in-october-launch-by-end-2026-440709">autocarindia.com</a></p>
+      <h2>October sales: a record festive month across the board</h2>
+      <p>GST 2.0 cuts and Diwali demand drove a strong October. Maruti Suzuki sold 2,12,384 domestic PVs (+20% YoY); Tata Motors held second at 73,894 (+20.9%); Mahindra posted its best-ever month of 73,338 domestic SUVs; and Hyundai did 62,799 (+16.7%). The industry is reading this as the real test after a frothy booking season &mdash; and it delivered.</p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/october-2026-car-sales-tata-retains-second-place-441189">Autocar India</a></p>
     </article>
     <article>
-      <h2>Festive demand running hot; October is the real test</h2>
-      <p>Maruti, Hyundai and Tata all report strong Diwali-season bookings. Maruti&rsquo;s retail between Ganesh Chaturthi and Dussehra was up ~35% year-on-year, and FADA called September a best-ever month for passenger-vehicle retail at 4,27,213 units (+32.1% YoY), aided by GST 2.0 cuts. Final October industry totals aren&rsquo;t out yet &mdash; the headline number to watch this week.</p>
-      <p class="src"><a href="https://www.businesstoday.in/auto/story/maruti-hyundai-tata-on-festive-ride-as-diwali-bookings-boom-562905-2026-10-21">Business Today</a></p>
+      <h2>Mercedes-Benz GLC Electric launches tomorrow (4 November)</h2>
+      <p>The locally assembled GLC Electric launches 4 November as the entry point to Mercedes-Benz India&rsquo;s electric SUV line-up, built off the Chakan (Pune) line. India gets the dual-motor 400 4MATIC; price is revealed at launch, with estimates around &#8377;80&ndash;85 lakh (ex-showroom).</p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/upcoming-car-launches-in-november-2026-441173">Autocar India</a></p>
     </article>
     <article>
-      <h2>A crowded November launch pipeline &mdash; mostly still estimates <span class="tag">(expected; dates unconfirmed)</span></h2>
-      <p>Listing trackers pencil in a busy month: Mahindra&rsquo;s Thar.e (date disputed, Aug vs Nov, ~&#8377;20&ndash;25 lakh expected), Maruti&rsquo;s Fronx facelift, and a wave of electric two-wheelers (Oben O00 commuter ~&#8377;80k, plus new Ather, Hero and Ola models). Treat the specific dates as tentative until the brands confirm.</p>
+      <h2>A busy November car calendar &mdash; most dates still &ldquo;expected&rdquo; <span class="tag">(dates largely unconfirmed)</span></h2>
+      <p>Trackers pencil in the Denza Z9 GT (13 Nov), Toyota Innova Hycross facelift (~26 Nov), Maruti Fronx facelift (~4 Nov) and MINI Cooper SE (~27 Nov). Treat the specific dates as tentative until the brands confirm.</p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/upcoming-car-launches-in-november-2026-441173">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>Electric two-wheeler launches cluster late in the month <span class="tag">(estimated dates)</span></h2>
+      <p>Listing sites expect the Ultraviolette X44 (~18 Nov) and F99 (~20 Nov), Ampere Xyber (~22 Nov) and Ather Redux (~26 Nov), plus the Oben O00 commuter (~&#8377;80k). All dates are estimates; one tracker could not corroborate a firmly-dated e-2W launch for November, so expect slippage.</p>
       <p class="src"><a href="https://www.91wheels.com/upcoming-bikes/electric">91wheels.com</a></p>
     </article>
   </section>
 
   <div class="archive">
     <strong>Past editions:</strong>
-    <span id="archive-list"><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+    <span id="archive-list"><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
   </div>
 
   <footer>Compiled by Claude &middot; updated daily</footer>
