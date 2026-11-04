@@ -78,87 +78,83 @@
     <h1>The Morning Brief</h1>
     <div class="dateline">
       <span>Bengaluru</span>
-      <span id="edition-date">Tuesday, 3 November 2026</span>
+      <span id="edition-date">Wednesday, 4 November 2026</span>
       <span>For Odin</span>
     </div>
   </header>
 
-  <p class="lead">Anthropic&rsquo;s text watermarking goes live today: from 3 November, replies from Claude Mythos 5, Opus 4.7, Opus 4.6 and Sonnet 4.6 on the Claude API carry a detectable watermark &mdash; Anthropic&rsquo;s own build of Google DeepMind&rsquo;s SynthID-Text &mdash; with Amazon Bedrock following a few days later. It confirms what this brief flagged as a rumour yesterday. If you build on the API, note the signal marks text as written or processed by Claude, while its absence never proves a human wrote something.</p>
+  <p class="lead">Anthropic&rsquo;s march to Wall Street is now the AI story of the week: ahead of a Nasdaq debut expected later this month (to trade as &ldquo;ANT&rdquo;), its S-1 lays bare an $80.7bn loss for the first half of 2026 against roughly $17bn of third-quarter revenue &mdash; the starkest look yet at what the frontier-model race costs to run, and at how dependent the company now is on its API business.</p>
 
   <section>
     <div class="section-title">AI &amp; LLMs</div>
     <article>
-      <h2>Claude text watermarking expands to older models, effective today</h2>
-      <p>Anthropic emailed API customers that from 3 November, output from Claude Mythos 5, Opus 4.7, Opus 4.6 and Sonnet 4.6 will carry a detectable watermark, with Amazon Bedrock a few days behind. It is Anthropic&rsquo;s implementation of SynthID-Text, the Google DeepMind technique published in Nature in 2024 &mdash; a statistical signal in token sampling, not an invisible character or metadata tag. A watermark shows text was written or processed by Claude; its absence does not prove a human wrote it.</p>
-      <p class="src"><a href="https://www.pcworld.com/article/3224834/claudes-updated-fable-and-mythos-models-watermark-their-replies.html">PCWorld</a></p>
+      <h2>Anthropic nears its Nasdaq IPO as the S-1 reveals an $80.7bn half-year loss</h2>
+      <p>On 3 November, CNN framed the imminent listing as the moment a company &ldquo;founded to answer to humanity&rdquo; starts answering to Wall Street. The S-1 filed 26 October (ticker &ldquo;ANT&rdquo;) discloses an $80.7bn loss for H1 2026 and more than 90 pages of risk factors, while separate reporting puts Q3 revenue near $17bn. A debut is expected later this month; no price or exact date is official yet.</p>
+      <p class="src"><a href="https://www.cnn.com/2026/11/03/tech/anthropic-ipo-ai-safety">CNN</a></p>
     </article>
     <article>
-      <h2>Anthropic tightens usage policy, adds permanent bans in extreme cases</h2>
-      <p>CNN reports (1 November) that Anthropic added language to its usage policy allowing permanent account bans for the most severe or repeated violations. A spokesperson said enforcement will mostly take the milder form of Claude ending a conversation rather than cutting off accounts.</p>
-      <p class="src"><a href="https://www.cnn.com/2026/11/01/business/anthropic-dont-be-mean-claude-ban">CNN Business</a></p>
+      <h2>Claude&rsquo;s text watermarking is now live on older models &mdash; with a reported loophole</h2>
+      <p>Anthropic&rsquo;s SynthID-Text watermark is now applied across the older Claude line as of 3 November, about a month ahead of the EU AI Act deadline. It is applied globally (regional targeting isn&rsquo;t yet reliable), and detection stays restricted to eligible organisations and regulators. MLQ reports the sampling-settings guidance isn&rsquo;t attached to Mythos 5 or Opus 4.7 &mdash; a possible compliance gap on two models. A mark shows text came from Claude; its absence proves nothing.</p>
+      <p class="src"><a href="https://mlq.ai/news/anthropics-claude-watermark-rollout-leaves-a-settings-loophole-on-two-models/">MLQ</a></p>
     </article>
     <article>
-      <h2>Google&rsquo;s Gemini 4 Carbon debuts, but access is locked down</h2>
-      <p>Announced 28 October as Google&rsquo;s strongest model, Carbon is pitched at cybersecurity and long-duration agentic tasks. Rather than a broad launch, Google is releasing it first to a subset of cyber-defenders under its Fairwind program, with no date for wider availability &mdash; a deliberately restricted rollout that contrasts with OpenAI&rsquo;s cheaper, broadly-available GPT-6.1 Terra from 26 October.</p>
-      <p class="src"><a href="https://ai-unpacked.com/stories/frontier-week-terra-carbon">AI Unpacked</a></p>
-    </article>
-    <article>
-      <h2>Anthropic IPO still firming for mid-November <span class="tag">(reported; schedule unconfirmed)</span></h2>
-      <p>Following its 26 October S-1 (ticker &ldquo;ANT&rdquo;), reports continue to point to marketing around the week of 9 November and a debut the week of 16 November, at a valuation discussed near ~$1.5tn. No pricing or date is official.</p>
-      <p class="src"><a href="https://news.bgov.com/banking-law/anthropic-said-to-target-mega-ipo-before-thanksgiving-holiday">Bloomberg Government</a></p>
+      <h2>The compute bill behind the IPO: OpenAI trims a raise, Nvidia pitches container-sized data centres</h2>
+      <p>A 3 November roundup notes OpenAI has reportedly cut its fundraising target by about $10bn amid market jitters over AI infrastructure spending, while Nvidia unveiled the &ldquo;DSX POD,&rdquo; a shipping-container-sized &ldquo;AI factory&rdquo; meant to stand up data-centre capacity in weeks rather than months. It is the capex backdrop to Anthropic&rsquo;s ~$17bn-quarter revenue and nine-figure half-year losses.</p>
+      <p class="src"><a href="https://www.ptechpartners.com/2026/11/03/october-2026-ai-news-roundup-revenue-vs-compute/">Peterson Technology Partners</a></p>
     </article>
   </section>
 
   <section>
     <div class="section-title">Automotive &amp; MBD</div>
     <article>
-      <h2>BMW brings Level 2 driver assist into cities, standard-fit from 2027</h2>
-      <p>BMW said (2 November) it will extend its driver-assistance system to urban driving, with the required sensor/compute hardware becoming standard on key model lines from 2027. Rollout starts in Germany pending final regulatory sign-off expected early 2027, then other markets. BMW is explicit that this remains SAE Level 2 &mdash; hands-on, driver-responsible &mdash; not autonomous driving, positioning it against Tesla&rsquo;s supervised FSD and Mercedes&rsquo; L2++ stack.</p>
-      <p class="src"><a href="https://www.autonews.com/bmw/ane-bmw-urban-self-driving-standard-fit-1102/">Automotive News</a></p>
+      <h2>Tesla switches on unsupervised robotaxi rides in Fort Worth</h2>
+      <p>Tesla launched Robotaxi in Fort Worth on 2 November with a 143-square-mile operating zone and, reportedly, unsupervised rides (no in-car safety monitor) &mdash; its first new city in over three months. Tesla also said Cybercab rides would reach Dallas &ldquo;next month.&rdquo; Consumer FSD remains supervised. Coverage flags that the exact start time and whether a monitor rode along were not fully clear.</p>
+      <p class="src"><a href="https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth">Not a Tesla App</a></p>
     </article>
     <article>
-      <h2>Tesla adds Fort Worth to its robotaxi network; NHTSA probes school-zone speeding</h2>
-      <p>Tesla launched robotaxi service in Fort Worth on 2 November, extending its Texas footprint alongside Austin, Dallas and Houston. Separately, NHTSA is reviewing a complaint alleging the automated driving system sped in school zones, covering both Model Y and Cybercab robotaxis. Consumer FSD (v14.3.x as of 31 October) remains supervised.</p>
-      <p class="src"><a href="https://autos.yahoo.com/ev-and-future-tech/articles/tesla-adds-fort-worth-growing-211522456.html">Yahoo Autos</a></p>
+      <h2>Mobileye lands a high-volume &ldquo;Surround ADAS&rdquo; program with a major US OEM</h2>
+      <p>Mobileye reported a high-volume Surround ADAS win with a major US automaker &mdash; a step up from front-facing assist to 360-degree perception using multiple cameras and radars around the vehicle. For an engineer eyeing an OEM role, it is a concrete read on where series ADAS content is heading: more sensors, more compute, tighter integration.</p>
+      <p class="src"><a href="https://www.sec.gov/Archives/edgar/data/1910139/000110465926005578/tm263599d1_ex99-1.htm">Mobileye (SEC 8-K)</a></p>
     </article>
     <article>
-      <h2>Safety and cybersecurity now have to be engineered together (MBD angle)</h2>
-      <p>An Electronics Weekly analysis argues ISO 26262 (functional safety) and ISO/SAE 21434 (cybersecurity) can no longer be separate workstreams: AUTOSAR&rsquo;s SecOC adds per-frame authentication and a freshness counter, and the piece quantifies the crypto latency this adds on a safety-critical braking ECU handling an ADAS camera command &mdash; a direct concern for MBD teams budgeting timing on secured signal paths. <span class="tag">(analysis, late October &mdash; not new-this-week)</span></p>
-      <p class="src"><a href="https://www.electronicsweekly.com/news/business/linking-functional-safety-with-cybersecurity-in-the-automotive-industry-2026-10/">Electronics Weekly</a></p>
+      <h2>Industry backdrop: softening Tesla deliveries, Europe&rsquo;s job squeeze</h2>
+      <p>OICA&rsquo;s 1 November digest flags Tesla EV deliveries set to fall on weak US demand, and warns that Europe&rsquo;s automotive job losses are outpacing the new EV and software roles being created &mdash; a reminder that the software-defined-vehicle transition is also a workforce story.</p>
+      <p class="src"><a href="https://oica.net/oica-5-news-monday-november-1-2026/">OICA</a></p>
     </article>
     <article>
-      <h2>No new AUTOSAR platform release this cycle</h2>
-      <p>Nothing surfaced in the past day or two on a fresh AUTOSAR (Classic or Adaptive) release or a new OEM functional-safety milestone. Watch items remain the next AUTOSAR drops and how combined safety-plus-security requirements reshape classic ECU toolchains.</p>
+      <h2>MBD &amp; functional safety: a quiet week, but Adaptive AUTOSAR keeps clearing ASIL bars</h2>
+      <p>Nothing genuinely new surfaced this cycle on a fresh AUTOSAR release or an OEM functional-safety milestone. The standing storyline worth tracking: Adaptive AUTOSAR stacks (e.g. Qorix, ETAS RTA-VRTE) continuing to earn TÜV ISO 26262 certification up to ASIL-B/D, and suppliers such as Schaeffler and Sonatus pushing edge-AI into motion control &mdash; sharpening the open question of how to make non-deterministic AI safe inside ASIL-rated control paths. <span class="tag">(background, not new this week)</span></p>
+      <p class="src"><a href="https://www.automotiveworld.com/news/tuv-certified-qorix-is-one-of-the-few-providers-with-a-certified-adaptive-autosar-stack/">Automotive World</a></p>
     </article>
   </section>
 
   <section>
     <div class="section-title">India &middot; Cars &amp; Bikes</div>
     <article>
-      <h2>October sales: a record festive month across the board</h2>
-      <p>GST 2.0 cuts and Diwali demand drove a strong October. Maruti Suzuki sold 2,12,384 domestic PVs (+20% YoY); Tata Motors held second at 73,894 (+20.9%); Mahindra posted its best-ever month of 73,338 domestic SUVs; and Hyundai did 62,799 (+16.7%). The industry is reading this as the real test after a frothy booking season &mdash; and it delivered.</p>
+      <h2>October: India&rsquo;s monthly PV wholesales cross 5 lakh for the first time</h2>
+      <p>GST 2.0 cuts and Diwali demand drove a record festive month, with passenger-vehicle dispatches crossing 5 lakh units. Maruti Suzuki led with 2,12,384 (+20.5% YoY), Tata was second at 73,894 (+20.9%), and Mahindra posted a best-ever ~73,338 domestic SUVs. The industry read this as the real test after a frothy booking season &mdash; and it delivered.</p>
       <p class="src"><a href="https://www.autocarindia.com/car-news/october-2026-car-sales-tata-retains-second-place-441189">Autocar India</a></p>
     </article>
     <article>
-      <h2>Mercedes-Benz GLC Electric launches tomorrow (4 November)</h2>
-      <p>The locally assembled GLC Electric launches 4 November as the entry point to Mercedes-Benz India&rsquo;s electric SUV line-up, built off the Chakan (Pune) line. India gets the dual-motor 400 4MATIC; price is revealed at launch, with estimates around &#8377;80&ndash;85 lakh (ex-showroom).</p>
-      <p class="src"><a href="https://www.autocarindia.com/car-news/upcoming-car-launches-in-november-2026-441173">Autocar India</a></p>
+      <h2>But retail tells a cooler story &mdash; registrations down ~15% YoY</h2>
+      <p>Vahan data counted ~4,67,494 registrations for October, down about 15% YoY even as it rose month-on-month. The gap between dispatches (to dealers) and registrations (to buyers) is the number to watch: wholesale records can mask inventory build-up if retail doesn&rsquo;t follow. <span class="tag">(registration vs wholesale &mdash; read both)</span></p>
+      <p class="src"><a href="https://flashfinance.news/vahan/reports/car-sales-october-2026">FlashFinance (Vahan)</a></p>
     </article>
     <article>
-      <h2>A busy November car calendar &mdash; most dates still &ldquo;expected&rdquo; <span class="tag">(dates largely unconfirmed)</span></h2>
-      <p>Trackers pencil in the Denza Z9 GT (13 Nov), Toyota Innova Hycross facelift (~26 Nov), Maruti Fronx facelift (~4 Nov) and MINI Cooper SE (~27 Nov). Treat the specific dates as tentative until the brands confirm.</p>
-      <p class="src"><a href="https://www.autocarindia.com/car-news/upcoming-car-launches-in-november-2026-441173">Autocar India</a></p>
+      <h2>Mercedes-Benz GLC Electric launches in India today (4 November)</h2>
+      <p>The Chakan (Pune)-assembled GLC 400 4MATIC &mdash; a 94kWh pack and a claimed 715km WLTP range &mdash; launches today as Mercedes-Benz India&rsquo;s new electric SUV flagship. Price is revealed at launch; pre-launch estimates cluster around &#8377;84&ndash;85 lakh (ex-showroom). Its long-wheelbase BMW iX3 rival isn&rsquo;t due until 2027.</p>
+      <p class="src"><a href="https://www.autocarpro.in/news/mercedes-benz-glc-electric-to-launch-in-india-on-november-4-134957">Autocar Professional</a></p>
     </article>
     <article>
-      <h2>Electric two-wheeler launches cluster late in the month <span class="tag">(estimated dates)</span></h2>
-      <p>Listing sites expect the Ultraviolette X44 (~18 Nov) and F99 (~20 Nov), Ampere Xyber (~22 Nov) and Ather Redux (~26 Nov), plus the Oben O00 commuter (~&#8377;80k). All dates are estimates; one tracker could not corroborate a firmly-dated e-2W launch for November, so expect slippage.</p>
-      <p class="src"><a href="https://www.91wheels.com/upcoming-bikes/electric">91wheels.com</a></p>
+      <h2>Electric two-wheeler launches cluster late in November <span class="tag">(dates tentative)</span></h2>
+      <p>Aggregator calendars pencil in the Ather Redux (~22 Nov, ~&#8377;1.2&ndash;1.4 lakh) and an Ola Electric model (~26 Nov); note the Hero Xtreme 400s (~20 Nov) is petrol, not electric. Royal Enfield&rsquo;s Flying Flea electric remains confirmed for a late-2026 launch. Treat the specific November dates as unconfirmed until the brands announce.</p>
+      <p class="src"><a href="https://www.91wheels.com/upcoming-bikes/electric-bikes-under-2-lakh">91wheels.com</a></p>
     </article>
   </section>
 
   <div class="archive">
     <strong>Past editions:</strong>
-    <span id="archive-list"><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+    <span id="archive-list"><a href="archive/2026-11-04.html">04 Nov</a><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
   </div>
 
   <footer>Compiled by Claude &middot; updated daily</footer>
