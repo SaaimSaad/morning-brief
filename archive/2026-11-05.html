@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Thursday, 5 November 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">Anthropic&rsquo;s Nasdaq debut now has a target window: reporting points to a listing in the week of 16 November &mdash; with pricing placed by some outlets around 19&ndash;20 November &mdash; for the company that filed its S-1 on 26 October to trade as &ldquo;ANT.&rdquo; Nothing is officially priced until the roadshow closes and the SEC declares the registration effective, so treat the dates as reported, not set.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>Anthropic&rsquo;s IPO window firms up: a mid-November Nasdaq debut now looks likely</h2>
+      <p>IPO trackers and reporting now point to Anthropic listing in the week of 16 November, with pricing placed by some outlets around 19&ndash;20 November; the public S-1 (filed 26 October, ticker &ldquo;ANT&rdquo;) remains the primary document. Pricing isn&rsquo;t final until the roadshow closes and the SEC declares the registration effective. <span class="tag">(reported timing, not officially priced)</span></p>
+      <p class="src"><a href="https://leverageshares.com/us/anthropic-ipo-tracker/">LeverageShares (IPO tracker)</a></p>
+    </article>
+    <article>
+      <h2>OpenAI moves to acquire hardware startup Pierre as agent-written code climbs</h2>
+      <p>Industry roundups report OpenAI announced on 4 November it will acquire Pierre Computer Company, alongside plans to merge &ldquo;Chat&rdquo; and &ldquo;Work&rdquo; inside ChatGPT, against a backdrop of agent-generated GitHub pull requests rising several-fold. These details come from secondary roundups, not an OpenAI release I could confirm directly. <span class="tag">(reported &mdash; unverified against primary source)</span></p>
+      <p class="src"><a href="https://fourweekmba.com/ai-openai-to-buy-pierre-as-agent-made-github-prs-climb-6x/">FourWeekMBA</a></p>
+    </article>
+    <article>
+      <h2>Microsoft ships &ldquo;Execution Containers&rdquo; to sandbox AI agents</h2>
+      <p>A Mag-7 weekly roundup reports Microsoft made Execution Containers generally available, giving AI agents a restricted environment to run in, with Anthropic, OpenAI and Nvidia named as users. For anyone deploying agents against real systems, the sandbox-first default is the notable part. <span class="tag">(reported)</span></p>
+      <p class="src"><a href="https://stocktwits.com/news-articles/markets/equity/mag-7-voices-how-nvidia-microsoft-alphabet-meta-reshaped-ai-this-week/cZxT1H2RBn8">Stocktwits</a></p>
+    </article>
+    <article>
+      <h2>A quieter frontier-model week &mdash; the live thread is protecting and evaluating models</h2>
+      <p>No major new frontier model launched in the last 48 hours (Anthropic&rsquo;s most recent is Haiku 5.5, 7 October). The threads worth tracking: Anthropic says it has cut model-distillation attack rates by over 90% (12 October) and has given independent evaluator METR employee-like access to its systems (15 October) &mdash; both about keeping models safe and checkable, not just larger.</p>
+      <p class="src"><a href="https://www.anthropic.com/news">Anthropic (news)</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <h2>Tesla closes the gap on Waymo in Texas &mdash; but still trails ~7x on national driverless miles</h2>
+      <p>State-registry snapshots put Tesla&rsquo;s Texas robotaxi fleet around 1,244 vehicles, roughly 15 behind Waymo&rsquo;s ~1,259, and Tesla&rsquo;s Austin fleet reportedly logged ~438,000 miles in a week against Waymo&rsquo;s ~406,000 locally. Nationally, Waymo still runs about seven times more driverless miles each week. Registration counts aren&rsquo;t the same as cars actually operating. <span class="tag">(fleet figures vary by source)</span></p>
+      <p class="src"><a href="https://www.benzinga.com/trading-ideas/long-ideas/26/11/62781991/tesla-robotaxi-waymo-texas">Benzinga</a></p>
+    </article>
+    <article>
+      <h2>Functional-safety week in Stuttgart: ISO 26262, SOTIF and the new AI-safety standard</h2>
+      <p>The 4th Automotive Functional Safety Forum (Stuttgart, 4&ndash;5 November) centres on ISO 26262, SOTIF and ISO/PAS 8800 &mdash; the emerging &ldquo;safety and AI&rdquo; standard for road vehicles. That triad is exactly the framing for putting machine-learning functions inside ASIL-rated paths, the open problem for MBD teams adding AI to control software. <span class="tag">(industry event)</span></p>
+      <p class="src"><a href="https://www.leadventgrp.com/events/4th-annual-automotive-functional-safety-forum/details">Leadvent Group</a></p>
+    </article>
+    <article>
+      <h2>Safety meets cybersecurity: AUTOSAR SecOC adds latency to the braking path</h2>
+      <p>An Electronics Weekly analysis argues ISO/SAE 21434 pushes mechanisms like AUTOSAR&rsquo;s SecOC (secure onboard communication) into ECUs, and that authenticating messages adds latency to time-critical paths such as braking &mdash; a concrete safety-vs-security trade-off model-based teams now have to budget for in the schedule. <span class="tag">(analysis, Oct 2026)</span></p>
+      <p class="src"><a href="https://www.electronicsweekly.com/news/business/linking-functional-safety-with-cybersecurity-in-the-automotive-industry-2026-10/">Electronics Weekly</a></p>
+    </article>
+    <article>
+      <h2>No fresh AUTOSAR release or named OEM functional-safety milestone this cycle</h2>
+      <p>Nothing genuinely new landed on an AUTOSAR release or a specific OEM ASIL milestone in the last 48 hours. The standing story remains the standards-and-tooling one: Adaptive AUTOSAR stacks earning ISO 26262 certification, plus ISO/PAS 8800 defining how AI functions get a safety case. <span class="tag">(nothing new this cycle)</span></p>
+      <p class="src"><a href="https://modelwise.ai/functional-safety-events-october-26-edition/">Modelwise</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>EICMA 2026: Royal Enfield shows its biggest bikes yet &mdash; Himalayan 750 and Continental GT 750</h2>
+      <p>At EICMA in Milan (3&ndash;8 November), Royal Enfield revealed 750cc versions of the Himalayan adventure-tourer and the Continental GT caf&eacute; racer &mdash; its largest-capacity models to date. India launch timing and full specifications weren&rsquo;t confirmed at the show; expect a staggered rollout rather than an immediate on-sale date. <span class="tag">(India timing unconfirmed)</span></p>
+      <p class="src"><a href="https://www.cartoq.com/bike-news/10-bikes-unveiled-eicma-2026-coming-to-india/">CarToq</a></p>
+    </article>
+    <article>
+      <h2>Hero goes upmarket at EICMA: a retro Classic Concept and the XPulse 450</h2>
+      <p>Hero MotoCorp unveiled a &ldquo;Classic Concept&rdquo; aimed squarely at the Royal Enfield Classic 350, plus an XPulse 450 built on a new ~421cc single-cylinder engine to push into the middleweight adventure segment. Name, final specs, price and production timing are all still unconfirmed. <span class="tag">(concept / pre-launch)</span></p>
+      <p class="src"><a href="https://www.bikedekho.com/news/hero-classic-bike-concept-unveiled-at-eicma-2026-20613">BikeDekho</a></p>
+    </article>
+    <article>
+      <h2>An electric Royal Enfield Himalayan also broke cover at EICMA</h2>
+      <p>Royal Enfield showed an electric Himalayan with styling close to the Himalayan 452, underlining its EV intent alongside the Flying Flea electric brand slated for a late-2026 launch. Specs and pricing are not yet official. <span class="tag">(unofficial specs)</span></p>
+      <p class="src"><a href="https://www.notebookcheck.net/Electric-Royal-Enfield-Himalayan-makes-shocking-debut-at-EICMA-bearing-polished-Himalayan-452-styling.765979.0.html">Notebookcheck</a></p>
+    </article>
+    <article>
+      <h2>India&rsquo;s November car pipeline: Thar.e, Safari EV, Fronx facelift, Hyundai Inster</h2>
+      <p>Aggregator calendars pencil in a busy month &mdash; Mahindra&rsquo;s electric Thar.e (dual-motor AWD, ~&#8377;20&ndash;25 lakh estimated), the Tata Safari EV, a Maruti Fronx facelift and the Hyundai Inster. Every date and price here is an aggregator estimate, not an official launch confirmation. <span class="tag">(dates are estimates, not confirmed)</span></p>
+      <p class="src"><a href="https://www.carlelo.com/news/5-new-cars-set-to-launch-in-india-in-november-2026">Carlelo</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-11-05.html">05 Nov</a><a href="archive/2026-11-04.html">04 Nov</a><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>
