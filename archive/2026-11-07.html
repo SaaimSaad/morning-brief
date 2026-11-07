@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Saturday, 7 November 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">OpenAI says an autonomous pipeline sifted 2,308 Linux-kernel bug reports, built working root exploits for 948 of them and generated candidate patches &mdash; for roughly $1.2M in compute &mdash; the clearest sign yet that AI can run the full find&ndash;exploit&ndash;fix loop on safety-critical code.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>OpenAI&rsquo;s autonomous pipeline finds &mdash; and exploits &mdash; 948 Linux-kernel privilege-escalation bugs</h2>
+      <p>In a post titled &ldquo;A thousand fewer paths to root,&rdquo; OpenAI describes an autonomous agent pipeline that analysed ~2,308 Linux-kernel bug reports, confirmed and built working local privilege-escalation exploits for 948 of them, and generated candidate patches &mdash; at a reported cost of about $1.2M in API compute. It is part of OpenAI&rsquo;s Daybreak cyber effort; findings are being routed to kernel maintainers via its &ldquo;Patch the Planet&rdquo; programme rather than published as exploit code. For an embedded/MBD engineer this is the signal to watch: AI closing the full find&ndash;exploit&ndash;fix loop on exactly the kind of low-level C that runs in vehicles. <span class="tag">(official OpenAI post; figures via its own write-up and secondary coverage)</span></p>
+      <p class="src"><a href="https://openai.com/index/a-thousand-fewer-paths-to-root/">OpenAI</a></p>
+    </article>
+    <article>
+      <h2>Anthropic IPO: roadshow reportedly proceeds next week, listing still targeted for week of 16 Nov</h2>
+      <p>Per reporting (The Information, relayed 6 Nov), Anthropic plans to go ahead with its investor roadshow next week and is still aiming to list on Nasdaq (ticker &ldquo;ANT&rdquo;) the week of 16 November, ahead of Thanksgiving. But some large investors are now questioning the ~$1.5&ndash;1.6 trillion valuation after a broad AI-stock sell-off. The S-1, filed publicly 26 October, still has blank price and share-count fields &mdash; nothing is priced until an amended S-1 and the roadshow close. <span class="tag">(timing and valuation reported, not official)</span></p>
+      <p class="src"><a href="https://finance.yahoo.com/markets/stocks/articles/big-investors-now-doubt-anthropic-133505249.html">Yahoo Finance</a></p>
+    </article>
+    <article>
+      <h2>Nvidia reportedly tells cloud partners: at least 51% of services must go to non-Chinese customers</h2>
+      <p>The Financial Times reports Nvidia has told cloud-computing clients that &ge;51% of their services must be sold to companies outside China, said to apply to new contracts worldwide and delivered verbally. Reuters could not verify it and Nvidia did not confirm the figure; it&rsquo;s unclear whether 51% is measured by revenue, compute-hours or customers. Chinese tech stocks fell on the news (Shanghai&rsquo;s STAR 50 down ~3.8%). <span class="tag">(reported via FT; unverified, Nvidia non-committal)</span></p>
+      <p class="src"><a href="https://thenextweb.com/news/nvidia-cloud-partners-cap-china-business">The Next Web</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <h2>AUTOSAR ships CAPI 1.0 &mdash; executable Adaptive Platform code, not just a spec</h2>
+      <p>At the 17th AUTOSAR Open Conference in Shanghai (announced 28 Oct, with partner iSOFT), AUTOSAR released CAPI 1.0: production-oriented, executable Adaptive Platform software covering all 15 core functional clusters, with source on GitHub. It marks a real shift from a specification body toward shipping reference code, with a live demo planned on an automotive ECU. AUTOSAR notes the Adaptive Platform is already in production programmes at BMW, Mercedes-Benz, VW and Xiaomi &mdash; directly relevant if you&rsquo;re moving toward Adaptive and SDV work at an OEM. <span class="tag">(official AUTOSAR; late-Oct release, most significant AUTOSAR news this cycle)</span></p>
+      <p class="src"><a href="https://www.autosar.org/news-events/detail/capi-release-10-is-here">AUTOSAR</a></p>
+    </article>
+    <article>
+      <h2>Musk: Tesla to wind down Cybertruck ~mid-2027 to free capacity for the Cybercab</h2>
+      <p>In a 5 November post on X, Elon Musk said Tesla plans to wind down Cybertruck production at Gigafactory Texas around mid-2027 to free capacity for the autonomous Cybercab. Separately, Tesla&rsquo;s Cybercab robotaxis have reportedly begun testing on Detroit-area roads alongside Waymo. The through-line: capacity and attention are being redirected from a niche EV toward the driverless fleet. <span class="tag">(Musk X post; Detroit testing reported)</span></p>
+      <p class="src"><a href="https://autos.yahoo.com/ev-and-future-tech/articles/cybertruck-nearing-end-road-musk-131236534.html">Yahoo Autos</a></p>
+    </article>
+    <article>
+      <h2>Robotaxi alliances reshuffle: Waymo to end Uber exclusivity, signs Avis; Lyft leans on Baidu + Waymo</h2>
+      <p>On Q3 earnings, Lyft said Waymo will end its exclusive robotaxi partnership with Uber in Austin and Atlanta by January 2028, and that Lyft is deepening ties with Baidu&rsquo;s Apollo Go and with Waymo. Waymo has also signed a multi-year fleet-management partnership with Avis. The commercial map for AV deployment is being redrawn around fleet ops and platform access, not just the self-driving stack. <span class="tag">(reported &mdash; company earnings commentary)</span></p>
+      <p class="src"><a href="https://www.benzinga.com/markets/earnings/26/11/62966806/robotaxis-arent-killing-lyfts-business-ceo-says-company-is-growing-in-av-markets-details-waymo-partnership">Benzinga</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>Royal Enfield launches the Himalayan 750 at EICMA &mdash; its biggest bike yet</h2>
+      <p>Royal Enfield officially revealed the Himalayan 750 at EICMA 2026 (Milan): a new 743cc air/oil-cooled parallel-twin making ~54 bhp at 7,000 rpm and 63 Nm at 5,000 rpm, 224 kg kerb, 815 mm seat, a 4-inch TFT, five ride modes, cornering ABS and lean-sensitive traction control. UK pricing starts around &pound;6,999. RE also showed the Continental GT 750 and the electric Flying Flea S6. India reveal is expected at Motoverse in Goa late this month; Indian price and timing are not yet confirmed. <span class="tag">(official reveal; India price/timing unconfirmed)</span></p>
+      <p class="src"><a href="https://www.autocarpro.in/news/royal-enfield-himalayan-750-launched-at-eicma-2026-135667">Autocar Professional</a></p>
+    </article>
+    <article>
+      <h2>Mahindra Thar.e expected 15 November</h2>
+      <p>Multiple India trackers list the all-electric Mahindra Thar.e for a 15 November launch, with an estimated price around &#8377;25 lakh. Treat the date and price as aggregator estimates until Mahindra confirms &mdash; but it&rsquo;s the most-cited India EV launch of the month. <span class="tag">(date/price are reported estimates, not official)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/upcoming-car-launches-in-november-2026-441173">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>India&rsquo;s November car slate: Tata Safari EV, Denza Z9 GT, plus a possible Maruti e-MPV</h2>
+      <p>Beyond the Thar.e, the month&rsquo;s India calendar points to a Tata Safari EV (possible this month, may slip to December), BYD-owned Denza&rsquo;s Z9 GT India debut (~27 Nov), and a rumoured Maruti electric MPV (codename &ldquo;YMC,&rdquo; ~13 Nov estimate). Dates mix confirmed debuts with aggregator estimates; the firmer entries are the Denza and the Thar.e. <span class="tag">(mix of confirmed debuts and estimated dates)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/upcoming-cars">Autocar India (upcoming cars)</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-11-07.html">07 Nov</a><a href="archive/2026-11-06.html">06 Nov</a><a href="archive/2026-11-05.html">05 Nov</a><a href="archive/2026-11-04.html">04 Nov</a><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>

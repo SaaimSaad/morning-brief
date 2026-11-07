@@ -78,88 +78,73 @@
     <h1>The Morning Brief</h1>
     <div class="dateline">
       <span>Bengaluru</span>
-      <span id="edition-date">Friday, 6 November 2026</span>
+      <span id="edition-date">Saturday, 7 November 2026</span>
       <span>For Odin</span>
     </div>
   </header>
 
-  <p class="lead">A week out from its targeted Nasdaq debut, Anthropic&rsquo;s IPO valuation is reportedly being pulled down toward $1.5&ndash;1.6 trillion from a ~$2 trillion ambition as a broad tech sell-off meets investor caution &mdash; still, on any of those numbers, the largest technology listing ever attempted.</p>
+  <p class="lead">OpenAI says an autonomous pipeline sifted 2,308 Linux-kernel bug reports, built working root exploits for 948 of them and generated candidate patches &mdash; for roughly $1.2M in compute &mdash; the clearest sign yet that AI can run the full find&ndash;exploit&ndash;fix loop on safety-critical code.</p>
 
   <section>
     <div class="section-title">AI &amp; LLMs</div>
     <article>
-      <h2>Anthropic IPO: valuation reportedly trimmed to ~$1.5&ndash;1.6T as the mid-November window nears</h2>
-      <p>Anthropic filed its S-1 publicly on 26 October (Nasdaq, ticker &ldquo;ANT&rdquo;) and is targeting a listing as early as the week of 16 November. Reporting now says institutional investors are pushing the valuation down to roughly $1.5&ndash;1.6 trillion from a ~$2 trillion target amid a tech sell-off; the prospectus details hundreds of billions in multi-year compute commitments among the key risks. Nothing is priced until the roadshow closes and the SEC declares the registration effective. <span class="tag">(valuation figures reported, not official)</span></p>
-      <p class="src"><a href="https://www.bloomberg.com/news/articles/2026-11-02/anthropic-ipo-explained-s-1-filing-nasdaq-listing-and-key-risks">Bloomberg</a></p>
+      <h2>OpenAI&rsquo;s autonomous pipeline finds &mdash; and exploits &mdash; 948 Linux-kernel privilege-escalation bugs</h2>
+      <p>In a post titled &ldquo;A thousand fewer paths to root,&rdquo; OpenAI describes an autonomous agent pipeline that analysed ~2,308 Linux-kernel bug reports, confirmed and built working local privilege-escalation exploits for 948 of them, and generated candidate patches &mdash; at a reported cost of about $1.2M in API compute. It is part of OpenAI&rsquo;s Daybreak cyber effort; findings are being routed to kernel maintainers via its &ldquo;Patch the Planet&rdquo; programme rather than published as exploit code. For an embedded/MBD engineer this is the signal to watch: AI closing the full find&ndash;exploit&ndash;fix loop on exactly the kind of low-level C that runs in vehicles. <span class="tag">(official OpenAI post; figures via its own write-up and secondary coverage)</span></p>
+      <p class="src"><a href="https://openai.com/index/a-thousand-fewer-paths-to-root/">OpenAI</a></p>
     </article>
     <article>
-      <h2>OpenAI&rsquo;s GPT-6 family goes live inside Google Cloud&rsquo;s model garden</h2>
-      <p>Google Cloud is making OpenAI models &mdash; GPT-6 Astra, GPT-6.1 Sol and GPT-6 Luna &mdash; available to enterprise customers, rolling out now in private preview via Vertex AI. It is a notable cross-vendor move: two direct rivals meeting on the same managed platform, with customers able to call OpenAI alongside Gemini. <span class="tag">(official &mdash; Google Cloud blog)</span></p>
-      <p class="src"><a href="https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers">Google Cloud</a></p>
+      <h2>Anthropic IPO: roadshow reportedly proceeds next week, listing still targeted for week of 16 Nov</h2>
+      <p>Per reporting (The Information, relayed 6 Nov), Anthropic plans to go ahead with its investor roadshow next week and is still aiming to list on Nasdaq (ticker &ldquo;ANT&rdquo;) the week of 16 November, ahead of Thanksgiving. But some large investors are now questioning the ~$1.5&ndash;1.6 trillion valuation after a broad AI-stock sell-off. The S-1, filed publicly 26 October, still has blank price and share-count fields &mdash; nothing is priced until an amended S-1 and the roadshow close. <span class="tag">(timing and valuation reported, not official)</span></p>
+      <p class="src"><a href="https://finance.yahoo.com/markets/stocks/articles/big-investors-now-doubt-anthropic-133505249.html">Yahoo Finance</a></p>
     </article>
     <article>
-      <h2>Google cuts Gemini video-generation prices ~30% with new Omni 1.2 Flash</h2>
-      <p>Coverage dated 5 November reports Google&rsquo;s Gemini Omni 1.2 Flash generates native ~15-second clips with better consistency while cutting prices about 30%, accessible through Google AI Studio and Vertex AI. The price-cutting underlines how fast inference costs for generative video are falling as the model race intensifies. <span class="tag">(reported &mdash; not yet confirmed against Google&rsquo;s own post)</span></p>
-      <p class="src"><a href="https://www.techbuzz.ai/articles/google-slashes-gemini-video-prices-30-as-ai-race-heats-up">TechBuzz</a></p>
-    </article>
-    <article>
-      <h2>No new frontier model this week &mdash; the action is the IPO and cross-platform distribution</h2>
-      <p>No major frontier model launched in the last 48 hours; the live threads are commercial (Anthropic&rsquo;s listing) and distributional (models showing up inside rivals&rsquo; clouds). For anyone building on these APIs, the signal is that model access is consolidating onto a few hyperscaler platforms rather than any single capability jump. <span class="tag">(context, not a launch)</span></p>
-      <p class="src"><a href="https://cloud.google.com/blog/products/ai-machine-learning/what-google-cloud-announced-in-ai-this-month">Google Cloud (monthly AI recap)</a></p>
+      <h2>Nvidia reportedly tells cloud partners: at least 51% of services must go to non-Chinese customers</h2>
+      <p>The Financial Times reports Nvidia has told cloud-computing clients that &ge;51% of their services must be sold to companies outside China, said to apply to new contracts worldwide and delivered verbally. Reuters could not verify it and Nvidia did not confirm the figure; it&rsquo;s unclear whether 51% is measured by revenue, compute-hours or customers. Chinese tech stocks fell on the news (Shanghai&rsquo;s STAR 50 down ~3.8%). <span class="tag">(reported via FT; unverified, Nvidia non-committal)</span></p>
+      <p class="src"><a href="https://thenextweb.com/news/nvidia-cloud-partners-cap-china-business">The Next Web</a></p>
     </article>
   </section>
 
   <section>
     <div class="section-title">Automotive &amp; MBD</div>
     <article>
-      <h2>VW launches full-scenario Level 2++ ADAS and leans hard on its GAIA world model</h2>
-      <p>Volkswagen rolled out a full-scenario Level 2++ ADAS within its VEGA technology stack in China, validated with its in-house GAIA 2.0 world model &mdash; which VW says runs simulations equivalent to ~5 million km of driving. The company targets L3 technology readiness in 2027 and has secured an L3 road-test permit in Hefei. The theme worth noting for MBD teams: simulation/world-models as the primary validation path for ML-in-the-loop functions. <span class="tag">(OEM announcement)</span></p>
-      <p class="src"><a href="https://www.autonomousvehicleinternational.com/news/adas/volkswagen-launches-full-scenario-level-2-adas-as-part-of-vega-technology-stack.html">Autonomous Vehicle International</a></p>
+      <h2>AUTOSAR ships CAPI 1.0 &mdash; executable Adaptive Platform code, not just a spec</h2>
+      <p>At the 17th AUTOSAR Open Conference in Shanghai (announced 28 Oct, with partner iSOFT), AUTOSAR released CAPI 1.0: production-oriented, executable Adaptive Platform software covering all 15 core functional clusters, with source on GitHub. It marks a real shift from a specification body toward shipping reference code, with a live demo planned on an automotive ECU. AUTOSAR notes the Adaptive Platform is already in production programmes at BMW, Mercedes-Benz, VW and Xiaomi &mdash; directly relevant if you&rsquo;re moving toward Adaptive and SDV work at an OEM. <span class="tag">(official AUTOSAR; late-Oct release, most significant AUTOSAR news this cycle)</span></p>
+      <p class="src"><a href="https://www.autosar.org/news-events/detail/capi-release-10-is-here">AUTOSAR</a></p>
     </article>
     <article>
-      <h2>Baidu unveils a closed-loop simulator generating up to 100,000 km of driving a day</h2>
-      <p>Reports dated 3&ndash;5 November say Baidu Apollo showed a closed-loop simulation model that can generate up to ~100,000 km of synthetic driving per day, pitched as a way to stress whole trips before deploying less-predictable end-to-end stacks at scale. Same lesson as VW: the verification problem for AI-driven vehicles is being met with massive simulated mileage, not just road testing. <span class="tag">(reported)</span></p>
-      <p class="src"><a href="https://wtvbam.com/2026/11/03/chinas-baidu-launches-ai-model-simulating-road-environment-for-robotaxis">WTVB / Reuters</a></p>
+      <h2>Musk: Tesla to wind down Cybertruck ~mid-2027 to free capacity for the Cybercab</h2>
+      <p>In a 5 November post on X, Elon Musk said Tesla plans to wind down Cybertruck production at Gigafactory Texas around mid-2027 to free capacity for the autonomous Cybercab. Separately, Tesla&rsquo;s Cybercab robotaxis have reportedly begun testing on Detroit-area roads alongside Waymo. The through-line: capacity and attention are being redirected from a niche EV toward the driverless fleet. <span class="tag">(Musk X post; Detroit testing reported)</span></p>
+      <p class="src"><a href="https://autos.yahoo.com/ev-and-future-tech/articles/cybertruck-nearing-end-road-musk-131236534.html">Yahoo Autos</a></p>
     </article>
     <article>
-      <h2>NHTSA proposes an optional cyan &ldquo;ADS marker lamp&rdquo; for driverless vehicles</h2>
-      <p>A proposed rule published 26 October would add an optional cyan marker lamp signalling that a vehicle is operating driverless; NHTSA said it &ldquo;lacks sufficient information&rdquo; to require it on every ADS vehicle. Public comments are due 25 November. A small but concrete step in the regulatory scaffolding around autonomy. <span class="tag">(proposed rule &mdash; comment period open)</span></p>
-      <p class="src"><a href="https://www.liamding.com/en/posts/2026-11-02-cyan-ads-marker-lamp-is-a-promise/">Analysis of NHTSA NPRM</a></p>
-    </article>
-    <article>
-      <h2>No fresh AUTOSAR release or named OEM ASIL milestone this cycle</h2>
-      <p>Nothing genuinely new landed on an AUTOSAR release or a specific OEM functional-safety milestone in the last 48 hours. The standing story remains how ISO 26262 / SOTIF / ISO&nbsp;PAS&nbsp;8800 frame a safety case for ML functions &mdash; and, as VW and Baidu show this week, world-model simulation is emerging as the practical evidence base for that argument. <span class="tag">(nothing new this cycle)</span></p>
-      <p class="src"><a href="https://autonomousvehicleinternational.com/news/ai-sensor-fusion/motional-to-launch-fully-driverless-level-4-robotaxi-service-in-las-vegas-by-2026.html">Autonomous Vehicle International</a></p>
+      <h2>Robotaxi alliances reshuffle: Waymo to end Uber exclusivity, signs Avis; Lyft leans on Baidu + Waymo</h2>
+      <p>On Q3 earnings, Lyft said Waymo will end its exclusive robotaxi partnership with Uber in Austin and Atlanta by January 2028, and that Lyft is deepening ties with Baidu&rsquo;s Apollo Go and with Waymo. Waymo has also signed a multi-year fleet-management partnership with Avis. The commercial map for AV deployment is being redrawn around fleet ops and platform access, not just the self-driving stack. <span class="tag">(reported &mdash; company earnings commentary)</span></p>
+      <p class="src"><a href="https://www.benzinga.com/markets/earnings/26/11/62966806/robotaxis-arent-killing-lyfts-business-ceo-says-company-is-growing-in-av-markets-details-waymo-partnership">Benzinga</a></p>
     </article>
   </section>
 
   <section>
     <div class="section-title">India &middot; Cars &amp; Bikes</div>
     <article>
-      <h2>EICMA 2026: Royal Enfield&rsquo;s biggest bike yet &mdash; the Himalayan 750</h2>
-      <p>At EICMA in Milan (3&ndash;8 November), Royal Enfield gave a world premiere to the Himalayan 750, reportedly a ~743cc parallel-twin making around 54 bhp, with European bookings open and a UK price from about &pound;6,999. India launch timing and final specs are not yet official; expect a staggered rollout. <span class="tag">(specs/price reported, India timing unconfirmed)</span></p>
-      <p class="src"><a href="https://endurrad.com/en/blogs/news-motorcycle-accessories/eicma-2026-moto-presentate-anteprime">Endurrad (EICMA 2026 live)</a></p>
+      <h2>Royal Enfield launches the Himalayan 750 at EICMA &mdash; its biggest bike yet</h2>
+      <p>Royal Enfield officially revealed the Himalayan 750 at EICMA 2026 (Milan): a new 743cc air/oil-cooled parallel-twin making ~54 bhp at 7,000 rpm and 63 Nm at 5,000 rpm, 224 kg kerb, 815 mm seat, a 4-inch TFT, five ride modes, cornering ABS and lean-sensitive traction control. UK pricing starts around &pound;6,999. RE also showed the Continental GT 750 and the electric Flying Flea S6. India reveal is expected at Motoverse in Goa late this month; Indian price and timing are not yet confirmed. <span class="tag">(official reveal; India price/timing unconfirmed)</span></p>
+      <p class="src"><a href="https://www.autocarpro.in/news/royal-enfield-himalayan-750-launched-at-eicma-2026-135667">Autocar Professional</a></p>
     </article>
     <article>
-      <h2>Hero pushes into the middleweight ADV class with the XPulse 450</h2>
-      <p>Day-two EICMA roundups say Hero MotoCorp revealed an XPulse 450 with upgraded engine and suspension, sitting above the XPulse 210 as a new flagship adventure bike. Final name, specs, price and India production timing remain unconfirmed. <span class="tag">(pre-launch &mdash; details unofficial)</span></p>
-      <p class="src"><a href="https://www.zabikers.co.za/2026/11/05/eicma-2026-day-two-highlights/">ZA Bikers</a></p>
-    </article>
-    <article>
-      <h2>India&rsquo;s EV two-wheelers at EICMA: Ultraviolette X-47 Venom confirmed; TVS teases four models</h2>
-      <p>Ultraviolette confirmed its X-47 Venom for EICMA 2026, while TVS said it will premiere four new models (pre-show chatter centred on an Apache RR 450 middleweight sportbike). Several TVS names and specs are still unconfirmed. <span class="tag">(mix of confirmed and unconfirmed)</span></p>
-      <p class="src"><a href="https://www.evfy.in/news/indian-electric-two-wheelers-eicma-2026-milan">EVFY</a></p>
-    </article>
-    <article>
-      <h2>India&rsquo;s November car calendar: Mercedes GLC Electric, Denza Z9 GT, Innova Hycross facelift, MINI Cooper SE</h2>
-      <p>Autocar India&rsquo;s calendar lists the Mercedes-Benz GLC Electric (4 Nov; 94kWh, ~715 km WLTP), BYD-owned Denza&rsquo;s Z9 GT India debut (~13 Nov), a Toyota Innova Hycross facelift (late Nov) and the second-gen MINI Cooper SE (~27 Nov). Rumoured but unconfirmed: a Maruti Fronx facelift, Tata Safari EV and Mahindra Thar.e. <span class="tag">(confirmed dates mixed with estimates)</span></p>
+      <h2>Mahindra Thar.e expected 15 November</h2>
+      <p>Multiple India trackers list the all-electric Mahindra Thar.e for a 15 November launch, with an estimated price around &#8377;25 lakh. Treat the date and price as aggregator estimates until Mahindra confirms &mdash; but it&rsquo;s the most-cited India EV launch of the month. <span class="tag">(date/price are reported estimates, not official)</span></p>
       <p class="src"><a href="https://www.autocarindia.com/car-news/upcoming-car-launches-in-november-2026-441173">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>India&rsquo;s November car slate: Tata Safari EV, Denza Z9 GT, plus a possible Maruti e-MPV</h2>
+      <p>Beyond the Thar.e, the month&rsquo;s India calendar points to a Tata Safari EV (possible this month, may slip to December), BYD-owned Denza&rsquo;s Z9 GT India debut (~27 Nov), and a rumoured Maruti electric MPV (codename &ldquo;YMC,&rdquo; ~13 Nov estimate). Dates mix confirmed debuts with aggregator estimates; the firmer entries are the Denza and the Thar.e. <span class="tag">(mix of confirmed debuts and estimated dates)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/upcoming-cars">Autocar India (upcoming cars)</a></p>
     </article>
   </section>
 
   <div class="archive">
     <strong>Past editions:</strong>
-    <span id="archive-list"><a href="archive/2026-11-06.html">06 Nov</a><a href="archive/2026-11-05.html">05 Nov</a><a href="archive/2026-11-04.html">04 Nov</a><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+    <span id="archive-list"><a href="archive/2026-11-07.html">07 Nov</a><a href="archive/2026-11-06.html">06 Nov</a><a href="archive/2026-11-05.html">05 Nov</a><a href="archive/2026-11-04.html">04 Nov</a><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
   </div>
 
   <footer>Compiled by Claude &middot; updated daily</footer>
