@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Monday, 9 November 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">Anthropic opens its IPO roadshow this week &mdash; but after last week&rsquo;s AI-stock rout, investors are now calling even a $1.5 trillion valuation a &ldquo;stretch,&rdquo; with some bracing for a Nasdaq debut (ticker ANT) nearer $1 trillion when it prices the week before Thanksgiving.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>Anthropic&rsquo;s IPO roadshow opens this week; investors call $1.5T a &ldquo;stretch&rdquo;</h2>
+      <p>Per CNBC (6 Nov), institutional investors now expect Anthropic to price below $1.5 trillion &mdash; some near $1 trillion &mdash; after last week&rsquo;s AI-stock selloff, down from the $1.5&ndash;2T floated weeks ago. Anthropic filed its public S-1 on 26 Oct (amended 2 Nov) to list Class A shares on Nasdaq as &ldquo;ANT&rdquo;; the roadshow is expected to kick off the week of 9 Nov with pricing reported around 19&ndash;20 Nov. Its last private mark was ~$965B (Series H, May). <span class="tag">(valuation and dates reported, not official until an amended S-1 sets the price range)</span></p>
+      <p class="src"><a href="https://www.cnbc.com/2026/11/06/investors-brace-for-anthropic-valuation-1point5-trillion-a-stretch.html">CNBC</a></p>
+    </article>
+    <article>
+      <h2>Google DeepMind shows AI agents flagging weaknesses in 1024-bit RSA</h2>
+      <p>On 6 Nov, DeepMind reportedly presented research in which AI agents, guided by researchers, helped identify two weaknesses in 1024-bit RSA cryptographic systems &mdash; a concrete example of frontier models being pointed at hard security and number-theory problems rather than chat. <span class="tag">(reported via weekly roundups; worth checking against DeepMind&rsquo;s own writeup before relying on it)</span></p>
+      <p class="src"><a href="https://aidapted.ro/en/articles/ai-news-8-november-2026/">AI News roundup (8 Nov)</a></p>
+    </article>
+    <article>
+      <h2>OpenAI runs a multi-agent pipeline against the Linux kernel</h2>
+      <p>OpenAI described a staged multi-agent system (Scout, Analyst, Triage, ExploitDev and patch agents) run on a mid-October Linux master branch: 2,308 candidate findings, 1,724 vulnerabilities reproduced in instrumented VMs, and 948 distinct local-privilege-escalation exploits built. It is pitched alongside OpenAI moving its Preparedness Framework to &ldquo;Critical&rdquo; with a dedicated security model. <span class="tag">(reported via AI digests; verify specifics against OpenAI&rsquo;s own publication)</span></p>
+      <p class="src"><a href="https://dev.to/hiroki-ii-ai/ai-daily-digest-november-6-2026-openai-ships-gpt-6-cyber-meta-buys-conductor-anthropic-locks-1jij">AI Daily Digest (6 Nov)</a></p>
+    </article>
+    <article>
+      <h2>Android Studio opens up to 40+ coding agents, including Claude and Codex</h2>
+      <p>Google&rsquo;s Android Studio now lets developers switch among 40+ coding agents &mdash; Claude Agent, OpenAI Codex and others &mdash; via the open Agent Client Protocol, with new CLI plugins for Claude Code and Codex. Connected agents get access to project info, build systems, the emulator and Logcat. A small but real sign of agent tooling standardising around a shared protocol. <span class="tag">(reported; feature-level, not a model release)</span></p>
+      <p class="src"><a href="https://aiagentstore.ai/ai-agent-news/this-week">AI Agents News (week of 3 Nov)</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <h2>VW Group China lands a Level 3 road-test permit in Hefei, eyes 2027 readiness</h2>
+      <p>Volkswagen Group China said on 26 Oct it secured a Level 3 automated-driving road-test permit in Hefei and has begun real-world testing and data collection, under what it calls the toughest L3 framework yet. The work runs through CARIZON, its JV with Horizon Robotics; VW targets L3 conditional autonomy in 2027 and L4 in 2029, with deliveries possibly from H2 2027. It&rsquo;s a testing permit only, not sales approval &mdash; and VW isn&rsquo;t first (Changan and BAIC Arcfox got limited L3 product approvals in late 2025). <span class="tag">(official VW announcement; 2027/2029 targets are company goals)</span></p>
+      <p class="src"><a href="https://cnevpost.com/2026/10/26/vw-secures-l3-road-test-permit-hefei/">CnEVPost</a></p>
+    </article>
+    <article>
+      <h2>Qorix gets T&Uuml;V S&Uuml;D certification for its Adaptive AUTOSAR stack (ASIL&nbsp;B)</h2>
+      <p>Qorix has achieved TÜV SÜD certification confirming its Adaptive AUTOSAR stack complies with ISO 26262 up to ASIL B, with the certification extending to its developer tooling; it already holds ASIL D certification for its Classic AUTOSAR stack. Certified Adaptive stacks are still rare &mdash; directly relevant to anyone moving from Classic-AUTOSAR/SIL work toward the high-performance, software-defined-vehicle side. <span class="tag">(vendor certification announcement; exact date not given in coverage)</span></p>
+      <p class="src"><a href="https://autotechinsight.spglobal.com/news/5283287/qorix-achieves-tv-sd-certification-for-adaptive-autosar-stack-ensuring-asil-b-compliance">S&amp;P Global AutoTechInsight</a></p>
+    </article>
+    <article>
+      <h2>BMW to bring nav-guided Level 2 city assist to Germany in 2027</h2>
+      <p>Per early-November roundups, BMW plans to launch SAE Level 2 navigation-guided driver assistance for city streets in Germany in 2027 &mdash; handling turns, lane changes and roundabouts &mdash; after UNECE R171 testing. The broader read is that mainstream OEMs are re-approaching automated driving through tightly-scoped, regulation-gated L2+ features rather than big L3 leaps. <span class="tag">(reported via industry roundups; verify timing against BMW&rsquo;s own release)</span></p>
+      <p class="src"><a href="https://blog.mean.ceo/autonomous-vehicles-news-november-2026/">Autonomous Vehicles News (Nov 2026)</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>Royal Enfield Himalayan 750 debuts at EICMA; India launch expected end-November</h2>
+      <p>RE unveiled the Himalayan 750 at EICMA 2026 with a new 743cc parallel-twin (63 Nm), five riding modes, adjustable Showa suspension, cornering ABS and TPMS. European bookings opened 3 Nov at a UK price of £6,999&ndash;8,699; the Continental GT 750 was shown alongside it. India launch is widely expected toward end-November, likely at Motoverse in Goa, with estimates clustering around ₹4&ndash;5.5 lakh. <span class="tag">(EICMA reveal and UK price official; India price and date are estimates, not confirmed by RE)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/bike-news/royal-enfield-himalayan-750-specs-and-uk-price-revealed-441207">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>India&rsquo;s November launch calendar: Denza, Innova Hycross update, Mini Cooper SE</h2>
+      <p>Listings point to a busy month: the Denza (BYD&rsquo;s premium brand) is reported for an India debut on 13 Nov, a Toyota Innova Hycross update around 25&ndash;26 Nov, and the Mini Cooper SE on 27 Nov. None is officially confirmed by the maker yet. <span class="tag">(reported/expected dates from launch trackers, not official confirmations)</span></p>
+      <p class="src"><a href="https://www.zigwheels.com/news">ZigWheels News</a></p>
+    </article>
+    <article>
+      <h2>India-bound from EICMA: Hero Vida UBX 06 (EV) and the BMW F 450 GS</h2>
+      <p>Among the India-bound machines shown at EICMA 2026: Hero unveiled the Vida UBX 06 electric scooter with an India launch slated for 2027, and the BMW F 450 GS / F 450 R are expected in India in late Q4 2026 or early 2027 with pricing to follow. The Hero Xpulse 450 (shown earlier at the same show) is confirmed for India shortly after its global rollout. <span class="tag">(official reveals; India timing reported, pricing TBA)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/auto-features/india-bound-bikes-and-scooters-from-eicma-2026-441268">Autocar India</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-11-09.html">09 Nov</a><a href="archive/2026-11-08.html">08 Nov</a><a href="archive/2026-11-07.html">07 Nov</a><a href="archive/2026-11-06.html">06 Nov</a><a href="archive/2026-11-05.html">05 Nov</a><a href="archive/2026-11-04.html">04 Nov</a><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>
