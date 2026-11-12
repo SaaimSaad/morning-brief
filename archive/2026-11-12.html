@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Thursday, 12 November 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">Anthropic&rsquo;s revised 2026 Usage Policy takes effect today &mdash; adding a model-welfare clause against sustained, purposeless cruelty to Claude and a new deceptive-activity section &mdash; even as the company starts its Nasdaq IPO roadshow prepared to accept a valuation well below the $2&nbsp;trillion its bulls wanted.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>Anthropic&rsquo;s revised Usage Policy takes effect today</h2>
+      <p>Announced 8 Oct, Anthropic&rsquo;s 2026 Usage Policy becomes effective 12 Nov. It adds a model-welfare clause barring sustained, purposeless cruelty toward Claude (Anthropic says Claude&rsquo;s ability to end such chats stays the primary enforcement), plus a new section on deceptive activity and tightened language on weapons, election deception, covert influence operations and surveillance. Anthropic frames most of it as codifying how it already enforced the prior (Sep 2025) policy.</p>
+      <p class="src"><a href="https://www.anthropic.com/news/usage-policy-update">Anthropic</a></p>
+    </article>
+    <article>
+      <h2>Anthropic starts its IPO roadshow &mdash; and its valuation keeps sliding</h2>
+      <p>Reports put the Nasdaq roadshow starting this week with a listing targeted for the week of 16 Nov (before Thanksgiving). The FT says Anthropic is prepared to accept a valuation &ldquo;well below the $2tn&rdquo; its most bullish investors wanted; Axios pegs the target roughly $1 trillion lower than a month ago, with ~$1.5T figures circulating. Last confirmed private mark: $965B (May 2026). <span class="tag">(timing and valuation are reported; no price range filed and Anthropic hasn&rsquo;t confirmed)</span></p>
+      <p class="src"><a href="https://www.implicator.ai/anthropic-could-start-ipo-roadshow-week-of-nov-9-putting-debut-before-thanksgiving/">Implicator.ai</a></p>
+    </article>
+    <article>
+      <h2>Google&rsquo;s Gemini app is coming to Apple CarPlay</h2>
+      <p>Google confirmed (11 Nov) that its Gemini assistant app is rolling out to Apple CarPlay, replacing Google Assistant in the car and bringing conversational, multi-step queries to the dashboard &mdash; a direct shot at Siri and a sign of how fast LLM assistants are moving into the cabin. The update was announced as arriving &ldquo;as soon as today,&rdquo; though it wasn&rsquo;t live everywhere at the time of reporting.</p>
+      <p class="src"><a href="https://9to5mac.com/2026/11/11/google-confirms-gemini-app-coming-to-apple-carplay">9to5Mac</a></p>
+    </article>
+    <article>
+      <h2>OpenAI&rsquo;s GPT-6 Cyber: first model rated &ldquo;Critical&rdquo; for cyber</h2>
+      <p>Released 5 Nov to approved security-testing customers, GPT-6 Cyber is the first OpenAI model classed &ldquo;Critical&rdquo; for cybersecurity under its Preparedness Framework. On OpenAI&rsquo;s own ExploitGym it scores 48.5% (up from 32.1% for GPT-5.6 Cyber); OpenAI says researchers used it to find 81 previously unknown high-severity Firefox vulnerabilities. <span class="tag">(benchmarks are OpenAI&rsquo;s own, not independently verified; a week old but notable)</span></p>
+      <p class="src"><a href="https://www.esecurityplanet.com/news/news-openai-gpt-6-cyber-security-benchmarks/">eSecurity Planet</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <p class="tag">Hard 48-hour OEM/ADAS announcements were thin; below are the freshest items plus two developments most relevant to an AUTOSAR/functional-safety engineer, dated honestly rather than padded.</p>
+      <h2>Tesla edges past Waymo on Texas&rsquo;s automated-vehicle registry</h2>
+      <p>As of 10 Nov, Tesla Robotaxi lists 1,302 vehicles on the Texas DMV automated-vehicle registry vs Waymo&rsquo;s 1,297 &mdash; a registration count, not a measure of rides or operating fleet. One breakdown puts 573 of Tesla&rsquo;s as Cybercabs (44%) and 423 of Waymo&rsquo;s as Zeekr RTs (33%). A symbolic flip in a market Waymo had led. <span class="tag">(registry figure; reported via Teslarati from the Texas DMV list)</span></p>
+      <p class="src"><a href="https://www.teslarati.com/tesla-overtakes-waymo-texas-robotaxi-fleet-performs-shock-flip/">Teslarati</a></p>
+    </article>
+    <article>
+      <h2>AUTOSAR ships CAPI 1.0 &mdash; an open-source reference for the Adaptive Platform</h2>
+      <p>AUTOSAR has released CAPI 1.0 (Common API), a common implementation of the Adaptive Platform with source code and code generators, and iSOFT has added a major contribution aimed at accelerating SDV and AI-defined-vehicle deployment, with a live demo at the 17th AUTOSAR Open Conference. For an Adaptive AUTOSAR engineer this lowers the barrier to standardised stacks and ties directly into the SDV shift. <span class="tag">(recent weeks, not 48-hour news)</span></p>
+      <p class="src"><a href="https://www.autosar.org/news-events/detail/autosar-and-isoft-announce-major-capi-contribution-to-accelerate-sdv-and-aidv-deployment">AUTOSAR</a></p>
+    </article>
+    <article>
+      <h2>TIER IV&rsquo;s end-to-end autonomy stack rides on open-source Autoware</h2>
+      <p>TIER IV&rsquo;s Level 4+ architecture pairs a diffusion-model-based end-to-end machine-learning pipeline (for object prediction and trajectory generation) with rule-based components kept for interpretability and stability &mdash; a pragmatic answer to the safety-argument problem of validating learned behaviour. It&rsquo;s being rolled out across ~50 mobility-service locations in Japan via the open Autoware platform. Directly relevant to ISO 26262 / SOTIF safety-case work on AI-based functions.</p>
+      <p class="src"><a href="https://www.automotiveworld.com/news/tier-iv-unveils-end-to-end-architecture-for-level-4-autonomy-to-be-demonstrated-across-50-locations-nationwide/">Automotive World</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>BYD&rsquo;s luxury brand Denza debuts in India tomorrow (13 Nov)</h2>
+      <p>BYD brings its premium Denza marque to India on 13 Nov, led by the Z9 GT shooting-brake &mdash; a tri-motor EV with a claimed 1,156bhp/1,210Nm and a 2.7s 0&ndash;100kmph time &mdash; arriving as a fully-built import, with the D9 luxury MPV also expected. Pricing is estimated at roughly &#8377;1.2&ndash;1.5 crore. <span class="tag">(debut date official; price and model line-up reported/estimated, not confirmed by Denza)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/byd-luxury-brand-denza-to-make-india-debut-on-november-13-441123">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>Altigreen launches Minsara electric multi-utility two-wheeler at &#8377;1.24 lakh</h2>
+      <p>Altigreen (JAKSON Group) has launched the Minsara, an electric multi-utility two-wheeler, from &#8377;1.24 lakh, offered in three variants with claimed ranges up to 165 km; deliveries are slated for December 2026. A rare mainstream entry targeting the utility/last-mile two-wheeler niche rather than the commuter-scooter crowd.</p>
+      <p class="src"><a href="https://www.autocarpro.in/news/altigreen-launches-minsara-electric-multi-utility-two-wheeler-at-rs-124-lakh-135708">Autocar Professional</a></p>
+    </article>
+    <article>
+      <h2>Toyota Innova Hycross facelift due later this month</h2>
+      <p>The Innova Hycross facelift is expected around 25&ndash;26 Nov, touted as possibly India&rsquo;s first flex-fuel strong hybrid &mdash; relevant as OEMs hedge between full-electric and ethanol-blend pathways under India&rsquo;s fuel policy. <span class="tag">(date reported; Toyota hasn&rsquo;t officially confirmed the launch timeline)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/upcoming-car-launches-in-november-2026-441173">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>Also on the November calendar: second-gen Mini Cooper SE</h2>
+      <p>After the Mercedes-Benz GLC Electric (claimed ~715km range) opened the month on 4 Nov, the next confirmed premium launch is the second-generation Mini Cooper SE on 27 Nov. India&rsquo;s November car calendar remains light &mdash; four notable launches versus nine-plus in October.</p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/upcoming-car-launches-in-november-2026-441173">Autocar India</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-11-12.html">12 Nov</a><a href="archive/2026-11-11.html">11 Nov</a><a href="archive/2026-11-10.html">10 Nov</a><a href="archive/2026-11-09.html">09 Nov</a><a href="archive/2026-11-08.html">08 Nov</a><a href="archive/2026-11-07.html">07 Nov</a><a href="archive/2026-11-06.html">06 Nov</a><a href="archive/2026-11-05.html">05 Nov</a><a href="archive/2026-11-04.html">04 Nov</a><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>
