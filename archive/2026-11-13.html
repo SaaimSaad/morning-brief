@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Friday, 13 November 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">Anthropic&rsquo;s Claude Fable 5.2 has taken the No.&nbsp;1 spot on the Artificial Analysis Intelligence Index (65, ahead of Google&rsquo;s Gemini&nbsp;4 and Anthropic&rsquo;s own Opus&nbsp;5.5) &mdash; just as the firm opens an IPO roadshow reportedly targeting a $1.4&nbsp;trillion valuation and a Nasdaq debut under the ticker &ldquo;ANT&rdquo; the week of 16&nbsp;November.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>Claude Fable 5.2 tops the Artificial Analysis Intelligence Index</h2>
+      <p>Anthropic&rsquo;s Fable 5.2 reportedly leads the third-party Artificial Analysis Intelligence Index with a score of 65, ahead of Google&rsquo;s Gemini&nbsp;4 (60) and Anthropic&rsquo;s own Opus&nbsp;5.5 (59) &mdash; putting Anthropic back at the frontier of the composite benchmark. The same coverage notes OpenAI has restricted its GPT-6 Cyber model to vetted security customers. <span class="tag">(ranking is from one third-party index, not a universal measure of capability)</span></p>
+      <p class="src"><a href="https://www.pymnts.com/news/artificial-intelligence/2026/anthropics-claude-tops-ai-rankings-as-openai-limits-cyber-model/">PYMNTS</a></p>
+    </article>
+    <article>
+      <h2>Anthropic&rsquo;s IPO roadshow targets a ~$1.4 trillion valuation</h2>
+      <p>Anthropic has opened its IPO roadshow reportedly aiming for a valuation near $1.4 trillion and to raise as much as tens of billions, with a Nasdaq listing under ticker &ldquo;ANT&rdquo; expected the week of 16 Nov (ahead of Thanksgiving). Reported targets vary widely across outlets (roughly $1.02T&ndash;$1.4T); the last confirmed private mark was $965B (May 2026). <span class="tag">(valuation and timing are reported pre-pricing; Anthropic hasn&rsquo;t confirmed a final range)</span></p>
+      <p class="src"><a href="https://www.aljazeera.com/economy/2026/11/10/anthropic-targets-1-4-trillion-valuation-in-massive-stock-market-debut">Al Jazeera</a></p>
+    </article>
+    <article>
+      <h2>Nonprofits sue OpenAI, Anthropic, Google and Meta to halt frontier AI</h2>
+      <p>A coalition of nonprofits filed suit on 12 Nov seeking to block further development of the most advanced (&ldquo;frontier&rdquo;) AI models by the major labs. Coverage reports OpenAI responded that it had paused training its most capable models pending additional safeguards. <span class="tag">(newly filed complaint, no ruling; the OpenAI training-pause claim is reported and not independently confirmed &mdash; treat with caution)</span></p>
+      <p class="src"><a href="https://cryptobriefing.com/openai-google-anthropic-face-lawsuit-to-stop-advanced-ai-model-development/">Crypto Briefing</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <h2>Gemini Robotics 2.5 hits a claimed 96% on live Mercedes-Benz lines</h2>
+      <p>Google DeepMind&rsquo;s Gemini Robotics 2.5 vision-language-action model (introduced ~10 Nov), running on Apptronik&rsquo;s Apollo&nbsp;2 humanoids, sorted automotive parts on active Mercedes-Benz lines at Kecskem&eacute;t (Hungary) and Sindelfingen (Germany) with a reported 96% success rate &mdash; picking metal brackets and placing them into per-vehicle sequencing containers. A concrete marker of learned, general-purpose control reaching real manufacturing. <span class="tag">(proof-of-concept; 96% is a pilot figure, vendor-reported, with no detail on what the 4% miss means on the line)</span></p>
+      <p class="src"><a href="https://www.autocar.co.uk/car-news/technology/mercedes-benz-begins-using-ai-robotics-make-its-cars">Autocar</a></p>
+    </article>
+    <article>
+      <h2>TIER IV open-sources end-to-end autonomous-driving AI models</h2>
+      <p>TIER IV (11 Nov) released end-to-end autonomous-driving models designed to adapt to different map information and sensor configurations, published open-source via the Autoware platform. For an ISO 26262 / SOTIF engineer the open release is a useful reference for the hard part &mdash; building a safety argument around learned (vs rule-based) driving behaviour and its validation.</p>
+      <p class="src"><a href="https://www.prnewswire.com/news-releases/tier-iv-unveils-end-to-end-autonomous-driving-adaptable-to-map-information-and-sensor-configurations-302935963.html">PR Newswire</a></p>
+    </article>
+    <article>
+      <h2>ST and WITTENSTEIN demo mixed-criticality on Stellar G3 for SDVs</h2>
+      <p>STMicroelectronics and WITTENSTEIN high integrity systems (10 Nov, at Electronica 2026) demonstrated mixed-criticality applications running on ST&rsquo;s Stellar&nbsp;G3 automotive microcontrollers with SAFE RTOS, aimed at software-defined and zonal E/E architectures. Directly relevant to AUTOSAR partitioning and ASIL freedom-from-interference work as compute consolidates onto fewer, more powerful MCUs.</p>
+      <p class="src"><a href="https://www.prnewswire.com/news-releases/stmicroelectronics-and-wittenstein-high-integrity-systems-demonstrate-flexible-software-architectures-for-software-defined-vehicles-302934706.html">PR Newswire</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>BYD&rsquo;s luxury brand Denza debuts in India today (13 Nov)</h2>
+      <p>BYD brings its premium Denza marque to India today, led by the Z9 GT shooting-brake &mdash; a tri-motor EV with a claimed 1,156hp and a 270kph top speed &mdash; arriving as a fully-built import, with the D9 luxury MPV also expected to follow. Pricing is estimated at roughly &#8377;1.2&ndash;1.5 crore. <span class="tag">(debut date official; price and full line-up reported/estimated, not yet confirmed by Denza)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/byd-luxury-brand-denza-officially-announces-india-entry-440908">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>TVS leads as India&rsquo;s E2W sales nearly double year-on-year in October</h2>
+      <p>TVS topped India&rsquo;s electric two-wheeler sales in October 2026 as E2W volumes nearly doubled versus a year earlier. Even so, EVs&rsquo; share of the overall two-wheeler market slipped (to roughly 9.7% of retail) as GST cuts on petrol models revived ICE demand &mdash; a reminder that policy pricing, not just product, is steering the mix. <span class="tag">(penetration figure is reported; final month data still firming up)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/bike-news/tvs-leads-e2w-sales-in-october-2026-as-sales-nearly-double-441292">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>Toyota Innova Hycross facelift &amp; Mini Cooper SE due later this month</h2>
+      <p>The Innova Hycross facelift is expected around 25 Nov &mdash; reported as possibly India&rsquo;s first flex-fuel strong hybrid, a direct nod to the ethanol-blend pathway &mdash; followed by the second-generation Mini Cooper SE on 27 Nov. A useful datapoint on how OEMs are hedging between full-electric and flex-fuel strategies under India&rsquo;s fuel policy. <span class="tag">(dates reported; not every launch timeline is officially confirmed)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/upcoming-car-launches-in-november-2026-441173">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>On the two-wheeler calendar: TVS Fiero 125 and Hero Karizma XMR 250</h2>
+      <p>Listings point to a TVS Fiero&nbsp;125 commuter (est. around &#8377;75,000) and the Hero Karizma XMR&nbsp;250 as the next notable bike launches pencilled in for the second half of November. <span class="tag">(these are aggregator-listed estimated dates and prices, not officially confirmed launches &mdash; treat as tentative)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/upcoming-bikes">Autocar India</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-11-13.html">13 Nov</a><a href="archive/2026-11-12.html">12 Nov</a><a href="archive/2026-11-11.html">11 Nov</a><a href="archive/2026-11-10.html">10 Nov</a><a href="archive/2026-11-09.html">09 Nov</a><a href="archive/2026-11-08.html">08 Nov</a><a href="archive/2026-11-07.html">07 Nov</a><a href="archive/2026-11-06.html">06 Nov</a><a href="archive/2026-11-05.html">05 Nov</a><a href="archive/2026-11-04.html">04 Nov</a><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>
