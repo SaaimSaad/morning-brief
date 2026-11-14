@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Saturday, 14 November 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">Anthropic has set an IPO price band of $70&ndash;$78 a share for 825&nbsp;million shares &mdash; valuing it at up to roughly $1.4&nbsp;trillion &mdash; with pricing reported for 18&nbsp;November and a Nasdaq debut under ticker &ldquo;ANT&rdquo; on 19&nbsp;November.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>Anthropic sets IPO price band: $70&ndash;$78, trading from 19 Nov</h2>
+      <p>Anthropic&rsquo;s amended SEC filing (10 Nov) sets a $70&ndash;$78 range for 825&nbsp;million Class A shares (about 801&nbsp;million new, 24&nbsp;million from existing holders) &mdash; raising up to ~$64&nbsp;billion and implying a fully-diluted valuation near $1.3&ndash;1.4&nbsp;trillion. Pricing is reported for 18&nbsp;Nov and first Nasdaq trade under &ldquo;ANT&rdquo; on 19&nbsp;Nov, with ~20% of stock set aside for retail. <span class="tag">(range and dates are reported pre-pricing; the IPO has not priced yet and Anthropic hasn&rsquo;t confirmed a final number)</span></p>
+      <p class="src"><a href="https://financefeeds.com/anthropic-ipo-date-price-range-70-78-trading-19-november/">FinanceFeeds</a></p>
+    </article>
+    <article>
+      <h2>TSMC backs both Anthropic and OpenAI; OpenAI closes a round at ~$1.25T</h2>
+      <p>TSMC&rsquo;s board reportedly approved up to $1&nbsp;billion in investment split evenly between Anthropic and OpenAI &mdash; a rare move by the foundry into its own AI customers. Separately, OpenAI is reported to be closing a funding round valuing it at about $1.25&nbsp;trillion, though the raise (cited at ~$11&ndash;15&nbsp;billion) is well below its original ~$30&nbsp;billion target. <span class="tag">(both figures are reported/second-hand and not confirmed by the companies &mdash; treat with caution)</span></p>
+      <p class="src"><a href="https://techfundingnews.com/openai-reportedly-raises-15b-at-1-25t-valuation-as-anthropic-ipo-approaches/">Tech Funding News</a></p>
+    </article>
+    <article>
+      <h2>Anthropic puts self-hosted &ldquo;Claude Managed Agents&rdquo; into private beta</h2>
+      <p>Anthropic reportedly opened a private beta (12 Nov) of a self-hosted edition of Claude Managed Agents, letting enterprises run the full agent harness &mdash; sandboxes, a PostgreSQL session store and workers &mdash; inside their own cloud or on-prem rather than Anthropic&rsquo;s. Relevant for regulated industries (automotive among them) that can&rsquo;t send code or data off-site. <span class="tag">(reported via AI-news aggregators; details not independently confirmed against an Anthropic release)</span></p>
+      <p class="src"><a href="https://samonai.substack.com/p/ai-brief-november-13-2026">Sam on AI</a></p>
+    </article>
+    <article>
+      <h2>Rumour: a Flash-tier Gemini 4 &ldquo;Hydrogen&rdquo; may be near</h2>
+      <p>Chatter on X this week points to Google readying a fast, cheap Flash-tier addition to the Gemini&nbsp;4 family, codenamed &ldquo;Hydrogen.&rdquo; As of now it is not in Google&rsquo;s Gemini API docs, model list or changelog, and Google has confirmed no name, specs or date. <span class="tag">(RUMOUR / leak &mdash; unconfirmed; the current Gemini&nbsp;4 Flash entry is still 3.8-era. Do not treat as official.)</span></p>
+      <p class="src"><a href="https://officechai.com/ai/gemini-4-hydrogen/">OfficeChai</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <h2>Infineon unveils AURIX RC1 for software-defined vehicles and &ldquo;Physical AI&rdquo;</h2>
+      <p>At electronica (Munich, 10&ndash;13 Nov) Infineon introduced the AURIX&nbsp;RC1 family concept &mdash; a next-gen real-time compute/control MCU for SDV and zonal architectures, rated to ASIL&nbsp;D with ISO/SAE&nbsp;21434 cybersecurity built in, with samples targeted for H1&nbsp;2027. Infineon also gave a first look at a separate automotive MCU platform built on open RISC-V. Squarely in the AUTOSAR-Classic-plus-functional-safety space you work in as compute consolidates onto fewer, higher-performance MCUs. <span class="tag">(RC1 is a concept with 2027 samples, not yet in production)</span></p>
+      <p class="src"><a href="https://www.eejournal.com/industry_news/infineon-redefines-real-time-compute-and-control-for-software-defined-vehicles-and-physical-ai-with-new-aurix-rc1/">EE Journal</a></p>
+    </article>
+    <article>
+      <h2>Infineon and Qualcomm to co-build central car computers</h2>
+      <p>The two agreed to jointly build central car computers for automated driving and digital cockpits, pairing Infineon&rsquo;s safety, connectivity and memory subsystem with Qualcomm&rsquo;s Snapdragon&nbsp;Ride SoCs. Infineon&rsquo;s safety MCU sits beside the Snapdragon SoC, monitors its health and manages safety mechanisms &mdash; a concrete example of the mixed-criticality / freedom-from-interference partitioning that zonal E/E architectures lean on. <span class="tag">(partnership announced around electronica; shipping products not yet dated)</span></p>
+      <p class="src"><a href="https://www.eejournal.com/industry_news/infineon-enables-car-computers-for-automated-driving-and-digital-cockpits-powered-by-qualcomm-snapdragon-ride/">EE Journal</a></p>
+    </article>
+    <article>
+      <h2>BYD&rsquo;s Yangwang Altior debuts with an in-house assisted-driving chip</h2>
+      <p>BYD&rsquo;s ultra-luxury Yangwang brand revealed the Altior at a global premiere in Abu Dhabi (7 Nov) &mdash; a quad-motor electric Rolls-Royce rival claiming 1,000km-plus CLTC range, and notably the first BYD model to run its own in-house &ldquo;Xuanji A3&rdquo; assisted-driving chip. A marker of OEMs vertically integrating ADAS compute rather than buying it from Nvidia/Qualcomm. <span class="tag">(range and price figures are vendor claims pre-homologation; pricing varies by source)</span></p>
+      <p class="src"><a href="https://theevreport.com/yangwang-altior-global-debut-abu-dhabi">The EV Report</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>BYD&rsquo;s Denza lands in India with two cars &mdash; D9 at ~&#8377;90 lakh</h2>
+      <p>BYD launched its premium Denza brand in India on 13 Nov with two models: the D9 luxury electric MPV (reported at about &#8377;90&nbsp;lakh ex-showroom) and the Z9&nbsp;GT shooting-brake, both as fully-built imports. It marks BYD&rsquo;s push upmarket in a price band it hasn&rsquo;t contested here before. <span class="tag">(launch confirmed; D9 price is as reported at launch, ex-showroom)</span></p>
+      <p class="src"><a href="https://www.carwale.com/news/byd-denza-d9-revealed-for-india">CarWale</a></p>
+    </article>
+    <article>
+      <h2>India&rsquo;s E2W market up ~48% YoY in October, but share slips</h2>
+      <p>Electric two-wheeler sales reached roughly 224,000 units in October 2026, up about 48% year-on-year (JMK Research). Even so, EVs&rsquo; share of the overall two-wheeler market dipped as GST cuts on petrol models revived ICE demand &mdash; a reminder that fiscal policy, not just product, is steering the mix. <span class="tag">(volumes from a monthly research report; share figures firm up as final data lands)</span></p>
+      <p class="src"><a href="https://www.autocarpro.in/news/gst-cuts-cool-ev-momentum-as-ice-vehicle-demand-surges-in-november-130067">Autocar Professional</a></p>
+    </article>
+    <article>
+      <h2>2027 Triumph Tiger 1200 launched in India</h2>
+      <p>Triumph brought the updated 2027 Tiger&nbsp;1200 to India this month, priced in the roughly &#8377;20.99&ndash;23.49&nbsp;lakh range (ex-showroom) &mdash; a refresh of its flagship adventure-tourer. <span class="tag">(price band as listed; variant-wise pricing may vary)</span></p>
+      <p class="src"><a href="https://www.zigwheels.com/news">ZigWheels</a></p>
+    </article>
+    <article>
+      <h2>On the calendar: Mahindra Thar.e, TVS Fiero 125 and more</h2>
+      <p>The second half of November is busy: the electric Mahindra Thar.e is pencilled for ~15 Nov (est. ~&#8377;25&nbsp;lakh), with the TVS Fiero&nbsp;125 commuter (~&#8377;75,000) and VinFast&rsquo;s VF5 both tipped around 17 Nov, and the Royal Enfield Himalayan&nbsp;750 also listed for this month. <span class="tag">(these are aggregator-listed estimated dates and prices, not officially confirmed launches &mdash; treat as tentative)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/upcoming-car-launches-in-november-2026-441173">Autocar India</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-11-14.html">14 Nov</a><a href="archive/2026-11-13.html">13 Nov</a><a href="archive/2026-11-12.html">12 Nov</a><a href="archive/2026-11-11.html">11 Nov</a><a href="archive/2026-11-10.html">10 Nov</a><a href="archive/2026-11-09.html">09 Nov</a><a href="archive/2026-11-08.html">08 Nov</a><a href="archive/2026-11-07.html">07 Nov</a><a href="archive/2026-11-06.html">06 Nov</a><a href="archive/2026-11-05.html">05 Nov</a><a href="archive/2026-11-04.html">04 Nov</a><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>
