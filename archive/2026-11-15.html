@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Sunday, 15 November 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">Anthropic&rsquo;s IPO roadshow is live: 825&nbsp;million Class&nbsp;A shares marketed at $70&ndash;$78 (up to ~$64&nbsp;billion raised, a ~$1.2&ndash;1.4&nbsp;trillion valuation), with pricing reported for 18&nbsp;Nov and a first Nasdaq trade under &ldquo;ANT&rdquo; on 19&nbsp;Nov &mdash; it has not priced yet.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>Anthropic IPO: pricing expected 18 Nov, Nasdaq debut 19 Nov as &ldquo;ANT&rdquo;</h2>
+      <p>Anthropic is marketing 825&nbsp;million Class&nbsp;A shares at $70&ndash;$78 (about 801&nbsp;million new), raising up to ~$64&nbsp;billion and implying a fully-diluted valuation near $1.2&ndash;1.4&nbsp;trillion. An amended filing also adds a ~$26&nbsp;billion private placement to seven strategic chip and cloud partners, with Nvidia and Alphabet each reported to commit ~$10&nbsp;billion. <span class="tag">(range, placement and dates are reported pre-pricing; the IPO has not priced and the final number can still move with demand)</span></p>
+      <p class="src"><a href="https://www.renaissancecapital.com/IPO-Center/News/122657/anthropic-sets-terms-for-61-billion-ipo-targeting-a-1.2-trillion-market-cap">Renaissance Capital</a></p>
+    </article>
+    <article>
+      <h2>Anthropic launches Claude Whiteboards, Sheets and Data</h2>
+      <p>On 10&nbsp;Nov Anthropic opened Claude Whiteboards and Claude Sheets in beta and made its dashboards product generally available, renamed Claude Data. On Team plans all three are on by default; Enterprise starts with Whiteboards and Sheets off, with Data scheduled to switch on around 19&ndash;20&nbsp;Nov. It also rolled out &ldquo;Claude Meetings,&rdquo; letting Claude join video calls and build plans, whiteboards and tasks live. <span class="tag">(Team/Enterprise beta; sources differ on the exact Claude Data default-on date)</span></p>
+      <p class="src"><a href="https://casrai.org/news/anthropic-claude-whiteboards-sheets-data-launch-2026">CASRAI</a></p>
+    </article>
+    <article>
+      <h2>Reported: Anthropic ships Claude Fable 5.2 and Mythos 5.2</h2>
+      <p>AI release trackers report that Anthropic shipped upgraded Fable&nbsp;5.2 and its restricted twin Mythos&nbsp;5.2 on 9&nbsp;Nov, with Fable&nbsp;5.2 cited at $8 / $40 per million input/output tokens and output up to ~30% faster than 5.1. <span class="tag">(sourced to third-party model-release trackers, not an official Anthropic post &mdash; treat pricing and specifics as unconfirmed)</span></p>
+      <p class="src"><a href="https://thursdai.news/releases/2026-11">ThursdAI release log</a></p>
+    </article>
+    <article>
+      <h2>Still unconfirmed: a Flash-tier Gemini 4 &ldquo;Hydrogen&rdquo;</h2>
+      <p>Aggregator trackers continue to list a fast, cheap Gemini&nbsp;4 &ldquo;Hydrogen&rdquo; (and a &ldquo;Carbon&rdquo; tier) supposedly surfacing via the Gemini API around 10&ndash;12&nbsp;Nov, but Google has published no official name, specs, benchmarks or date, and nothing appears in Google&rsquo;s own model docs or changelog. <span class="tag">(RUMOUR / leak &mdash; unconfirmed; do not treat as official)</span></p>
+      <p class="src"><a href="https://officechai.com/ai/gemini-4-hydrogen/">OfficeChai</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <h2>NHTSA probes Waymo after robotaxis keep passing stopped school buses</h2>
+      <p>US regulator NHTSA opened an investigation (filing dated ~6&nbsp;Nov) after Waymo vehicles continued illegally passing stopped school buses even after a software update meant to fix the behaviour &mdash; most logged incidents reportedly came <em>after</em> the fix. A pointed reminder for safety engineers that an OTA patch is not verified closure: the regression surfaced in the field, not in validation. <span class="tag">(agency filing + TechCrunch reporting; Waymo says it has had no citations since March 2026)</span></p>
+      <p class="src"><a href="https://techcrunch.com/2026/11/09/waymo-robotaxis-kept-illegally-passing-school-buses-after-software-fix-feds-say/">TechCrunch</a></p>
+    </article>
+    <article>
+      <h2>Tesla&rsquo;s robotaxi fleet edges past Waymo&rsquo;s in Texas</h2>
+      <p>On Texas&rsquo;s autonomous-vehicle registry Tesla listed roughly 1,302 vehicles against Waymo&rsquo;s ~1,297 as of about 10&nbsp;Nov &mdash; reportedly the first time Tesla&rsquo;s registered fleet has topped Waymo&rsquo;s in the state, as both scale driverless operations and Tesla expands beyond Austin. <span class="tag">(figures come from a state registry via secondary trackers and shift day to day; counts differ slightly by source)</span></p>
+      <p class="src"><a href="https://www.teslarati.com/tesla-overtakes-waymo-texas-robotaxi-fleet-performs-shock-flip/">Teslarati</a></p>
+    </article>
+    <article>
+      <h2>Quiet week for AUTOSAR/functional-safety news; watch on-device AI</h2>
+      <p>No major AUTOSAR, ISO&nbsp;26262 or zonal-architecture announcement landed in the last 24&ndash;48 hours &mdash; the automotive cycle was dominated by robotaxi and regulatory news. The standing MBD-adjacent thread to watch is embedded/on-device AI reaching production: Mercedes-Benz&rsquo;s on-device Liquid&nbsp;AI stack (a small, embedded model that runs in-car rather than in the cloud, announced April 2026, production targeted H2&nbsp;2026) is reported to be rolling out via OTA &mdash; relevant to anyone pairing embedded controls with AI. <span class="tag">(partnership and on-device approach are confirmed; the live OTA-rollout timing is single-source and unconfirmed)</span></p>
+      <p class="src"><a href="https://www.automotiveworld.com/news/mercedes-benz-taps-liquid-ai-for-on-device-in-car-ai/">Automotive World</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>BYD&rsquo;s Denza opens in India: Z9&nbsp;GT super-tourer and D9 MPV</h2>
+      <p>BYD launched its premium Denza brand in India on 13&nbsp;Nov, led by the Z9&nbsp;GT &mdash; a ~1,000hp-plus tri-motor electric shooting-brake (reported around &#8377;1.2&nbsp;crore) &mdash; alongside the D9 luxury electric MPV (reported near &#8377;90&nbsp;lakh), both brought in as fully-built imports (CBU). It is BYD&rsquo;s clearest push upmarket in India so far. <span class="tag">(prices are as reported around launch, ex-showroom, CBU; confirm variant-wise figures against official Denza India pricing)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news-amp/byd-luxury-brand-denza-officially-announces-india-entry-440908">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>Record October for India&rsquo;s e-scooters; TVS on top, Ola slides</h2>
+      <p>Electric two-wheeler sales hit a record ~223,800 units in October (+48% YoY). TVS led with a record 60,429 units (~27% share, up ~94% YoY), Bajaj was second at ~49,100 (~22%), while Ather slipped to ~14% share (from 20% a year ago) and Ola&nbsp;Electric collapsed to ~5% from 11%. Hero Vida (~29,900) is now within ~1,900 units of Ather. <span class="tag">(retail vs Vahan-registration figures vary slightly by source)</span></p>
+      <p class="src"><a href="https://www.autocarpro.in/news/diwali-comes-early-for-electric-2ws-october-sales-cross-223000-tvs-delivers-record-60429-units-135631">Autocar Professional</a></p>
+    </article>
+    <article>
+      <h2>Hyundai Ioniq&nbsp;6 India launch tipped for mid-November</h2>
+      <p>Aggregator listings peg the Ioniq&nbsp;6 electric fastback for an India launch around 15&nbsp;Nov at an expected ~&#8377;65&nbsp;lakh (ex-showroom), as a CBU import. <span class="tag">(RUMOUR / expected &mdash; Hyundai India has not officially confirmed a date or price; treat as tentative)</span></p>
+      <p class="src"><a href="https://www.cardekho.com/hyundai/ioniq-6/specs">CarDekho</a></p>
+    </article>
+    <article>
+      <h2>On the calendar: Innova Hycross flex-fuel hybrid, Mini Cooper&nbsp;SE</h2>
+      <p>Autocar India&rsquo;s November list flags a Toyota Innova Hycross facelift around 25&nbsp;Nov &mdash; tipped to be India&rsquo;s first flex-fuel strong-hybrid car &mdash; and a second-generation Mini Cooper&nbsp;SE around 27&nbsp;Nov, with Mahindra&rsquo;s XEV&nbsp;7e electric SUV also expected this month. <span class="tag">(these are listed/estimated dates, not all officially confirmed &mdash; treat as tentative)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/upcoming-car-launches-in-november-2026-441173">Autocar India</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-11-15.html">15 Nov</a><a href="archive/2026-11-14.html">14 Nov</a><a href="archive/2026-11-13.html">13 Nov</a><a href="archive/2026-11-12.html">12 Nov</a><a href="archive/2026-11-11.html">11 Nov</a><a href="archive/2026-11-10.html">10 Nov</a><a href="archive/2026-11-09.html">09 Nov</a><a href="archive/2026-11-08.html">08 Nov</a><a href="archive/2026-11-07.html">07 Nov</a><a href="archive/2026-11-06.html">06 Nov</a><a href="archive/2026-11-05.html">05 Nov</a><a href="archive/2026-11-04.html">04 Nov</a><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>
