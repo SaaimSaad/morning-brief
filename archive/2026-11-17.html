@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Tuesday, 17 November 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">Anthropic prices its IPO tomorrow (Wed 18 Nov) and trades for the first time Thursday on Nasdaq as &ldquo;ANT&rdquo; &mdash; 825&nbsp;million shares at $70&ndash;$78 for a ~$1.4&nbsp;trillion valuation, with an order book said to be ~7&times; oversubscribed &mdash; and it has not priced yet.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>Anthropic IPO: pricing Wednesday, first Nasdaq trade Thursday as &ldquo;ANT&rdquo;</h2>
+      <p>Anthropic&rsquo;s amended S-1 offers 825&nbsp;million Class&nbsp;A shares at $70&ndash;$78, implying a market value of roughly $1.3&ndash;$1.45&nbsp;trillion; pricing is set for Wednesday 18&nbsp;Nov and trading begins Thursday 19&nbsp;Nov. Buyers reportedly requested nearly seven times the shares on offer. <span class="tag">(the registration is still &ldquo;subject to completion&rdquo; and the IPO has not priced; the ~7&times; oversubscription is from reporting, not the filing, and the final price can still move)</span></p>
+      <p class="src"><a href="https://finance.yahoo.com/markets/stocks/articles/anthropic-prices-ipo-wednesday-investors-185110963.html">Yahoo Finance</a></p>
+    </article>
+    <article>
+      <h2>$26&nbsp;billion strategic placement rides alongside the listing</h2>
+      <p>In a concurrent private placement, seven firms &mdash; AMD, Broadcom, Google, Micron, Microsoft, NVIDIA and TSMC &mdash; have agreed to buy an aggregate $26.0&nbsp;billion of non-voting Class&nbsp;N stock at the IPO price, with Nvidia and Google reportedly in for ~$10&nbsp;billion each. It closes just after the IPO and is not a condition of it. <span class="tag">(per-firm split is from secondary coverage, not yet verified against the SEC filing; placement is subject to closing conditions incl. stockholder approval)</span></p>
+      <p class="src"><a href="https://cryptobriefing.com/nvidia-alphabet-anthropic-ipo-private-placement/">Crypto Briefing</a></p>
+    </article>
+    <article>
+      <h2>Nvidia&rsquo;s Q3 earnings land the same week &mdash; the AI trade&rsquo;s stress test</h2>
+      <p>Nvidia reports fiscal-Q3 results in the same window as the Anthropic debut; options are pricing an implied earnings-day move of about &plusmn;10.6% (vs a ~&plusmn;7.8% 10-year average), and guidance is understood to assume zero China data-center compute revenue. Watchpoints: data-center growth, Blackwell/Rubin execution, margins and Q4 guidance. <span class="tag">(preview/estimates; confirm the exact report date and consensus on Nvidia IR before relying on numbers)</span></p>
+      <p class="src"><a href="https://www.marketpulse.com/markets/nvidia-nvda-q3-earnings-preview-ai-spending-risks-and-governance-concerns-threaten-major-uptrend/">MarketPulse</a></p>
+    </article>
+    <article>
+      <h2>Model cadence stays frenetic: Alibaba previews Qwen4-Max</h2>
+      <p>Alibaba&rsquo;s Qwen team has announced Qwen4-Max, the first preview of its next flagship family, pitched at agent-first coding with ~1M-token context &mdash; but with no benchmarks or model card released yet. It follows Google&rsquo;s fast/cheap Gemini&nbsp;4 &ldquo;Hydrogen&rdquo; (~12&nbsp;Nov) and Anthropic&rsquo;s Claude Fable/Mythos&nbsp;5.2 (9&nbsp;Nov, priced down to $8/$40 per 1M tokens). <span class="tag">(Qwen4-Max is a preview; benchmarks unpublished &mdash; treat performance claims as unverified)</span></p>
+      <p class="src"><a href="https://alphasignal.ai/news/alibaba-launches-qwen4-max-with-agent-first-coding-and-1m-token-support">AlphaSignal</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <h2>Rust keeps pushing into safety-critical ECU software</h2>
+      <p>Memory-safe Rust continues to move toward ASIL-rated embedded control: AdaCore and OxidOS are reported (16&nbsp;Nov) to be partnering on a Rust-based ECU operating system positioned as an alternative to &mdash; or co-resident with &mdash; heavier RTOS/AUTOSAR stacks, with OTA update-and-rollback. Both sit inside the Safety-Critical Rust Consortium (Arm, OxidOS, AdaCore, Ferrous, Woven by Toyota). Worth tracking for anyone doing AUTOSAR Classic and ISO&nbsp;26262 work. <span class="tag">(the bilateral AdaCore&ndash;OxidOS tie-up is single-source and I couldn&rsquo;t open the primary; the consortium membership below is firmly attributable)</span></p>
+      <p class="src"><a href="https://www.eenewseurope.com/en/adacore-joins-safety-critical-rust-consortium">eeNews Europe</a></p>
+    </article>
+    <article>
+      <h2>China&rsquo;s ADAS market tilts toward L3 commercialisation</h2>
+      <p>A new market report (16&nbsp;Nov) frames &ldquo;physical AI,&rdquo; door-to-door (D2D) standardisation and L3 pilots as the growth drivers for Chinese independent OEMs through 2030, noting at least one Chinese OEM has cleared approval for L3 autonomous road-traffic pilots. The direction of travel &mdash; eyes-off systems reaching production &mdash; is exactly the ADAS/autonomy frontier an OEM-bound controls engineer should be watching. <span class="tag">(vendor market report, not an OEM product announcement; forecasts to 2030)</span></p>
+      <p class="src"><a href="https://globenewswire.com/news-release/2026/11/16/3403765/28124/en/chinese-independent-oem-adas-and-autonomous-driving-market-report-2026-physical-ai-d2d-standardization-and-l3-commercialization-drive-growth-through-2030.html">GlobeNewswire</a></p>
+    </article>
+    <article>
+      <h2>SDV monetisation: OTA updates forecast to top 2&nbsp;billion/yr by 2035</h2>
+      <p>ABI Research projects ~2.03&nbsp;billion annual software-defined-vehicle OTA updates globally by 2035, and estimates true SDVs (L3 and above) at ~16.7% of new vehicles sold in 2026, as automakers shift to monetisable software platforms. For MBD/embedded engineers this is the structural pull behind centralised compute, service-oriented architecture and continuous model deployment. No major standalone ISO&nbsp;26262 / Adaptive-AUTOSAR certification headline landed in the last 24&ndash;48h. <span class="tag">(analyst forecast, dated 2&nbsp;Nov; projections not actuals)</span></p>
+      <p class="src"><a href="https://www.globenewswire.com/news-release/2026/11/02/3393344/0/en/software-defined-vehicle-ota-updates-to-surpass-2-billion-annually-by-2035-as-automakers-shift-to-monetizable-software-platforms.html">GlobeNewswire</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>Toyota Innova Hycross facelift set for 25 Nov &mdash; flex-fuel in play</h2>
+      <p>Toyota&rsquo;s Innova Hycross facelift is lined up for 25&nbsp;November, with reports (citing minister Nitin Gadkari) that it could arrive as an E100-capable flex-fuel strong hybrid &mdash; which would be India&rsquo;s first. Expected ~&#8377;20&ndash;35&nbsp;lakh (ex-showroom). <span class="tag">(launch date per Autocar India; Toyota has not officially confirmed the flex-fuel variant or price &mdash; treat flex-fuel as unconfirmed)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/toyota-innova-hycross-facelift-to-launch-on-november-25-441225">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>Also on the near calendar: Mini Cooper&nbsp;SE and next-gen Fortuner</h2>
+      <p>The second-generation electric Mini Cooper&nbsp;SE is tipped for ~27&nbsp;November, with the next-generation Toyota Fortuner expected around early December and Mahindra&rsquo;s XEV&nbsp;7e electric SUV also in the pipeline. Most of this week&rsquo;s India activity is upcoming-calendar rather than cars actually going on sale. <span class="tag">(listed/estimated dates, several not officially confirmed by the makers &mdash; treat as tentative)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/upcoming-car-launches-in-november-2026-441173">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>Two-wheelers: EICMA pipeline heads to India, Motoverse 27&ndash;29 Nov</h2>
+      <p>The bikes unveiled at EICMA 2026 are now queuing for India launches, and Royal Enfield&rsquo;s Motoverse festival runs 27&ndash;29&nbsp;November in Goa, where the Himalayan&nbsp;750 is widely expected to appear; India Bike Week follows on 4&ndash;5&nbsp;December. <span class="tag">(event dates confirmed; specific model reveals at Motoverse are anticipated, not officially confirmed)</span></p>
+      <p class="src"><a href="https://www.bikes4sale.in/news/eicma-2026-upcoming-bikes-scooters-india/">Bikes4Sale</a></p>
+    </article>
+    <article>
+      <h2>VinFast VF5 compact EV inches toward an India launch</h2>
+      <p>VinFast&rsquo;s entry-level VF5 electric hatchback/SUV continues to be prepped for India, with expected pricing around &#8377;10&ndash;13&nbsp;lakh (ex-showroom). Listings disagree sharply on timing &mdash; some point to late November, others slip it into 2027. <span class="tag">(RUMOUR on date: VinFast has not officially confirmed a launch date or price; listed dates conflict &mdash; do not treat as fixed)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/vinfast-vf5-india-launch-on-the-cards-438838">Autocar India</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-11-17.html">17 Nov</a><a href="archive/2026-11-16.html">16 Nov</a><a href="archive/2026-11-15.html">15 Nov</a><a href="archive/2026-11-14.html">14 Nov</a><a href="archive/2026-11-13.html">13 Nov</a><a href="archive/2026-11-12.html">12 Nov</a><a href="archive/2026-11-11.html">11 Nov</a><a href="archive/2026-11-10.html">10 Nov</a><a href="archive/2026-11-09.html">09 Nov</a><a href="archive/2026-11-08.html">08 Nov</a><a href="archive/2026-11-07.html">07 Nov</a><a href="archive/2026-11-06.html">06 Nov</a><a href="archive/2026-11-05.html">05 Nov</a><a href="archive/2026-11-04.html">04 Nov</a><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>
