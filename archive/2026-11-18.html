@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Wednesday, 18 November 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">Anthropic is expected to price its IPO after the US close today and trade for the first time Thursday on Nasdaq as &ldquo;ANT&rdquo; &mdash; 825&nbsp;million Class&nbsp;A shares at $70&ndash;$78 for a ~$1.3&ndash;1.45&nbsp;trillion valuation, with the order book reported heavily oversubscribed and underwriters tipped to price at or above the top of the range.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>Anthropic prices its IPO today; first Nasdaq trade Thursday as &ldquo;ANT&rdquo;</h2>
+      <p>Anthropic&rsquo;s amended S-1 offers 825&nbsp;million Class&nbsp;A shares at $70&ndash;$78, implying a market value of roughly $1.3&ndash;1.45&nbsp;trillion; pricing is expected after the US close on Wednesday and trading begins Thursday. CNBC and Yahoo report the book is heavily oversubscribed, with bankers likely to price at or above the top of the range. <span class="tag">(not yet priced as of this edition; the oversubscription and &ldquo;above range&rdquo; read are from reporting, not the filing &mdash; the final number can still move)</span></p>
+      <p class="src"><a href="https://finance.yahoo.com/markets/stocks/articles/anthropic-prices-ipo-wednesday-investors-185110963.html">Yahoo Finance</a></p>
+    </article>
+    <article>
+      <h2>Nvidia blows past estimates &mdash; $115.8B revenue, $130B guide &mdash; in first print since Huang&rsquo;s exit</h2>
+      <p>Nvidia reported fiscal-Q3 (quarter ended 25&nbsp;Oct) revenue of $115.8&nbsp;billion, up 103% YoY, with Data&nbsp;Center alone at $107.6&nbsp;billion (+110%); it guided Q4 to $130&nbsp;billion &plusmn;3% and called the Vera&nbsp;Rubin NVL72 its fastest-ever production ramp. It was the company&rsquo;s first earnings since founder Jensen&nbsp;Huang abruptly resigned as CEO on 11&nbsp;Nov amid a scandal, with CFO Colette&nbsp;Kress now interim chief. <span class="tag">(numbers from Nvidia&rsquo;s release; the Q4 guide assumes zero China data-center compute revenue)</span></p>
+      <p class="src"><a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027">NVIDIA Newsroom</a></p>
+    </article>
+    <article>
+      <h2>OpenAI ships GPT-6.2 &ldquo;Astra&rdquo; and &ldquo;Sol&rdquo; with lower API prices</h2>
+      <p>OpenAI released two models on 17&nbsp;Nov: GPT-6.2 Astra (pitched at complex professional work, $8/$40 per 1M input/output tokens) and the cheaper Sol ($2/$10), both live in ChatGPT and the API. OpenAI&rsquo;s system card classifies them at its &ldquo;Critical&rdquo; cybersecurity-capability threshold, and reports say Astra is the first released model to reach the &ldquo;High&rdquo; bar for AI self-improvement. <span class="tag">(benchmark gains are OpenAI&rsquo;s own; capability-threshold claims from the system card and secondary coverage)</span></p>
+      <p class="src"><a href="https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/">The Decoder</a></p>
+    </article>
+    <article>
+      <h2>$26&nbsp;billion chip-and-cloud placement rides alongside the Anthropic listing</h2>
+      <p>In a concurrent private placement, seven firms &mdash; AMD, Broadcom, Google, Micron, Microsoft, Nvidia and TSMC &mdash; have agreed to buy an aggregate $26.0&nbsp;billion of non-voting Class&nbsp;N stock at the IPO price, reportedly with Nvidia and Google in for ~$10&nbsp;billion each. It closes just after the IPO and is not a condition of it. <span class="tag">(per-firm split is from secondary coverage; placement subject to closing conditions incl. stockholder approval)</span></p>
+      <p class="src"><a href="https://cryptobriefing.com/nvidia-alphabet-anthropic-ipo-private-placement/">Crypto Briefing</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <h2>Mercedes launches hands-free, point-to-point L2 assist to take on Tesla FSD</h2>
+      <p>Mercedes-Benz is rolling out &ldquo;Hands-Free Assist&rdquo; and &ldquo;Drive Assist Pro,&rdquo; a Level&nbsp;2 system that handles point-to-point highway driving hands-off at up to 130&nbsp;km/h, positioned directly against Tesla&rsquo;s FSD. Launch begins in Germany this year, with the US following in 2027. <span class="tag">(reported 17&nbsp;Nov; this is a hands-off L2 feature &mdash; the driver stays responsible, not an eyes-off/L3 system)</span></p>
+      <p class="src"><a href="https://www.autonews.com/mercedes-benz/ane-mercedes-level-2-upgrade-1117/">Automotive News</a></p>
+    </article>
+    <article>
+      <h2>AI agents move into the AUTOSAR toolchain</h2>
+      <p>An engineering feature details work building AI pipelines on top of AUTOSAR &mdash; prototyping agents that parse AUTOSAR interface descriptions and auto-generate edge-case test vectors to ease integration, test and ISO&nbsp;26262 compliance. It&rsquo;s a concrete look at where AI is actually entering MBD/embedded workflows, rather than the vehicle itself &mdash; squarely in your lane. <span class="tag">(vendor engineering piece, German-language; recent but undated)</span></p>
+      <p class="src"><a href="https://www.all-electronics.de/automotive/decoding-autosar-building-ai-workflows-for-sdvs/2736278">all-electronics</a></p>
+    </article>
+    <article>
+      <h2>Qualcomm pitches the &ldquo;AI-Defined Vehicle&rdquo; as the next step past SDV</h2>
+      <p>At the European Automotive Summit in Munich, Qualcomm &mdash; with Renault and Mercedes-Benz &mdash; outlined an &ldquo;AI-Defined Vehicle&rdquo; stage in which on-board AI agents coordinate multiple vehicle functions, keeping the software-defined vehicle as the technical base layer. <span class="tag">(conference framing from ~1 week ago, German-language source; direction-of-travel, not a shipping product)</span></p>
+      <p class="src"><a href="https://www.computerbase.de/news/mobilitaet/qualcomm-auf-das-software-defined-vehicle-folgt-das-ai-defined-vehicle.100289/">ComputerBase</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>India EV passenger sales top 30,000 for a fifth straight month; annual tally crosses 300,000</h2>
+      <p>October electric car/SUV sales stayed above 30,000 units &mdash; Tata led with 14,654, Mahindra 8,541 and JSW&nbsp;MG 5,938 &mdash; and cumulative 2026 registrations crossed 300,000 for the first time (304,701 between 1&nbsp;Jan and 9&nbsp;Nov), with Tata, Mahindra and MG the top three. Maruti&rsquo;s e&nbsp;Vitara remains a minor player (~1,200/month). <span class="tag">(retail and registration figures differ slightly by source; full-November data not yet out)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/october-2026-ev-sales-over-30000-units-hit-for-fifth-straight-month-441232">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>Toyota Innova Hycross facelift due 25&nbsp;Nov &mdash; flex-fuel hybrid rumoured</h2>
+      <p>Toyota&rsquo;s Innova Hycross facelift is lined up for 25&nbsp;November; reporting (citing minister Nitin&nbsp;Gadkari) suggests it could debut an E100-capable flex-fuel strong hybrid, which would be an India first. Expected ~&#8377;20&ndash;35&nbsp;lakh (ex-showroom). <span class="tag">(launch date per Autocar India; Toyota has not confirmed a flex-fuel variant or price &mdash; treat flex-fuel as unconfirmed)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/toyota-innova-hycross-facelift-to-launch-on-november-25-441225">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>Two-wheelers: Royal Enfield Motoverse (27&ndash;29&nbsp;Nov) headlines a busy calendar</h2>
+      <p>EICMA&nbsp;2026 bikes are now queuing for India launches, and Royal Enfield&rsquo;s Motoverse festival in Goa (27&ndash;29&nbsp;November) is widely expected to be where the new 743cc Himalayan&nbsp;750 (&approx;55&nbsp;PS / 63&nbsp;Nm) appears; India Bike Week follows on 4&ndash;5&nbsp;December. <span class="tag">(event dates confirmed; specific model reveals at Motoverse are anticipated, not officially confirmed)</span></p>
+      <p class="src"><a href="https://www.bikes4sale.in/news/eicma-2026-upcoming-bikes-scooters-india/">Bikes4Sale</a></p>
+    </article>
+    <article>
+      <h2>VinFast VF5 compact EV still circling an India launch</h2>
+      <p>VinFast&rsquo;s entry-level VF5 continues to be prepped for India at an expected ~&#8377;10&ndash;13&nbsp;lakh (ex-showroom), but listed launch dates keep slipping &mdash; some point to late November, others into 2027. <span class="tag">(RUMOUR on timing: VinFast has not officially confirmed a date or price; listed dates conflict)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/vinfast-vf5-india-launch-on-the-cards-438838">Autocar India</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-11-18.html">18 Nov</a><a href="archive/2026-11-17.html">17 Nov</a><a href="archive/2026-11-16.html">16 Nov</a><a href="archive/2026-11-15.html">15 Nov</a><a href="archive/2026-11-14.html">14 Nov</a><a href="archive/2026-11-13.html">13 Nov</a><a href="archive/2026-11-12.html">12 Nov</a><a href="archive/2026-11-11.html">11 Nov</a><a href="archive/2026-11-10.html">10 Nov</a><a href="archive/2026-11-09.html">09 Nov</a><a href="archive/2026-11-08.html">08 Nov</a><a href="archive/2026-11-07.html">07 Nov</a><a href="archive/2026-11-06.html">06 Nov</a><a href="archive/2026-11-05.html">05 Nov</a><a href="archive/2026-11-04.html">04 Nov</a><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>
