@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Thursday, 19 November 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">Anthropic begins trading on Nasdaq today as &ldquo;ANT&rdquo; after pricing its IPO at $83 a share &mdash; above its $70&ndash;$78 range &mdash; and upsizing the deal to raise about $81.3&nbsp;billion, the largest IPO on record, at a fully&nbsp;diluted valuation near $1.5&nbsp;trillion.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>Anthropic prices IPO at $83, debuts on Nasdaq today as &ldquo;ANT&rdquo; &mdash; a record $81.3B raise</h2>
+      <p>Anthropic priced its IPO at $83 per share on Wednesday, above the $70&ndash;$78 range, and upsized the deal to roughly 980&nbsp;million shares (from 825&nbsp;million) to raise about $81.3&nbsp;billion &mdash; the biggest IPO on record, topping SpaceX&rsquo;s ~$75&nbsp;billion. That implies a fully-diluted valuation near $1.5&nbsp;trillion. First trade is today, Thursday&nbsp;19&nbsp;November. <span class="tag">(price and raise are consistent across outlets; first-day trading performance is not yet known as of this edition, and the valuation basis varies &mdash; ~$1.08T market cap vs ~$1.5T fully diluted)</span></p>
+      <p class="src"><a href="https://www.cnn.com/2026/11/18/investing/anthropic-ipo-price-stock">CNN</a></p>
+    </article>
+    <article>
+      <h2>Strategic buyers take ~$26B of Anthropic stock in a concurrent private placement</h2>
+      <p>Alongside the public offering, a group of strategic partners &mdash; reported to include Nvidia, Google, Microsoft and Broadcom &mdash; agreed to buy about $26&nbsp;billion of non-voting stock at the $83 IPO price, lifting the combined deal to roughly $94.5&nbsp;billion. The placement is separate from, and not a condition of, the IPO. <span class="tag">(per-buyer split is from secondary coverage; placement subject to closing conditions)</span></p>
+      <p class="src"><a href="https://finance.biggo.com/news/b026716a-e979-457e-b20f-78bb0eec3712">BigGo Finance</a></p>
+    </article>
+    <article>
+      <h2>Nvidia reports fiscal-Q3 after the close today &mdash; the Street&rsquo;s biggest AI-demand tell</h2>
+      <p>Nvidia posts FY2027 Q3 earnings after the US close on Thursday; Visible&nbsp;Alpha consensus is ~$109.3&nbsp;billion revenue, with Data&nbsp;Center estimates ranging $99.7&ndash;$110.8&nbsp;billion. The stock is down ~20% from last quarter, so the print is a key read on whether AI-capex demand is still accelerating. <span class="tag">(preview only &mdash; actual numbers are not out as of this edition; consensus figures per S&amp;P Global Market Intelligence)</span></p>
+      <p class="src"><a href="https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/11/nvidia-earnings-preview-q3-2027">S&amp;P Global</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <h2>California pulls Waymo&rsquo;s driverless robotaxis off freeways; Waymo halts highway rides everywhere</h2>
+      <p>A California DMV order barring Waymo&rsquo;s driverless vehicles from state freeways took effect 11&nbsp;November and became public on the 17th; in response Waymo temporarily suspended driverless freeway rides across all its markets. Separately, federal regulators (NHTSA) are probing whether Waymo vehicles reliably detect and stop for stopped school buses. <span class="tag">(details from secondary coverage; a reminder that the hard part of autonomy is edge-case perception and regulatory validation, not the happy path)</span></p>
+      <p class="src"><a href="https://www.thetruthaboutcars.com/cars/news-blog/waymo-pulls-freeway-robotaxi-rides-after-california-ban-45137143">The Truth About Cars</a></p>
+    </article>
+    <article>
+      <h2>Tesla&rsquo;s Robotaxi keeps expanding; Musk floats adding customer-owned cars in December</h2>
+      <p>Tesla launched unsupervised Robotaxi rides in San&nbsp;Antonio (9&nbsp;Nov) &mdash; its second new city in two weeks after Fort&nbsp;Worth &mdash; and says the service now runs 24/7 in every available city. On 16&nbsp;Nov Musk said Tesla could begin testing customer-owned vehicles on the platform as soon as December. Texas registry data shows Tesla and Waymo now neck-and-neck (~1,300 vehicles each). <span class="tag">(expansion and registry counts from secondary coverage; &ldquo;24/7&rdquo; and the December timeline are Tesla/Musk claims)</span></p>
+      <p class="src"><a href="https://www.teslarati.com/tesla-overtakes-waymo-texas-robotaxi-fleet-performs-shock-flip/">Teslarati</a></p>
+    </article>
+    <article>
+      <h2>Infineon and Qualcomm tie up on vehicle computing for centralised E/E architectures</h2>
+      <p>Infineon and Qualcomm signed a technology agreement to expand the Snapdragon&nbsp;Ride ecosystem for centralised vehicle computers, jointly developing a microcontroller-based subsystem to run alongside Snapdragon&nbsp;Ride and Ride&nbsp;Flex. It&rsquo;s a concrete signal of how safety MCUs and high-performance SoCs are being paired for the software-defined vehicle &mdash; squarely in the MBD/embedded lane. <span class="tag">(announced ~3&nbsp;Nov; agreement/LOI stage, not shipping silicon)</span></p>
+      <p class="src"><a href="https://www.electronicsforyou.biz/industry-buzz/infineon-to-partner-with-qualcomm-to-provide-vehicle-computing/">Electronics For You</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>India EV sales hit a record in October &mdash; electric cars up 76% YoY, two-wheelers lead</h2>
+      <p>FADA data put total EV retail at a record ~3.55&nbsp;lakh units in October (&approx;11.5% of all vehicle sales). Electric car retail jumped ~76% YoY to 37,049 units, with Tata and Mahindra together taking ~64% of the electric-car market; electric two-wheelers hit a record ~1.44&nbsp;lakh units. <span class="tag">(datasets differ slightly &mdash; FADA 37,049 vs Autocar India 36,911 electric cars; full November figures due early December)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/ev-retail-sales-surge-76-percent-in-october-2026-441290">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>GST cuts cool EV momentum as cheaper petrol/diesel cars surge in November</h2>
+      <p>Autocar&nbsp;Pro reports that September&rsquo;s GST cuts have narrowed the price gap between EVs and ICE vehicles, pulling early-November demand toward cheaper petrol and diesel models even as passenger and commercial EVs hold up &mdash; a reminder that EV adoption here is still highly price-elastic. <span class="tag">(early-November trade read; firm November retail data not yet published)</span></p>
+      <p class="src"><a href="https://www.autocarpro.in/news/gst-cuts-cool-ev-momentum-as-ice-vehicle-demand-surges-in-november-130067">Autocar Pro</a></p>
+    </article>
+    <article>
+      <h2>EICMA 2026 bikes queue for India &mdash; Royal Enfield Himalayan 750, Continental GT 750, Flying Flea S6 Scrambler</h2>
+      <p>Royal&nbsp;Enfield unveiled the 743cc Himalayan&nbsp;750, the Continental&nbsp;GT&nbsp;750 and the electric Flying&nbsp;Flea&nbsp;S6 Scrambler at EICMA&nbsp;2026, all bound for India. India timing is unsettled: some reports expect the Himalayan&nbsp;750 at RE&rsquo;s Motoverse (Goa, 27&ndash;29&nbsp;Nov), others point to end-2026 or early 2027, at an expected ~&#8377;5&ndash;5.5&nbsp;lakh. <span class="tag">(RUMOUR on India launch timing &mdash; Royal Enfield has not confirmed dates or prices; the EICMA reveals themselves are official)</span></p>
+      <p class="src"><a href="https://www.cartoq.com/bike-news/10-bikes-unveiled-eicma-2026-coming-to-india/">CarToQ</a></p>
+    </article>
+    <article>
+      <h2>Maruti Brezza facelift and a new Mahindra EV headline a busy launch week</h2>
+      <p>Aggregator calendars list the facelifted Maruti&nbsp;Brezza (new features, underbody CNG) for mid/late November and a new Mahindra electric SUV (XEV&nbsp;7e / 3XO-based EV), with the Toyota&nbsp;Innova&nbsp;Hycross facelift confirmed for 25&nbsp;November. <span class="tag">(RUMOUR on exact dates &mdash; the Brezza and Mahindra EV dates come from &ldquo;expected launch&rdquo; listings, not official announcements; only the Innova Hycross date is confirmed)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/upcoming-car-launches-in-november-2026-441173">Autocar India</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-11-19.html">19 Nov</a><a href="archive/2026-11-18.html">18 Nov</a><a href="archive/2026-11-17.html">17 Nov</a><a href="archive/2026-11-16.html">16 Nov</a><a href="archive/2026-11-15.html">15 Nov</a><a href="archive/2026-11-14.html">14 Nov</a><a href="archive/2026-11-13.html">13 Nov</a><a href="archive/2026-11-12.html">12 Nov</a><a href="archive/2026-11-11.html">11 Nov</a><a href="archive/2026-11-10.html">10 Nov</a><a href="archive/2026-11-09.html">09 Nov</a><a href="archive/2026-11-08.html">08 Nov</a><a href="archive/2026-11-07.html">07 Nov</a><a href="archive/2026-11-06.html">06 Nov</a><a href="archive/2026-11-05.html">05 Nov</a><a href="archive/2026-11-04.html">04 Nov</a><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>
