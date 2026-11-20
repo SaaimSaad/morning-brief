@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Friday, 20 November 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">Anthropic opened its first day on Nasdaq at $111.50 &mdash; about 34% above its $83 IPO price &mdash; then cooled to close at $97.17, up roughly 17%, valuing the Claude maker near $1.27&nbsp;trillion after the largest IPO on record.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>Anthropic debuts on Nasdaq: opens +34%, closes +17% at $97.17, ~$1.27T valuation</h2>
+      <p>Anthropic (ticker &ldquo;ANT&rdquo;) began trading Wednesday&nbsp;19&nbsp;November. Shares opened at $111.50, 34% above the $83 IPO price, then faded to close at $97.17 &mdash; up about 17% on the day &mdash; for a market value near $1.27&nbsp;trillion. The IPO raised roughly $81.3&nbsp;billion, the biggest on record. <span class="tag">(valuation basis varies across outlets; an intraday market cap above $2T was quoted near the open before settling to the ~$1.27T close figure)</span></p>
+      <p class="src"><a href="https://www.forbes.com/sites/fionariley/2026/11/19/anthropic-ipo-live-nasdaq-futures-jump-as-record-stock-debut-could-open-25-higher/">Forbes</a></p>
+    </article>
+    <article>
+      <h2>Anthropic soars while the rest of Big AI slips &mdash; &ldquo;circular deal&rdquo; worries linger</h2>
+      <p>On Anthropic&rsquo;s debut day much of the AI-adjacent complex fell, with Alphabet, Meta, Amazon and SpaceX reportedly off between 2% and 4%. The split underlines ongoing unease about circular financing among the handful of firms that simultaneously fund, supply and buy from one another. <span class="tag">(peer moves from debut-day coverage; a single day&rsquo;s move, not a trend)</span></p>
+      <p class="src"><a href="https://www.npr.org/2026/11/19/nx-s1-6042558/anthropic-ipo-breaks-records-100-billion">NPR</a></p>
+    </article>
+    <article>
+      <h2>Nvidia posts a $115.8B quarter (+103%) &mdash; first report since Jensen Huang&rsquo;s abrupt exit</h2>
+      <p>For fiscal&nbsp;Q3&nbsp;2027 (ended 25&nbsp;Oct, reported 17&nbsp;Nov) Nvidia booked $115.8&nbsp;billion revenue, up 103% YoY, with data-center revenue of $107.6&nbsp;billion (+110%) and Q4 guidance near $130&nbsp;billion. It was the first set of results under interim CEO Colette&nbsp;Kress after co-founder Jensen&nbsp;Huang resigned on 12&nbsp;November amid personal-conduct allegations. <span class="tag">(earnings are official; Huang&rsquo;s departure confirmed by multiple outlets, Nvidia gave no official reason; no permanent successor named)</span></p>
+      <p class="src"><a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/default.aspx">NVIDIA Investor Relations</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <h2>Waymo pulls driverless cars off freeways everywhere after California ban</h2>
+      <p>Following a California DMV order barring its driverless vehicles from state freeways, Waymo suspended driverless freeway rides across all its markets. The episode &mdash; preceded this year by robotaxis entering active construction lanes and a near-3,900-vehicle software recall &mdash; is a pointed reminder that autonomy&rsquo;s hard part is edge-case perception and regulatory validation, not the happy path. <span class="tag">(details from secondary coverage; surface-street service continues)</span></p>
+      <p class="src"><a href="https://finance.yahoo.com/markets/stocks/article/waymo-pulls-robotaxis-off-highways-after-california-ban-with-tech-seen-as-far-from-perfect-161031372.html">Yahoo Finance</a></p>
+    </article>
+    <article>
+      <h2>Tesla&rsquo;s Cybercab fleet hits a record and retakes the Texas robotaxi lead from Waymo</h2>
+      <p>Teslarati reports Tesla registered a record ~200 Cybercabs in Texas in a single day, pushing its purpose-built robotaxi fleet to ~773 vehicles and back ahead of Waymo. The two-seat Cybercab has no steering wheel or pedals; public rides remain centred on Austin, with wider Texas expansion underway. <span class="tag">(registry counts and &ldquo;lead&rdquo; framing from secondary coverage; a reported Dallas Cybercab start is not independently confirmed)</span></p>
+      <p class="src"><a href="https://www.teslarati.com/teslas-cybercab-fleet-just-had-its-biggest-day-ever/">Teslarati</a></p>
+    </article>
+    <article>
+      <h2>Infineon unveils AURIX RC1, a RISC-V platform for software-defined vehicles and &ldquo;physical AI&rdquo;</h2>
+      <p>Infineon&rsquo;s new AURIX&nbsp;RC1 line (announced ~4&nbsp;Nov) integrates up to 12 32-bit cores, a parallel processing unit for edge AI, and up to 40&nbsp;MB of embedded memory &mdash; a safety-MCU building block for centralised E/E architectures, squarely in the MBD/embedded lane as OEMs pair safety MCUs with high-performance SoCs. <span class="tag">(product announcement; a silicon roadmap, not yet in volume vehicles. Separately, chipmakers warn AI data-centre demand is squeezing mature automotive chip supply into 2028.)</span></p>
+      <p class="src"><a href="https://securityboulevard.com/2026/11/news-alert-infineon-unveils-risc-v-chip-platform-targets-software-defined-vehicles-and-physical-ai/">Security Boulevard</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>India EV retail up 45% YoY in October to ~3.55 lakh units; EV share near 9.7%</h2>
+      <p>FADA data put total EV retail at 354,625 units in October 2026, up 45% YoY, with the EV share of all vehicle sales more than doubling to ~9.7% from 4.7% a year earlier. Electric two-wheelers rose ~48% to 224,064 units and electric passenger vehicles reached 37,049. <span class="tag">(datasets differ slightly across outlets; full November figures due early December)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/industry/indian-e-two-wheeler-sales-crosses-a-record-223-lakh-units-in-october-441190">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>E-2W pecking order shifts: TVS and Bajaj surge, Ola slumps, Ather share slips</h2>
+      <p>In October TVS led electric two-wheeler retail with 60,490 units and Bajaj took second with 49,126. Ola&nbsp;Electric was the only top-five brand to shrink &mdash; 12,098 units, down 26.4% YoY &mdash; while Ather&rsquo;s share eased to ~14% from 20% a year earlier. Legacy ICE makers now clearly lead India&rsquo;s electric two-wheeler race. <span class="tag">(October retail data; monthly figures can swing with festive timing)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/bike-news/tvs-leads-e2w-sales-in-october-2026-as-sales-nearly-double-441292">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>Toyota Innova Hycross facelift teased for a 25 November reveal &mdash; India&rsquo;s first flex-fuel strong hybrid?</h2>
+      <p>Toyota has teased the Innova&nbsp;Hycross facelift ahead of a 25&nbsp;November unveiling, expected at around &#8377;20.5&nbsp;lakh. Reports flag it as potentially the first flex-fuel strong-hybrid car to launch in India &mdash; a notable powertrain milestone for the market. <span class="tag">(RUMOUR on exact date/price &mdash; the teaser is official, but the launch date and flex-fuel claim come from outlet reporting, not a Toyota confirmation)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/upcoming-car-launches-in-november-2026-441173">Autocar India</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-11-20.html">20 Nov</a><a href="archive/2026-11-19.html">19 Nov</a><a href="archive/2026-11-18.html">18 Nov</a><a href="archive/2026-11-17.html">17 Nov</a><a href="archive/2026-11-16.html">16 Nov</a><a href="archive/2026-11-15.html">15 Nov</a><a href="archive/2026-11-14.html">14 Nov</a><a href="archive/2026-11-13.html">13 Nov</a><a href="archive/2026-11-12.html">12 Nov</a><a href="archive/2026-11-11.html">11 Nov</a><a href="archive/2026-11-10.html">10 Nov</a><a href="archive/2026-11-09.html">09 Nov</a><a href="archive/2026-11-08.html">08 Nov</a><a href="archive/2026-11-07.html">07 Nov</a><a href="archive/2026-11-06.html">06 Nov</a><a href="archive/2026-11-05.html">05 Nov</a><a href="archive/2026-11-04.html">04 Nov</a><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>
