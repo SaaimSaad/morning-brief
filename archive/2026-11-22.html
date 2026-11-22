@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Sunday, 22 November 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">Nvidia just reported roughly $115.8&nbsp;billion in a single quarter &mdash; up ~103% year-on-year, data centre alone at $107.6&nbsp;billion &mdash; and guided to ~$130&nbsp;billion next quarter, with Jensen Huang calling Blackwell demand &ldquo;off the charts&rdquo; and cloud GPUs sold out: the clearest sign yet that the compute bill under the AI boom is still being paid in full.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>Nvidia posts a record quarter &mdash; ~$115.8B revenue, data centre up ~110%, Q4 guide ~$130B</h2>
+      <p>Nvidia reported about $115.8&nbsp;billion in revenue for its October quarter, up roughly 103% year-on-year, with the data-centre segment alone at $107.6&nbsp;billion (up ~110%). It guided to about $130&nbsp;billion in Q4 data-centre revenue (&plusmn;3%), and CEO Jensen Huang said Blackwell demand is &ldquo;off the charts&rdquo; and cloud GPUs are sold out. <span class="tag">(these are the numbers behind the AI capex cycle &mdash; and the other side of the ~$70.7B compute bill Anthropic disclosed last week)</span></p>
+      <p class="src"><a href="https://www.techpowerup.com/354965/nvidia-reports-q3-2026-earnings-of-usd-115-8-billion">TechPowerUp</a></p>
+    </article>
+    <article>
+      <h2>Google switches on Gemini &ldquo;Computer Use&rdquo; for the Mac</h2>
+      <p>Google rolled out an agent in the Gemini app for macOS (19&nbsp;Nov) that clicks, types and fills forms across local files, Mac apps and websites, running in an isolated background window with a live preview and pausing for logins, payments and other sensitive actions. It needs an Apple-silicon Mac on macOS&nbsp;15+, a paid Google AI plan, and is US-only at launch. <span class="tag">(agentic desktop control is the same direction as putting AI in the loop of real engineering tooling)</span></p>
+      <p class="src"><a href="https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/">Google</a></p>
+    </article>
+    <article>
+      <h2>Frontier labs ship a fortnight of new models</h2>
+      <p>Per release trackers, the past two weeks brought Anthropic&rsquo;s Claude Fable&nbsp;5.2 (9&nbsp;Nov), OpenAI&rsquo;s GPT-6.2 Astra and Sol (17&nbsp;Nov) and Google&rsquo;s Gemini&nbsp;4 Neon (18&nbsp;Nov), with the cheaper tiers (e.g. GPT-6.2 Sol at ~$2/$10 per&nbsp;million tokens) pitched at cutting the cost of complex reasoning. <span class="tag">(tracker-sourced &mdash; model names and exact dates vary across aggregators and aren&rsquo;t all confirmed on official channels)</span></p>
+      <p class="src"><a href="https://thursdai.news/releases/2026-11">ThursdAI release tracker</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <h2>Wayve signs a multi-year cloud deal with CoreWeave to train its AI driver</h2>
+      <p>UK autonomy firm Wayve agreed a multi-year cloud-compute deal with CoreWeave to train, evaluate and simulate its end-to-end, learning-based autonomous-driving foundation models &mdash; the data-hungry neural approach that is increasingly challenging classical, rule-based ADAS stacks. <span class="tag">(announced mid-Nov; a quieter weekend for OEM and functional-safety news)</span></p>
+      <p class="src"><a href="https://www.autoconnectedcar.com/2026/11/autonomous-self-driving-vehicle-news-ivian-coreweave-wayve-kakao-nvidia-kia-asi-tier-iv-man-truck-bus-komatsu-may-mobility-volkswagen-tesla-terawatt-waymo/">AutoConnectedCar</a></p>
+    </article>
+    <article>
+      <h2>Kakao Mobility and Nvidia to co-develop a production Level-4 system</h2>
+      <p>Korean ride-hailing operator Kakao Mobility signed an MoU with Nvidia to jointly develop a production-oriented SAE Level-4 autonomous-driving system, pairing its fleet data with Nvidia&rsquo;s compute and DRIVE stack. <span class="tag">(MoU stage &mdash; an intent to co-develop, not a shipping product)</span></p>
+      <p class="src"><a href="https://www.autoconnectedcar.com/2026/11/autonomous-self-driving-vehicle-news-ivian-coreweave-wayve-kakao-nvidia-kia-asi-tier-iv-man-truck-bus-komatsu-may-mobility-volkswagen-tesla-terawatt-waymo/">AutoConnectedCar</a></p>
+    </article>
+    <article>
+      <h2>Report: Chinese OEMs push L3 pilots, in-house chips and &ldquo;cockpit-driving fusion&rdquo;</h2>
+      <p>A market study of China&rsquo;s independent OEMs says L3 pilots are now beginning and that self-developed silicon plus merged cockpit-and-driving compute are redefining how carmakers compete, projecting continued ADAS/AD growth through 2030. <span class="tag">(analyst market report, 16&nbsp;Nov &mdash; a trend read, not a single-company announcement)</span></p>
+      <p class="src"><a href="https://www.globenewswire.com/news-release/2026/11/16/3403765/28124/en/chinese-independent-oem-adas-and-autonomous-driving-market-report-2026-physical-ai-d2d-standardization-and-l3-commercialization-drive-growth-through-2030.html">GlobeNewswire</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>BMW R 12 G/S launches in India at &#8377;25.40&nbsp;lakh</h2>
+      <p>BMW Motorrad launched the retro-enduro R 12 G/S in India on 19&nbsp;November at &#8377;25.40&nbsp;lakh (ex-showroom), sold only in the Pro variant as a CBU with Comfort and Enduro packages standard. Its 1,170cc air/oil-cooled boxer twin makes ~109&nbsp;hp and 115&nbsp;Nm. <span class="tag">(one Autocar headline misprinted the price as &#8377;24.50 lakh; body text and other outlets confirm &#8377;25.40 lakh)</span></p>
+      <p class="src"><a href="https://www.businesstoday.in/auto/story/bmw-motorrad-launches-r-12-gs-in-india-at-rs-25-40-lakh-568455-2026-11-19">Business Today</a></p>
+    </article>
+    <article>
+      <h2>Honda Rebel 500 relaunches locally built, from &#8377;4.50&nbsp;lakh</h2>
+      <p>Honda launched a now locally-assembled (~50% localised) Rebel 500 cruiser on 19&nbsp;November at &#8377;4.50&nbsp;lakh for the standard and &#8377;4.90&nbsp;lakh for the E-Clutch (ex-showroom, Bengaluru) &mdash; well under the &#8377;5.12&nbsp;lakh it cost as a full import in 2025. <span class="tag">(the engine is still imported; localisation mainly cut the on-paper price)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/bike-news/honda-rebel-500-launched-at-rs-450-lakh-441372">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>VinFast&rsquo;s budget VF3 EV expected in India around 26 November</h2>
+      <p>Listings point to VinFast launching its compact VF3 electric car in India at roughly &#8377;7&nbsp;lakh around 26&nbsp;November, following its locally-assembled VF6 and VF7 SUVs (from &#8377;16.49&nbsp;lakh). <span class="tag">(RUMOUR &mdash; date and price are aggregator estimates that disagree with each other, not a VinFast announcement)</span></p>
+      <p class="src"><a href="https://www.91wheels.com/cars/vinfast">91Wheels</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-11-22.html">22 Nov</a><a href="archive/2026-11-21.html">21 Nov</a><a href="archive/2026-11-20.html">20 Nov</a><a href="archive/2026-11-19.html">19 Nov</a><a href="archive/2026-11-18.html">18 Nov</a><a href="archive/2026-11-17.html">17 Nov</a><a href="archive/2026-11-16.html">16 Nov</a><a href="archive/2026-11-15.html">15 Nov</a><a href="archive/2026-11-14.html">14 Nov</a><a href="archive/2026-11-13.html">13 Nov</a><a href="archive/2026-11-12.html">12 Nov</a><a href="archive/2026-11-11.html">11 Nov</a><a href="archive/2026-11-10.html">10 Nov</a><a href="archive/2026-11-09.html">09 Nov</a><a href="archive/2026-11-08.html">08 Nov</a><a href="archive/2026-11-07.html">07 Nov</a><a href="archive/2026-11-06.html">06 Nov</a><a href="archive/2026-11-05.html">05 Nov</a><a href="archive/2026-11-04.html">04 Nov</a><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>
