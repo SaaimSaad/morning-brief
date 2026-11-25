@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Wednesday, 25 November 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">Staff at both Anthropic and OpenAI are now openly questioning whether their most advanced models can be shipped safely &mdash; Axios reports internal doubts even as the labs keep racing, with Anthropic countering that locking a model inside the company doesn&rsquo;t make it any safer.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>Anthropic and OpenAI staff openly question whether their top models are safe to release</h2>
+      <p>Axios reported on 24&nbsp;November that employees at both labs have voiced doubts that certain unreleased frontier models can be launched safely &mdash; this after OpenAI earlier slowed its &ldquo;Astra&rdquo; model because it couldn&rsquo;t rule out that it had hit the &ldquo;critical&rdquo; threshold in its preparedness framework. Anthropic&rsquo;s counter-argument: keeping a capable model internal doesn&rsquo;t actually make it safe. <span class="tag">(a recurring 2026 theme &mdash; over 1,200 AI-company staff have signed a &ldquo;Pacing the Frontier&rdquo; petition this year; this is reporting on internal sentiment, not a formal policy change)</span></p>
+      <p class="src"><a href="https://www.unite.ai/anthropic-and-openai-staff-question-releasing-advanced-ai-models/">Unite.AI (via Axios)</a></p>
+    </article>
+    <article>
+      <h2>Google ships Gemini&nbsp;4 Neon &mdash; a cheaper coding model it says matches Opus&nbsp;5.5 and GPT-6.2 Sol</h2>
+      <p>Announced 18&nbsp;November, Gemini&nbsp;4 Neon is a mid-tier model aimed at coding and agentic work, priced at $3 per&nbsp;million input / $15 per&nbsp;million output tokens. Google claims state-of-the-art secure-code results on the hard tier of AutoBaxBench (76%) and ~32% lower cost per task than Gemini&nbsp;4 Carbon in third-party evals. It replaces Argon in the Gemini app picker; Argon&rsquo;s introductory pricing ends 1&nbsp;December. <span class="tag">(benchmark figures are Google&rsquo;s own or early third-party reporting; available via AI Studio, the Gemini API, and Antigravity for paid tiers)</span></p>
+      <p class="src"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/">Google (blog.google)</a></p>
+    </article>
+    <article>
+      <h2>OpenAI begins testing &ldquo;Dots&rdquo; &mdash; persistent, always-on agents that run between chats</h2>
+      <p>OpenAI is reported to be trialling &ldquo;Dots,&rdquo; agents that keep running in the background between conversations, with a small set of ChatGPT&nbsp;Plus users and some Business workspaces. Separately, OpenAI says its agents now complete about 46% of research tasks estimated at 2&ndash;4&nbsp;hours of human work, up from 23% in March. <span class="tag">(limited test; sourced from aggregated weekly agent-news reporting and OpenAI&rsquo;s own eval figures rather than a primary launch post &mdash; treat as early/unconfirmed)</span></p>
+      <p class="src"><a href="https://aiagentstore.ai/ai-agent-news/this-week">AI Agent Store &mdash; weekly</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <h2>Pony.ai and Toyota put a fully driverless bZ4X robotaxi into paid service in Guangzhou</h2>
+      <p>The two companies launched commercial, fully driverless rides with the mass-produced bZ4X &mdash; Toyota&rsquo;s first series-production battery-electric robotaxi, built on Pony.ai&rsquo;s Gen-7 autonomous system &mdash; starting in Guangzhou&rsquo;s Nansha district, bookable 24/7 via the PonyPilot app. They are targeting roughly 1,000 vehicles across major Chinese cities as production scales. <span class="tag">(announced 15&ndash;16&nbsp;November; a mass-produced OEM robotaxi, not a prototype &mdash; the industrialisation step most AV programmes are chasing)</span></p>
+      <p class="src"><a href="https://cnevpost.com/2026/11/16/pony-ai-toyota-bz4x-robotaxi-guangzhou">CnEVPost</a></p>
+    </article>
+    <article>
+      <h2>New SAE paper: AI-driven predictive fault management for ADAS controllers under ISO&nbsp;26262</h2>
+      <p>A 2026 SAE Technical Paper proposes a framework that combines AI-based predictive fault models with ISO&nbsp;26262 safety mechanisms in ADAS controllers &mdash; shifting from reactive diagnostics toward anticipating faults before they violate a safety goal. Directly in the AI-in-functional-safety lane relevant to MBD work. <span class="tag">(research paper, not a product release; paywalled on SAE MOBILUS &mdash; abstract is open)</span></p>
+      <p class="src"><a href="https://saemobilus.sae.org/papers/ai-enhanced-functional-safety-adas-controllers-predictive-fault-management-iso-26262-2026-01-0036">SAE MOBILUS</a></p>
+    </article>
+    <article>
+      <h2>Quiet week for OEM/AUTOSAR newsflow &mdash; demand signal in the camera market</h2>
+      <p>Hard news on Classic/Adaptive AUTOSAR stacks and OEM functional-safety was thin over the last 48&nbsp;hours. The notable data point: a 24&nbsp;November market study forecasts the automotive-camera market growing at a 7.9% CAGR to ~$15.82&nbsp;billion by 2033, crediting ADAS and AI perception as the main drivers. <span class="tag">(market-research release, not company news &mdash; included as a sector signal, treat the forecast numbers with the usual caution)</span></p>
+      <p class="src"><a href="https://www.globenewswire.com/news-release/2026/11/24/3409633/28124/en/automotive-camera-market-by-technology-application-vehicle-and-ev-type-view-autonomy-and-region-global-forecast-to-2033-adas-and-ai-drive-7-9-cagr-to-15-82-billion.html">GlobeNewswire</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>Toyota Innova Hycross facelift due to launch today &mdash; likely India&rsquo;s first flex-fuel strong hybrid</h2>
+      <p>Toyota has teased the facelifted Innova Hycross for a 25&nbsp;November launch, with the headline change widely expected to be a flex-fuel version of its 2.0-litre petrol strong-hybrid powertrain, able to run on high ethanol blends (up to E85/E100). Estimated pricing runs roughly &#8377;20&ndash;35&nbsp;lakh (ex-showroom). <span class="tag">(launch date is from Toyota&rsquo;s teaser and widely reported, but a couple of outlets list the 26th; the flex-fuel hybrid spec and final price were not officially confirmed at the time of writing &mdash; a genuine powertrain-engineering first for India if it lands)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/toyota-innova-hycross-facelift-to-launch-on-november-25-441225">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>Royal Enfield Himalayan&nbsp;750 heads to India &mdash; pricing expected at Motoverse this week</h2>
+      <p>Royal Enfield unveiled the Himalayan&nbsp;750 at EICMA with an all-new 743cc parallel-twin (63&nbsp;Nm, five ride modes, cruise control, TPMS), a big step up from the 450. Its India debut, pricing and bookings are expected at Motoverse (HillTop, Goa, 27&ndash;29&nbsp;November), alongside the Continental&nbsp;GT&nbsp;750 and an electric Flying&nbsp;Flea S6. Estimated ~&#8377;4.0&ndash;4.8&nbsp;lakh. <span class="tag">(bike is officially revealed; the India price and booking timing are expectations until Royal Enfield confirms them at the event)</span></p>
+      <p class="src"><a href="https://www.autocarpro.in/news/royal-enfield-himalayan-750-launched-at-eicma-2026-135667">Autocar Professional</a></p>
+    </article>
+    <article>
+      <h2>Tata Sierra.ev launched at &#8377;18.79&nbsp;lakh with 500+&nbsp;km real-world range and QWD</h2>
+      <p>Tata Motors has launched the electric Sierra at an introductory &#8377;18.79&nbsp;lakh (ex-showroom), claiming over 500&nbsp;km of real-world range and offering a &ldquo;quad-wheel-drive&rdquo; (QWD) dual-motor option &mdash; positioning the revived Sierra nameplate squarely against premium Indian EVs. <span class="tag">(ex-showroom introductory pricing; the petrol/diesel Sierra was launched separately from ~&#8377;11.49&nbsp;lakh)</span></p>
+      <p class="src"><a href="https://www.autocarpro.in/news/tata-motors-launches-sierraev-at-rs-1879-lakh-offers-over-500-km-real-world-range-qwd-133300">Autocar Professional</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-11-25.html">25 Nov</a><a href="archive/2026-11-24.html">24 Nov</a><a href="archive/2026-11-23.html">23 Nov</a><a href="archive/2026-11-22.html">22 Nov</a><a href="archive/2026-11-21.html">21 Nov</a><a href="archive/2026-11-20.html">20 Nov</a><a href="archive/2026-11-19.html">19 Nov</a><a href="archive/2026-11-18.html">18 Nov</a><a href="archive/2026-11-17.html">17 Nov</a><a href="archive/2026-11-16.html">16 Nov</a><a href="archive/2026-11-15.html">15 Nov</a><a href="archive/2026-11-14.html">14 Nov</a><a href="archive/2026-11-13.html">13 Nov</a><a href="archive/2026-11-12.html">12 Nov</a><a href="archive/2026-11-11.html">11 Nov</a><a href="archive/2026-11-10.html">10 Nov</a><a href="archive/2026-11-09.html">09 Nov</a><a href="archive/2026-11-08.html">08 Nov</a><a href="archive/2026-11-07.html">07 Nov</a><a href="archive/2026-11-06.html">06 Nov</a><a href="archive/2026-11-05.html">05 Nov</a><a href="archive/2026-11-04.html">04 Nov</a><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>
