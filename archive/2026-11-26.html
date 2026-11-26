@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Thursday, 26 November 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">Toyota has put India&rsquo;s first flex-fuel strong hybrid on sale &mdash; the facelifted Innova Hycross now mates its 2.0-litre petrol-hybrid powertrain to an engine certified for high ethanol blends, from an introductory &#8377;19.99&nbsp;lakh &mdash; a genuine powertrain-engineering first for the market.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>Nvidia CEO Jensen Huang resigns; board rules out reinstating him and opens a formal CEO search</h2>
+      <p>Huang resigned as president, CEO and director effective 12&nbsp;November; CFO Colette Kress is interim CEO (keeping the CFO role) and the board has retained Heidrick &amp; Struggles to find a permanent chief. On the 17&nbsp;November earnings call the board confirmed it &ldquo;does not intend to reinstate Jensen,&rdquo; while Kress lifted the FY2028 revenue-growth outlook to ~75% year-on-year. <span class="tag">(official via Nvidia&rsquo;s newsroom and its SEC 8-K; the company has not given a reason &mdash; and aggregator claims circulating this week that Huang was being reinstated are false)</span></p>
+      <p class="src"><a href="https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition">Nvidia Newsroom</a></p>
+    </article>
+    <article>
+      <h2>OpenAI ships GPT-6.2 Astra and Sol &mdash; frontier models tuned for professional work at lower compute cost</h2>
+      <p>Released 17&nbsp;November, Astra is pitched as OpenAI&rsquo;s frontier model for advanced reasoning, coding and complex professional tasks, with Sol aimed at cutting the compute cost of hard problems. <span class="tag">(from OpenAI&rsquo;s own model release notes; capability and cost claims are OpenAI&rsquo;s and not yet independently benchmarked)</span></p>
+      <p class="src"><a href="https://help.openai.com/en/articles/9624314-model-release-notes">OpenAI model release notes</a></p>
+    </article>
+    <article>
+      <h2>Anthropic folds Chat and Cowork into one Claude Enterprise workspace, pushing agents into day-to-day office work</h2>
+      <p>From 16&nbsp;November, Claude Enterprise combines Chat and the autonomous &ldquo;Cowork&rdquo; agent experience by default, with connectors, plugins and admin-managed private plugin marketplaces &mdash; part of Anthropic&rsquo;s enterprise push ahead of a widely expected IPO. <span class="tag">(product/rollout news, not a model release; admins can enable it early or opt out)</span></p>
+      <p class="src"><a href="https://www.constellationr.com/insights/news/anthropic-expands-cowork-plugins-across-enterprise-functions">Constellation Research</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <h2>Mercedes-Benz brings hands-free Level&nbsp;2 highway driving to the US &mdash; and lays out its redundancy path to Level&nbsp;3</h2>
+      <p>Mercedes is rolling out hands-free highway driving with point-to-point navigation in the US, starting with a California pilot in December&nbsp;2026, and classes the features as Level&nbsp;2. Its MB.DRIVE ASSIST PRO platform &mdash; launching in Stuttgart and Munich by year-end &mdash; is the stated route to Level&nbsp;3, which it says requires fully redundant steering, braking and power. <span class="tag">(that redundancy is the functional-safety crux of eyes-off L3; Mercedes has also quietly dropped L3 from the latest S-Class)</span></p>
+      <p class="src"><a href="https://www.wardsauto.com/news/mercedes-benz-is-bringing-partially-automated-driving-to-vehicles-in-us-ge/874662/">WardsAuto</a></p>
+    </article>
+    <article>
+      <h2>China pushes L3/L4 while Western OEMs retreat to &ldquo;Level&nbsp;2+&rdquo;</h2>
+      <p>Volkswagen has secured Level&nbsp;3 test approval in China and Xpeng has begun Level&nbsp;4 robotaxi demos, even as BMW and Mercedes pull eyes-off Level&nbsp;3 from their flagship cars. Analysts tie the Western pivot to Level&nbsp;2+ to liability transfer, high development cost and regulatory friction. <span class="tag">(VW/Xpeng item dated late October; the L2+ vs L3 split is the strategic backdrop for any OEM ADAS programme)</span></p>
+      <p class="src"><a href="https://www.electrive.com/2026/10/28/vw-receives-level-3-test-approval-in-china-xpeng-begins-level-4-demos/">electrive</a></p>
+    </article>
+    <article>
+      <h2>SAE paper: harmonising generative AI with ISO&nbsp;26262 for ADAS</h2>
+      <p>A 2026 SAE Technical Paper sets out how to combine generative-AI perception and decision components with ISO&nbsp;26262 safety mechanisms in ADAS &mdash; squarely the AI-in-functional-safety question facing MBD teams moving AI into safety-critical control. <span class="tag">(research paper, not a product; full text paywalled on SAE MOBILUS, abstract open)</span></p>
+      <p class="src"><a href="https://saemobilus.sae.org/papers/harmonizing-generative-ai-iso-26262-safe-intelligent-adas-systems-2026-01-0785">SAE MOBILUS</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>Toyota launches India&rsquo;s first flex-fuel strong hybrid &mdash; Innova Hycross facelift from ~&#8377;19.99&nbsp;lakh</h2>
+      <p>The facelifted Innova Hycross pairs Toyota&rsquo;s 2.0-litre petrol strong-hybrid powertrain with an engine certified to run on high ethanol blends (reported E20&ndash;E85), at an introductory ~&#8377;19.99&nbsp;lakh (ex-showroom) for the flex-fuel hybrid variant. It is a genuine powertrain-engineering first for India and a live test of ethanol strong-hybrids at scale. <span class="tag">(now launched; outlets differ on the exact launch date and some earlier reports cited E100 &mdash; treat the final E-rating and variant pricing as still settling)</span></p>
+      <p class="src"><a href="https://www.cartoq.com/car-news/toyota-innova-hycross-launch-price-flex-fuel/">CarToq</a></p>
+    </article>
+    <article>
+      <h2>Tata Motors crosses 6&nbsp;lakh passenger-vehicle sales in a calendar year for the first time</h2>
+      <p>Tata recorded 6,49,477 PV wholesales in January&ndash;October&nbsp;2026 &mdash; its first calendar year past 6&nbsp;lakh &mdash; including a record 73,894&nbsp;units in October. On the current run-rate it could close 2026 near 7.9&nbsp;lakh, with EVs a major contributor. <span class="tag">(wholesale/dispatch figures; November and December sales are still to report)</span></p>
+      <p class="src"><a href="https://www.autocarindia.com/car-news/tata-motors-crosses-6-lakh-annual-sales-for-the-first-time-441216">Autocar India</a></p>
+    </article>
+    <article>
+      <h2>Royal Enfield Himalayan&nbsp;750 &mdash; India bookings open 27&nbsp;November, price at Motoverse</h2>
+      <p>Royal Enfield opens India bookings for the Himalayan&nbsp;750 on 27&nbsp;November, with pricing to be revealed at Motoverse (Goa, 27&ndash;29&nbsp;November). The all-new 743cc parallel-twin makes roughly 55&nbsp;bhp and 63&nbsp;Nm; UK pricing starts at &pound;6,999, and India is widely expected around &#8377;4&ndash;5&nbsp;lakh. <span class="tag">(bike is officially revealed; the India price is an expectation until Royal Enfield confirms it at the event)</span></p>
+      <p class="src"><a href="https://www.cartoq.com/bike-news/royal-enfield-himalayan-750-india-launch-motoverse-2026/">CarToq</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-11-26.html">26 Nov</a><a href="archive/2026-11-25.html">25 Nov</a><a href="archive/2026-11-24.html">24 Nov</a><a href="archive/2026-11-23.html">23 Nov</a><a href="archive/2026-11-22.html">22 Nov</a><a href="archive/2026-11-21.html">21 Nov</a><a href="archive/2026-11-20.html">20 Nov</a><a href="archive/2026-11-19.html">19 Nov</a><a href="archive/2026-11-18.html">18 Nov</a><a href="archive/2026-11-17.html">17 Nov</a><a href="archive/2026-11-16.html">16 Nov</a><a href="archive/2026-11-15.html">15 Nov</a><a href="archive/2026-11-14.html">14 Nov</a><a href="archive/2026-11-13.html">13 Nov</a><a href="archive/2026-11-12.html">12 Nov</a><a href="archive/2026-11-11.html">11 Nov</a><a href="archive/2026-11-10.html">10 Nov</a><a href="archive/2026-11-09.html">09 Nov</a><a href="archive/2026-11-08.html">08 Nov</a><a href="archive/2026-11-07.html">07 Nov</a><a href="archive/2026-11-06.html">06 Nov</a><a href="archive/2026-11-05.html">05 Nov</a><a href="archive/2026-11-04.html">04 Nov</a><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>
