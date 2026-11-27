@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Morning Brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --faded: #6b6b6b;
+    --rule: #d9d4c7;
+    --paper: #f7f4ec;
+    --accent: #8c3b2e;   /* restrained terracotta */
+    --link: #2a4b6b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 3px double var(--ink); padding-bottom: 14px; }
+  .masthead h1 {
+    font-size: clamp(38px, 8vw, 64px);
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+  }
+  .dateline {
+    display: flex; justify-content: space-between;
+    font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--faded); margin-top: 10px; flex-wrap: wrap; gap: 6px;
+  }
+  /* Lead line */
+  .lead {
+    font-style: italic; font-size: 19px; text-align: center;
+    margin: 22px 0 30px; color: var(--ink);
+  }
+  /* Sections */
+  section { margin-bottom: 34px; }
+  .section-title {
+    font-size: 13px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); border-bottom: 1px solid var(--rule);
+    padding-bottom: 6px; margin-bottom: 16px;
+  }
+  article { margin-bottom: 16px; }
+  article h2 {
+    font-size: 19px; margin: 0 0 4px; font-weight: 700; line-height: 1.3;
+  }
+  article p { margin: 0 0 4px; }
+  article .src a { color: var(--link); font-size: 13px; text-decoration: none; }
+  article .src a:hover { text-decoration: underline; }
+  .tag { font-size: 11px; color: var(--faded); font-style: italic; }
+  /* Archive */
+  .archive {
+    border-top: 1px solid var(--rule); margin-top: 48px; padding-top: 16px;
+    font-size: 13px; color: var(--faded);
+  }
+  .archive a { color: var(--link); text-decoration: none; margin-right: 10px; }
+  footer { text-align: center; font-size: 11px; color: var(--faded); margin-top: 40px; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8e4d9; --faded:#9a948a; --rule:#3a3732; --paper:#17150f; --accent:#c87458; --link:#7fa8d0; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <h1>The Morning Brief</h1>
+    <div class="dateline">
+      <span>Bengaluru</span>
+      <span id="edition-date">Friday, 27 November 2026</span>
+      <span>For Odin</span>
+    </div>
+  </header>
+
+  <p class="lead">Royal Enfield launches its biggest motorcycle yet &mdash; the all-new 743cc Himalayan&nbsp;750 breaks cover in India today at Motoverse in Goa, a parallel-twin adventure-tourer making ~55&nbsp;bhp and 63&nbsp;Nm, with India pricing revealed at the event.</p>
+
+  <section>
+    <div class="section-title">AI &amp; LLMs</div>
+    <article>
+      <h2>Anthropic appears to be stealth-testing Claude Opus&nbsp;5.6 &mdash; faster coding, no official word</h2>
+      <p>Testers reported access from 24&nbsp;November via Claude Code and the chat interface, with circulating comparisons showing one task finishing in ~21&nbsp;minutes on Opus&nbsp;5.6 vs ~33&nbsp;minutes on Opus&nbsp;5.5, plus sharper code-generated 3D scenes and animations. <span class="tag">(rumour: all claims come from tester posts and third-party coverage; Anthropic has not confirmed the model, specs or a release date &mdash; early-December is speculated)</span></p>
+      <p class="src"><a href="https://www.testingcatalog.com/testers-share-early-results-possible-claude-opus-5-6/">TestingCatalog</a></p>
+    </article>
+    <article>
+      <h2>OpenAI&rsquo;s frontier models and Codex are coming to Google Cloud</h2>
+      <p>OpenAI is bringing its frontier models and Codex workflows into Google Cloud&rsquo;s Model Garden, with general availability planned in the coming weeks &mdash; an unusual cross-rival distribution deal that widens where enterprises can run OpenAI models. <span class="tag">(official, from OpenAI&rsquo;s own announcement)</span></p>
+      <p class="src"><a href="https://openai.com/index/openai-models-google-cloud/">OpenAI</a></p>
+    </article>
+    <article>
+      <h2>Anthropic reportedly used Claude agents to rewrite its API in Rust, cutting CPU use ~70%</h2>
+      <p>Coverage on 26&nbsp;November says Anthropic migrated its production API to Rust &mdash; largely driven by Claude agents &mdash; for roughly a 70% CPU reduction with no downtime, a concrete data-point on agentic AI doing large-scale production engineering. <span class="tag">(reported via AI news digests, not yet a detailed Anthropic engineering write-up; treat the exact figures as unverified)</span></p>
+      <p class="src"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-november-26-2026/">The Neuron</a></p>
+    </article>
+    <article>
+      <h2>OpenAI and Anthropic staff warn next-gen models may soon be able to &ldquo;trick us&rdquo;</h2>
+      <p>More than two dozen employees across both labs say frontier models are nearing a point where they could deceive evaluators; an Anthropic spokesperson countered that simply holding a model back &ldquo;doesn&rsquo;t make it safe.&rdquo; <span class="tag">(reporting dated 26&nbsp;November; staff concerns, not a company safety finding)</span></p>
+      <p class="src"><a href="https://novaramedia.com/2026/11/26/openai-and-anthropic-staff-say-latest-models-will-soon-be-able-to-trick-us">Novara Media</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">Automotive &amp; MBD</div>
+    <article>
+      <h2>BMW won&rsquo;t offer Level&nbsp;3 on the facelifted 7 Series &mdash; says buyers aren&rsquo;t interested</h2>
+      <p>BMW is holding its eyes-off Level&nbsp;3 assistant off the updated 7 Series, with its development chief citing weak demand and buyers&rsquo; unwillingness to pay the premium, while keeping the tech in development. It underscores the Western OEM retreat to &ldquo;Level&nbsp;2++&rdquo; where the driver stays liable. <span class="tag">(reported 23&nbsp;November; the L2++ vs L3 liability/cost trade-off is the strategic backdrop for any OEM ADAS programme)</span></p>
+      <p class="src"><a href="https://www.bmwblog.com/2026/11/23/bmw-admits-customers-uninterested-level-3-autonomous-driving/">BMWBlog</a></p>
+    </article>
+    <article>
+      <h2>China moves first on Level&nbsp;3 highway driving &mdash; BAIC/Huawei Stelato begins tests at 120&nbsp;km/h</h2>
+      <p>On 17&nbsp;November the BAIC&times;Huawei Stelato brand began L3 highway testing on the Stelato&nbsp;V8, capable of L3 driving at 120&nbsp;km/h with lane changes and ramp deceleration; China&rsquo;s first conditional L3 permits went to Changan and BAIC for designated zones in Beijing and Chongqing. <span class="tag">(official test launch; permits are geo-fenced and speed-limited, not open-road L3)</span></p>
+      <p class="src"><a href="https://carnewschina.com/2026/11/18/the-first-chinese-automaker-began-l3-autopilot-tests-on-highways/">CarNewsChina</a></p>
+    </article>
+    <article>
+      <h2>Mercedes-Benz sets December US launch for MB.Drive Assist Pro &mdash; subscription L2++ point-to-point</h2>
+      <p>Mercedes&rsquo; point-to-point hands-free ADAS begins an Early Access Program in select California cities in December&nbsp;2026, framed as a pivot from geo-fenced SAE Level&nbsp;3 toward subscription-based Level&nbsp;2++ highway autonomy &mdash; keeping the driver legally responsible. <span class="tag">(the redundancy needed for eyes-off L3 is the functional-safety crux Mercedes is sidestepping for now)</span></p>
+      <p class="src"><a href="https://www.autoconnectedcar.com/2026/11/autonomous-self-driving-vehicle-news-mercedes-benz-tier-iv-aeye-rivian-sonatus-forvia-hella/">AutoConnectedCar</a></p>
+    </article>
+    <article>
+      <h2>US robotaxi race tightens &mdash; Tesla reaches its 8th city, trades the Texas fleet lead with Waymo</h2>
+      <p>Tesla&rsquo;s unsupervised robotaxi service expanded to San&nbsp;Antonio (its 5th Texas market; Austin now ~443&nbsp;sq&nbsp;mi), and on the Texas DMV registry Tesla led with 1,507 registered robotaxis to Waymo&rsquo;s 1,321 as of 18&nbsp;November after a batch of 200&nbsp;Cybercabs. <span class="tag">(fleet counts come from state registry trackers, not company filings; Waymo issued a late-November recall tied to handling human instructions)</span></p>
+      <p class="src"><a href="https://evwire.com/p/tesla-200-cybercabs-texas-robotaxi-lead-waymo-186">EVwire</a></p>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-title">India &middot; Cars &amp; Bikes</div>
+    <article>
+      <h2>Royal Enfield Himalayan&nbsp;750 launches today at Motoverse, Goa</h2>
+      <p>Royal Enfield opened India bookings for the Himalayan&nbsp;750 on 27&nbsp;November with the price revealed at Motoverse (Goa, 27&ndash;29&nbsp;November). The all-new 743cc parallel-twin &mdash; its biggest engine yet &mdash; makes ~55&nbsp;bhp at 7,000&nbsp;rpm and 63&nbsp;Nm at 5,000&nbsp;rpm, sitting above the Himalayan&nbsp;450; UK pricing starts at &pound;6,999 and India was widely expected around &#8377;4&ndash;5&nbsp;lakh. <span class="tag">(launch/price reveal is scheduled at today&rsquo;s event; confirm the final on-road price against Royal Enfield before relying on it)</span></p>
+      <p class="src"><a href="https://www.bikedekho.com/news/category-general-news/royal-enfield-himalayan-750-to-launch-tomorrow-at-motoverse-2026-20738">BikeDekho</a></p>
+    </article>
+    <article>
+      <h2>Toyota Innova HyCross Flex Hybrid now on sale &mdash; India&rsquo;s first flex-fuel strong hybrid, from &#8377;19.99&nbsp;lakh</h2>
+      <p>Toyota Kirloskar has confirmed the Innova HyCross Flex Hybrid on sale from &#8377;19.99&nbsp;lakh (ex-showroom), pairing its 2.0-litre petrol strong-hybrid powertrain with an engine certified for high ethanol blends &mdash; a genuine powertrain-engineering first for the market and a real test of ethanol strong-hybrids at scale. <span class="tag">(now officially launched per EVreporter; a car, not a BEV despite the branding)</span></p>
+      <p class="src"><a href="https://evreporter.com/toyota-launches-innova-hycross-flex-hybrid-ev-in-india-prices-start-at-%E2%82%B919-99-lakh/">EVreporter</a></p>
+    </article>
+    <article>
+      <h2>VinFast to enter India&rsquo;s electric two-wheeler market with mass-market models in early 2027</h2>
+      <p>Vietnam&rsquo;s VinFast plans mass-market electric scooters for India in early 2027 &mdash; a timeline pushed back from an earlier second-half-2026 target &mdash; adding a new entrant to a crowded e-2W field led by Ola, TVS, Ather and Bajaj. <span class="tag">(company plan; VinFast has not yet named an India-specific product lineup or firm launch date)</span></p>
+      <p class="src"><a href="https://www.autocarpro.in/news/vinfast-to-enter-indias-electric-two-wheeler-market-with-mass-market-models-in-early-2027-136078">Autocar Professional</a></p>
+    </article>
+  </section>
+
+  <div class="archive">
+    <strong>Past editions:</strong>
+    <span id="archive-list"><a href="archive/2026-11-27.html">27 Nov</a><a href="archive/2026-11-26.html">26 Nov</a><a href="archive/2026-11-25.html">25 Nov</a><a href="archive/2026-11-24.html">24 Nov</a><a href="archive/2026-11-23.html">23 Nov</a><a href="archive/2026-11-22.html">22 Nov</a><a href="archive/2026-11-21.html">21 Nov</a><a href="archive/2026-11-20.html">20 Nov</a><a href="archive/2026-11-19.html">19 Nov</a><a href="archive/2026-11-18.html">18 Nov</a><a href="archive/2026-11-17.html">17 Nov</a><a href="archive/2026-11-16.html">16 Nov</a><a href="archive/2026-11-15.html">15 Nov</a><a href="archive/2026-11-14.html">14 Nov</a><a href="archive/2026-11-13.html">13 Nov</a><a href="archive/2026-11-12.html">12 Nov</a><a href="archive/2026-11-11.html">11 Nov</a><a href="archive/2026-11-10.html">10 Nov</a><a href="archive/2026-11-09.html">09 Nov</a><a href="archive/2026-11-08.html">08 Nov</a><a href="archive/2026-11-07.html">07 Nov</a><a href="archive/2026-11-06.html">06 Nov</a><a href="archive/2026-11-05.html">05 Nov</a><a href="archive/2026-11-04.html">04 Nov</a><a href="archive/2026-11-03.html">03 Nov</a><a href="archive/2026-11-02.html">02 Nov</a><a href="archive/2026-11-01.html">01 Nov</a><a href="archive/2026-10-31.html">31 Oct</a><a href="archive/2026-10-30.html">30 Oct</a><a href="archive/2026-10-29.html">29 Oct</a><a href="archive/2026-10-28.html">28 Oct</a><a href="archive/2026-10-27.html">27 Oct</a><a href="archive/2026-10-26.html">26 Oct</a><a href="archive/2026-10-25.html">25 Oct</a><a href="archive/2026-10-24.html">24 Oct</a><a href="archive/2026-10-23.html">23 Oct</a><a href="archive/2026-10-22.html">22 Oct</a><a href="archive/2026-10-21.html">21 Oct</a><a href="archive/2026-10-20.html">20 Oct</a></span>
+  </div>
+
+  <footer>Compiled by Claude &middot; updated daily</footer>
+
+</div>
+</body>
+</html>
